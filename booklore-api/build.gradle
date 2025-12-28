@@ -105,3 +105,16 @@ bootRun {
         jvmArgs("-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005")
     }
 }
+
+// Angular 빌드 파일을 static 리소스 폴더로 복사하는 태스크
+// Angular 17+는 dist/booklore/browser에 출력하므로 그 내용을 static으로 복사
+task copyAngularBuild(type: Copy) {
+    dependsOn bootRun // bootRun 실행 시 자동으로 실행
+    from "../booklore-ui/dist/booklore/browser"
+    into "src/main/resources/static"
+    include "**/*"
+    exclude "*.lock"
+}
+
+// processResources가 실행될 때 Angular 빌드 파일 복사
+processResources.dependsOn copyAngularBuild
