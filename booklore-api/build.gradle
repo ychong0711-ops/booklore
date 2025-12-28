@@ -117,3 +117,6 @@ bootRun {
 
 // 전체 빌드 시에도 Angular 파일 포함
 build.dependsOn copyAngularToStatic
+
+// processResources가 copyAngularToStatic을 먼저 실행하도록 명시적 의존성 선언
+processResources.dependsOn copyAngularToStatic
