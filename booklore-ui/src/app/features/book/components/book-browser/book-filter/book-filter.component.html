@@ -1,0 +1,62 @@
+<div class="book-filter-container">
+
+  <div class="filter-header">
+    <span class="filter-title">Filters</span>
+    <p-selectButton
+      [options]="filterModeOptions"
+      [(ngModel)]="selectedFilterMode"
+      optionLabel="label"
+      optionValue="value"
+      class="filter-mode-select"
+      allowEmpty="false"
+      styleClass="h-8"></p-selectButton>
+  </div>
+
+  <div class="filter-content">
+    <p-accordion [value]="expandedPanels" [multiple]="true">
+      @for (filterType of filterTypes; track trackByFilterType(i, filterType); let i = $index) {
+        @if (filterStreams[filterType] | async; as filters) {
+          @if (filters.length > 0) {
+        <p-accordion-panel [value]="i">
+          <p-accordion-header>
+            <span class="filter-type-label">
+              {{ filterLabels[filterType] || (filterType | titlecase) }}
+              @if (activeFilters[filterType]?.length) {
+                <span class="active-filter-count">
+                  ({{ activeFilters[filterType].length }})
+                </span>
+              }
+            </span>
+          </p-accordion-header>
+
+          <p-accordion-content>
+            <div class="filter-list">
+              @for (filter of filters; track trackByFilter(j, filter); let j = $index) {
+                <div
+                  class="filter-row"
+                  [ngClass]="{
+                    'active': activeFilters[filterType]?.includes(filter.value?.id || filter.value)
+                  }"
+                  (click)="handleFilterClick(filterType, filter.value?.id || filter.value)">
+                  {{ filter.value.name || filter.value }}
+                  <p-badge class="filter-value-badge" [value]="filter.bookCount"></p-badge>
+                </div>
+              }
+              @if (truncatedFilters[filterType]) {
+                <div class="truncation-notice">
+                  Showing first 500 items
+                </div>
+              }
+            </div>
+          </p-accordion-content>
+        </p-accordion-panel>
+          }
+        }
+      }
+    </p-accordion>
+
+    <div class="footer-notice">
+      Note: Top 500 items are displayed per filter category
+    </div>
+  </div>
+</div>

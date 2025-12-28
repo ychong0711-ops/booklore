@@ -1,0 +1,110 @@
+app:
+  path-config: '/app/data'
+  bookdrop-folder: '/bookdrop'
+  version: 'development'
+  swagger:
+    enabled: ${SWAGGER_ENABLED:false}
+  remote-auth:
+    enabled: ${REMOTE_AUTH_ENABLED:false}
+    create-new-users: ${REMOTE_AUTH_CREATE_NEW_USERS:true}
+    header-name: ${REMOTE_AUTH_HEADER_NAME:Remote-Name}
+    header-user: ${REMOTE_AUTH_HEADER_USER:Remote-User}
+    header-email: ${REMOTE_AUTH_HEADER_EMAIL:Remote-Email}
+    header-groups: ${REMOTE_AUTH_HEADER_GROUPS:Remote-Groups}
+    admin-group: ${REMOTE_AUTH_ADMIN_GROUP}
+    groups-delimiter: ${REMOTE_AUTH_GROUPS_DELIMITER:\\s+}
+  force-disable-oidc: ${FORCE_DISABLE_OIDC:false}
+
+server:
+  forward-headers-strategy: native
+  port: 8080
+  tomcat:
+    relaxed-query-chars: '[,],%,{,},|'
+
+spring:
+  servlet:
+    multipart:
+      enabled: false
+  mvc:
+    async:
+      request-timeout: 600000
+  application:
+    name: booklore-api
+  datasource:
+    url: ${DATABASE_URL:jdbc:mariadb://${DATABASE_HOST:${DB_HOST:mariadb}}:${DATABASE_PORT:3306}/${DATABASE_NAME:booklore}?createDatabaseIfNotExist=true}
+    username: ${DATABASE_USERNAME:root}
+    password: ${DATABASE_PASSWORD:${MYSQL_ROOT_PASSWORD}}
+    hikari:
+      max-lifetime: 580000         # 9.6 minutes (avoid DB-side connection cuts)
+      connection-test-query: SELECT 1
+      maximum-pool-size: 10        # Allows bursts
+      minimum-idle: 1              # Shrinks when idle
+      idle-timeout: 300000         # 5 minutes before idle connections are closed
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: false
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 500
+          order_inserts: true
+          order_updates: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+springdoc:
+  swagger-ui:
+    path: /api/v1/swagger-ui.html
+    persist-authorization: true
+  api-docs:
+    path: /api/v1/api-docs
+
+logging:
+  level:
+    root: ${ROOT_LOG_LEVEL:INFO}
+    com.adityachandel.booklore: ${LOG_LEVEL:INFO}
+    org.apache.fontbox: ERROR
+    org.apache.pdfbox: ERROR
+    org.quartz.core.QuartzScheduler: WARN
+    org.quartz.simpl.SimpleThreadPool: WARN
+    org.quartz.simpl.RAMJobStore: WARN
+    org.hibernate.orm.connections.pooling: WARN
+    org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer: ERROR
+
+# Ollama AI Configuration
+# Ollama 서버 연결 및 AI 모델 설정을 위한 구성
+ollama:
+  # Ollama 서버 주소 (로컬 개발 환경)
+  host: ${OLLAMA_HOST:http://localhost:11434}
+  
+  # 채팅/요약에 사용할 모델
+  # 설치된 모델:
+  # - qwen3:4b: 경량화, 빠른 응답, 한국어 지원 ⭐ 현재 선택됨
+  # - qwen3:8b: 균형잡힌 성능 (16GB RAM 이상 권장)
+  # - qwen3:30b: 고품질 출력 (32GB RAM 이상 권장)
+  # - llama3.2: 영어 성능 우수
+  # - mistral: 다국어 지원
+  model: ${OLLAMA_MODEL:qwen3:4b}
+  
+  # 임베딩 모델 (의미론적 검색용)
+  # - nomic-embed-text: 무료 모델 중 가장 좋은 성능 (768 차원) ⭐ 권장
+  # - all-minilm: 경량화 버전
+  embedding-model: ${OLLAMA_EMBEDDING_MODEL:nomic-embed-text}
+  
+  # API 타임아웃 (초)
+  # 복잡한 요약 작업은 5분(300초)까지 소요될 수 있음
+  timeout: ${OLLAMA_TIMEOUT:300}
+  
+  # Temperature (0.0 ~ 1.0)
+  # 0.0: 결정론적 출력, 일관된 답변
+  # 0.5: 균형 잡힌 출력 (qwen3:4b 권장)
+  # 1.0: 창의적 출력
+  temperature: ${OLLAMA_TEMPERATURE:0.5}
+  
+  # 최대 생성 토큰 수
+  # qwen3:4b는 512~1024 토큰 권장 (경량화 모델)
+  # qwen3:8b 이상은 1024~2048 토큰 가능
+  max-tokens: ${OLLAMA_MAX_TOKENS:1024}

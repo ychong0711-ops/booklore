@@ -1,0 +1,660 @@
+@if (book$ | async; as book) {
+  <div class="metadata-viewer-container">
+    <div class="metadata-header">
+
+      <div class="cover-section">
+        <div class="cover-wrapper">
+
+          <p-image
+            [src]="urlHelper.getCoverUrl(book.id, book.metadata?.coverUpdatedOn)"
+            alt="Image"
+            width="250"
+            appendTo="body"
+            [preview]="true">
+          </p-image>
+
+          @if (book?.metadata!.seriesNumber != null) {
+            <div class="series-badge">
+              #{{ book?.metadata!.seriesNumber }}
+            </div>
+          }
+
+          <div
+            class="cover-progress-bar-container"
+            [style.--progress-count]="getProgressCount(book)">
+            @let progress = getProgressPercent(book);
+            @if (progress !== null) {
+              <p-progressBar
+                [value]="progress"
+                [showValue]="false"
+                class="cover-progress-bar"
+                [ngClass]="{
+                  'progress-complete': progress === 100,
+                  'progress-incomplete': progress < 100
+                }"
+              ></p-progressBar>
+            }
+
+            @if (getKoProgressPercent(book) !== null) {
+              <p-progressBar
+                [value]="getKoProgressPercent(book)"
+                [showValue]="false"
+                class="cover-progress-bar"
+                [ngClass]="[
+                  getKoProgressPercent(book) === 100 ? 'progress-complete-ko' : 'progress-incomplete-ko'
+                ]"
+              >
+              </p-progressBar>
+            }
+
+            @if (getKoboProgressPercent(book) !== null) {
+              <p-progressBar
+                [value]="getKoboProgressPercent(book)"
+                [showValue]="false"
+                class="cover-progress-bar"
+                [ngClass]="[
+                  getKoboProgressPercent(book) === 100 ? 'progress-complete-kobo' : 'progress-incomplete-kobo'
+                ]"
+              >
+              </p-progressBar>
+            }
+          </div>
+        </div>
+
+        @if (navigationState$ | async) {
+          <div class="navigation-buttons-mobile">
+            <p-button
+              icon="pi pi-chevron-left"
+              [disabled]="!canNavigatePrevious()"
+              (onClick)="navigatePrevious()"
+              rounded
+              outlined
+              severity="info"
+              pTooltip="Go to previous book"
+              tooltipPosition="bottom">
+            </p-button>
+            <span class="text-sm text-surface-600 dark:text-surface-400">
+              {{ getNavigationPosition() }}
+            </span>
+            <p-button
+              icon="pi pi-chevron-right"
+              iconPos="right"
+              [disabled]="!canNavigateNext()"
+              (onClick)="navigateNext()"
+              severity="info"
+              rounded
+              outlined
+              pTooltip="Go to next book"
+              tooltipPosition="bottom">
+            </p-button>
+          </div>
+        }
+      </div>
+
+      <div class="info-section">
+        <div class="info-content">
+
+          <div class="title-group">
+            @if (book?.metadata?.seriesName) {
+              <p class="series-link" (click)="goToSeries(book?.metadata?.seriesName!)">
+                {{ book?.metadata?.seriesName }}
+                @if (book?.metadata?.seriesNumber) {
+                  #{{ book?.metadata?.seriesNumber }}
+                }
+              </p>
+            }
+
+            <div class="title-wrapper">
+              <div class="title-content">
+                <h1 class="book-title">
+                  {{ book?.metadata?.title }}@if (book?.metadata?.subtitle) {
+                  : {{ book.metadata?.subtitle }}
+                }
+                </h1>
+                <i
+                  class="pi lock-icon"
+                  [ngClass]="isMetadataFullyLocked(book?.metadata!) ? 'pi-lock locked' : 'pi-lock-open unlocked'"
+                  [pTooltip]="isMetadataFullyLocked(book?.metadata!) ? 'This book metadata is locked.' : 'This book metadata is unlocked.'"
+                  tooltipPosition="top"
+                ></i>
+              </div>
+
+              <p class="authors">
+                @for (author of book?.metadata!.authors; track $index; let isLast = $last) {
+                  <a class="author-link" (click)="goToAuthorBooks(author)">{{ author }}</a>
+                  @if (!isLast) {
+                    <span class="author-separator">, </span>
+                  }
+                }
+              </p>
+            </div>
+          </div>
+
+          <div class="ratings-section">
+
+            <div class="personal-rating">
+              <div class="rating-group">
+                <i class="pi pi-thumbs-up-fill rating-icon" pTooltip="Personal Rating" tooltipPosition="top"></i>
+                <p-rating
+                  [ngModel]="book?.personalRating"
+                  (onRate)="onPersonalRatingChange(book, $event)"
+                  stars="10"
+                  [style.--p-rating-icon-active-color]="getStarColorScaled(book?.personalRating, 10)">
+                </p-rating>
+              </div>
+              <p-button
+                text
+                size="small"
+                icon="pi pi-undo"
+                severity="warn"
+                (onClick)="resetPersonalRating(book)"
+                pTooltip="Reset Rating"
+                tooltipPosition="top"
+                class="reset-button">
+              </p-button>
+            </div>
+
+            @if (book?.metadata?.amazonRating || book?.metadata?.goodreadsRating || book?.metadata?.hardcoverRating || book?.metadata?.googleId) {
+              <div class="gradient-divider"></div>
+            }
+
+            <div class="external-ratings">
+              @if (book?.metadata?.amazonRating) {
+                <a
+                  class="rating-link"
+                  [href]="'https://www.amazon.com/dp/' + (book.metadata?.asin ?? '')"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  [pTooltip]="getRatingTooltip(book, 'amazon')"
+                  tooltipPosition="top"
+                >
+                  <img src="https://www.amazon.com/favicon.ico" alt="Amazon" class="rating-favicon"/>
+                  <span class="rating-value">{{ getRatingPercent(book.metadata!.amazonRating) }}%</span>
+                </a>
+              }
+
+              @if (book?.metadata?.goodreadsRating) {
+                <a
+                  class="rating-link"
+                  [href]="'https://www.goodreads.com/book/show/' + (book.metadata?.goodreadsId ?? '')"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  [pTooltip]="getRatingTooltip(book, 'goodreads')"
+                  tooltipPosition="top"
+                >
+                  <img src="https://www.goodreads.com/favicon.ico" alt="Goodreads" class="rating-favicon"/>
+                  <span class="rating-value">{{ getRatingPercent(book.metadata!.goodreadsRating) }}%</span>
+                </a>
+              }
+
+              @if (book?.metadata?.hardcoverRating) {
+                <a
+                  class="rating-link"
+                  [href]="'https://hardcover.app/books/' + (book.metadata?.hardcoverId ?? '')"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  [pTooltip]="getRatingTooltip(book, 'hardcover')"
+                  tooltipPosition="top"
+                >
+                  <img src="https://assets.hardcover.app/static/favicon.ico" alt="Hardcover" class="rating-favicon"/>
+                  <span class="rating-value">{{ getRatingPercent(book.metadata!.hardcoverRating) }}%</span>
+                </a>
+              }
+
+              @if (book?.metadata?.googleId) {
+                <a
+                  class="rating-link"
+                  [href]="'https://books.google.com/books?id=' + book.metadata!.googleId"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="https://books.google.com/favicon.ico" alt="Google Books" class="rating-favicon"/>
+                </a>
+              }
+
+              @if (book?.metadata?.comicvineId) {
+                <a
+                  class="rating-link"
+                  [href]="'https://comicvine.gamespot.com/' + book.metadata!.comicvineId"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="https://www.comicvine.com/favicon.ico" alt="Comic Vine" class="rating-favicon"/>
+                </a>
+              }
+            </div>
+          </div>
+
+          <div class="tags-section">
+            @if (book?.metadata?.categories?.length) {
+              <div class="tag-row">
+                <span class="tag-label">Genres:</span>
+                <div class="tag-scroll">
+                  <div class="tag-container">
+                    @for (category of book.metadata!.categories; track category) {
+                      <a (click)="goToCategory(category)" class="tag-clickable">
+                        <app-tag color="red" size="xs">{{ category }}</app-tag>
+                      </a>
+                    }
+                  </div>
+                </div>
+              </div>
+            }
+
+            @if (book?.metadata?.moods?.length) {
+              <div class="tag-row">
+                <span class="tag-label">Moods:</span>
+                <div class="tag-scroll">
+                  <div class="tag-container">
+                    @for (mood of book.metadata!.moods; track mood) {
+                      <a (click)="goToMood(mood)" class="tag-clickable">
+                        <app-tag color="indigo" size="xs">{{ mood }}</app-tag>
+                      </a>
+                    }
+                  </div>
+                </div>
+              </div>
+            }
+
+            @if (book?.metadata?.tags?.length) {
+              <div class="tag-row">
+                <span class="tag-label">Tags:</span>
+                <div class="tag-scroll">
+                  <div class="tag-container">
+                    @for (tag of book.metadata!.tags; track tag) {
+                      <a (click)="goToTag(tag)" class="tag-clickable">
+                        <app-tag color="green" size="xs">{{ tag }}</app-tag>
+                      </a>
+                    }
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+
+          <div class="metadata-grid">
+            <div class="metadata-item">
+              <span class="metadata-key">Library:</span>
+              @if (book?.libraryName) {
+                <span class="metadata-value metadata-link" (click)="goToLibrary(book.libraryId!)">
+                  {{ book?.libraryName }}
+                </span>
+              } @else {
+                <span class="metadata-value">-</span>
+              }
+            </div>
+
+            <div class="metadata-item">
+              <span class="metadata-key">Publisher:</span>
+              @if (book?.metadata?.publisher) {
+                <span class="metadata-value metadata-link" (click)="goToPublisher(book?.metadata?.publisher!)">
+                  {{ book?.metadata?.publisher }}
+                </span>
+              } @else {
+                <span class="metadata-value">-</span>
+              }
+            </div>
+
+            <div class="metadata-item">
+              <span class="metadata-key">Published:</span>
+              @if (book?.metadata!.publishedDate) {
+                <span class="metadata-value metadata-link" (click)="goToPublishedYear(book?.metadata!.publishedDate!)">
+                  {{ book?.metadata!.publishedDate }}
+                </span>
+              } @else {
+                <span class="metadata-value">-</span>
+              }
+            </div>
+
+            <div class="metadata-item">
+              <span class="metadata-key">Language:</span>
+              @if (book?.metadata!.language) {
+                <span class="metadata-value metadata-link" (click)="goToLanguage(book?.metadata!.language!)">
+                  {{ book?.metadata!.language }}
+                </span>
+              } @else {
+                <span class="metadata-value">-</span>
+              }
+            </div>
+
+            <div class="metadata-item">
+              <span class="metadata-key">File Type:</span>
+              @if (getFileExtension(book?.filePath)) {
+                <span (click)="goToFileType(book?.filePath)" style="cursor: pointer;">
+                  <app-tag size="3xs" variant="pill" [color]="getFileTypeColor(getFileExtension(book?.filePath))">
+                    {{ (getFileExtension(book?.filePath) | uppercase) || '-' }}
+                  </app-tag>
+                </span>
+              } @else {
+                <app-tag size="3xs" variant="pill" [color]="getFileTypeColor(getFileExtension(book?.filePath))">
+                  -
+                </app-tag>
+              }
+            </div>
+
+            <div class="metadata-item">
+              <span class="metadata-key">BookLore Progress:</span>
+              <span class="metadata-value-group">
+                <app-tag size="3xs" variant="pill" [color]="getProgressColor(getProgressPercent(book))">
+                  {{ getProgressPercent(book) !== null ? getProgressPercent(book) + '%' : 'N/A' }}
+                </app-tag>
+                @if (getProgressPercent(book) !== null) {
+                  <p-button
+                    pTooltip="Reset progress"
+                    tooltipPosition="bottom"
+                    icon="pi pi-refresh"
+                    size="small"
+                    severity="danger"
+                    text
+                    class="inline-action-button"
+                    (onClick)="resetProgress(book, ResetProgressTypes.BOOKLORE)">
+                  </p-button>
+                }
+              </span>
+            </div>
+
+            <div class="metadata-item">
+              <span class="metadata-key">Metadata Match:</span>
+              @if (book?.metadataMatchScore != null) {
+                <span (click)="goToMatchScoreRange(book?.metadataMatchScore!)" style="cursor: pointer;">
+                  <app-tag size="3xs" variant="pill" [color]="getMatchScoreColor(book?.metadataMatchScore!)">
+                    {{ (book?.metadataMatchScore!) | number:'1.0-0' }}%
+                  </app-tag>
+                </span>
+              } @else {
+                <span class="metadata-value">-</span>
+              }
+            </div>
+
+            <div class="metadata-item">
+              <span class="metadata-key">ISBN:</span>
+              @if (book?.metadata?.isbn13 || book?.metadata?.isbn10) {
+                <span class="metadata-value">
+                  {{ book.metadata!.isbn13 }}
+                  @if (book?.metadata?.isbn13 && book?.metadata?.isbn10) {
+                    /
+                  }
+                  {{ book.metadata!.isbn10 }}
+                </span>
+              } @else {
+                <span class="metadata-value">-</span>
+              }
+            </div>
+
+            <div class="metadata-item">
+              <span class="metadata-key">Read Status:</span>
+              <span class="metadata-value-group">
+                <span (click)="goToReadStatus(selectedReadStatus)" style="cursor: pointer;">
+                  <app-tag size="3xs" variant="pill" [color]="getStatusColor(selectedReadStatus)">
+                    {{ getStatusLabel(selectedReadStatus) }}
+                  </app-tag>
+                </span>
+                <i class="pi pi-pencil edit-icon" (click)="menu.toggle($event)"></i>
+                <p-menu #menu [popup]="true" [model]="readStatusMenuItems"></p-menu>
+              </span>
+            </div>
+
+            @if (book?.koreaderProgress && book.koreaderProgress?.percentage != null) {
+              <div class="metadata-item">
+                <span class="metadata-key">KOReader Progress:</span>
+                <span class="metadata-value-group">
+                  <app-tag size="3xs" variant="pill" [color]="getKoProgressColor(getKOReaderPercentage(book))">
+                    {{ getKOReaderPercentage(book) + '%' }}
+                  </app-tag>
+                  <p-button
+                    pTooltip="Reset progress"
+                    tooltipPosition="bottom"
+                    icon="pi pi-refresh"
+                    size="small"
+                    severity="danger"
+                    text
+                    class="inline-action-button"
+                    (onClick)="resetProgress(book, ResetProgressTypes.KOREADER)">
+                  </p-button>
+                </span>
+              </div>
+            }
+
+            @if (book?.koboProgress && book.koboProgress?.percentage != null) {
+              <div class="metadata-item">
+                <span class="metadata-key">Kobo Progress:</span>
+                <span class="metadata-value-group">
+                  <app-tag size="3xs" variant="pill" [color]="getKoProgressColor(book.koboProgress?.percentage)">
+                    {{ book.koboProgress?.percentage | number:'1.0-1' }}%
+                  </app-tag>
+                  <p-button
+                    pTooltip="Reset progress"
+                    tooltipPosition="bottom"
+                    icon="pi pi-refresh"
+                    size="small"
+                    severity="danger"
+                    text
+                    class="inline-action-button"
+                    (onClick)="resetProgress(book, ResetProgressTypes.KOBO)">
+                  </p-button>
+                </span>
+              </div>
+            }
+
+            @if (selectedReadStatus === ReadStatus.READ) {
+              <div class="metadata-item">
+                @if (book?.dateFinished) {
+                  <span class="metadata-key">Finished On:</span>
+                  @if (!isEditingDateFinished) {
+                    <span class="metadata-value-group">
+                      <span class="metadata-value">{{ formatDate(book.dateFinished) }}</span>
+                      <i class="pi pi-pencil edit-icon" (click)="toggleDateFinishedEdit(book)"></i>
+                    </span>
+                  } @else {
+                    <span class="metadata-value-group">
+                      <p-datepicker
+                        [(ngModel)]="editDateFinished"
+                        dateFormat="dd-M-yy"
+                        size="small"
+                        [showIcon]="true"
+                        iconDisplay="input"
+                        [style]="{ 'width': '125px', 'font-size': '12px' }">
+                      </p-datepicker>
+                      <p-button rounded icon="pi pi-check" size="small" severity="success" text (onClick)="saveDateFinished(book)" pTooltip="Save date"></p-button>
+                      <p-button rounded icon="pi pi-times" size="small" severity="danger" text (onClick)="cancelDateFinishedEdit()" pTooltip="Cancel"></p-button>
+                    </span>
+                  }
+                }
+              </div>
+            }
+
+            <div class="metadata-item">
+              <span class="metadata-key">Page Count:</span>
+              @if (book?.metadata!.pageCount) {
+                <span class="metadata-value metadata-link" (click)="goToPageCountRange(book?.metadata!.pageCount!)">
+                  {{ book?.metadata!.pageCount }}
+                </span>
+              } @else {
+                <span class="metadata-value">-</span>
+              }
+            </div>
+
+            <div class="metadata-item">
+              <span class="metadata-key">File Size:</span>
+              @if (book?.fileSizeKb) {
+                <span class="metadata-value metadata-link" (click)="goToFileSizeRange(book?.fileSizeKb!)">
+                  {{ getFileSizeInMB(book) }}
+                </span>
+              } @else {
+                <span class="metadata-value">-</span>
+              }
+            </div>
+          </div>
+
+          <div class="file-path-section">
+            <span class="metadata-key">File Path:</span>
+            <i class="pi eye-icon" [ngClass]="showFilePath ? 'pi-eye-slash' : 'pi-eye'" (click)="showFilePath = !showFilePath"></i>
+            @if (showFilePath) {
+              <code class="file-path-code">{{ book?.filePath }}</code>
+            }
+          </div>
+        </div>
+
+        @if (userService.userState$ | async; as userState) {
+          <div class="action-buttons">
+            @if (navigationState$ | async) {
+              <div class="navigation-buttons-desktop">
+                <p-button
+                  icon="pi pi-chevron-left"
+                  [disabled]="!canNavigatePrevious()"
+                  (onClick)="navigatePrevious()"
+                  rounded
+                  outlined
+                  severity="info"
+                  pTooltip="Go to previous book"
+                  tooltipPosition="bottom">
+                </p-button>
+                <span class="text-sm text-surface-600 dark:text-surface-400">
+                  {{ getNavigationPosition() }}
+                </span>
+                <p-button
+                  icon="pi pi-chevron-right"
+                  iconPos="right"
+                  [disabled]="!canNavigateNext()"
+                  (onClick)="navigateNext()"
+                  severity="info"
+                  rounded
+                  outlined
+                  pTooltip="Go to next book"
+                  tooltipPosition="bottom">
+                </p-button>
+              </div>
+              <p-divider layout="vertical" class="action-divider"></p-divider>
+            }
+            @if (book!.bookType === 'PDF') {
+              @if (readMenuItems$ | async; as readItems) {
+                <p-splitbutton label="Read" icon="pi pi-book" [model]="readItems" (onClick)="read(book.id, 'ngx')" severity="primary"/>
+              }
+            }
+            @if (book!.bookType !== 'PDF' && book!.bookType !== 'FB2') {
+              <p-button label="Read" icon="pi pi-book" (onClick)="read(book?.metadata!.bookId, undefined)" severity="primary"/>
+            }
+            <p-button label="Shelf" icon="pi pi-folder" severity="info" outlined (onClick)="assignShelf(book.id)" class="mobile-icon-only"></p-button>
+            @if (userState.user!.permissions.canDownload || userState.user!.permissions.admin) {
+              @if ((book!.alternativeFormats && book!.alternativeFormats.length > 0) || (book!.supplementaryFiles && book!.supplementaryFiles.length > 0)) {
+                @if (downloadMenuItems$ | async; as downloadItems) {
+                  <p-splitbutton label="Download" icon="pi pi-download" [model]="downloadItems" (onClick)="download(book)" severity="success" outlined class="mobile-icon-only"/>
+                }
+              } @else {
+                <p-button label="Download" icon="pi pi-download" severity="success" outlined (onClick)="download(book)" class="mobile-icon-only"></p-button>
+              }
+            }
+            @if (userState.user!.permissions.canEditMetadata || userState.user!.permissions.admin) {
+              @if (refreshMenuItems$ | async; as refreshItems) {
+                <p-splitbutton
+                  [label]="isAutoFetching ? 'Fetching...' : 'Auto Fetch'"
+                  [icon]="isAutoFetching ? 'pi pi-spin pi-spinner' : 'pi pi-bolt'"
+                  [outlined]="true"
+                  [model]="refreshItems"
+                  severity="warn"
+                  (onClick)="quickRefresh(book!.id)"
+                  [disabled]="isAutoFetching"
+                  pTooltip="Automatically fetch metadata using default sources"
+                  tooltipPosition="top"
+                  styleClass="mobile-icon-only">
+                </p-splitbutton>
+              }
+            }
+            @if (userState.user!.permissions.canDeleteBook || userState.user!.permissions.admin) {
+              @if (otherItems$ | async; as otherItems) {
+                <p-button icon="pi pi-ellipsis-v" outlined severity="primary" (click)="entitymenu.toggle($event)"></p-button>
+                <p-tieredMenu #entitymenu [model]="otherItems" [popup]="true" appendTo="body"></p-tieredMenu>
+              }
+            }
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="description-section">
+      <div [ngClass]="{ 'line-clamp-7': !isExpanded }" class="description-content">
+        <div class="readonly-editor">
+          <p-editor #quillEditor [readonly]="true" [(ngModel)]="book.metadata!.description">
+            <ng-template #header></ng-template>
+          </p-editor>
+        </div>
+      </div>
+      @if (book.metadata!.description && book.metadata!.description.length > 500) {
+        <p-button
+          [label]="isExpanded ? 'Show less' : 'Show more'"
+          [icon]="isExpanded ? 'pi pi-chevron-up' : 'pi pi-chevron-down'"
+          iconPos="right"
+          size="small"
+          text
+          (click)="toggleExpand()">
+        </p-button>
+      }
+    </div>
+
+    <p-tabs lazy="true" class="custom-p-tabs" [value]="defaultTabValue" scrollable>
+      <p-tablist>
+        @if (bookInSeries.length > 1) {
+          <p-tab [value]="1">
+            <i class="pi pi-ethereum"></i> More in Series
+          </p-tab>
+        }
+        <p-tab [value]="2">
+          <i class="pi pi-bookmark"></i> Similar Books
+        </p-tab>
+        <p-tab [value]="3">
+          <i class="pi pi-pen-to-square"></i> Notes
+        </p-tab>
+        <p-tab [value]="4">
+          <i class="pi pi-clock"></i> Reading Sessions
+        </p-tab>
+        <p-tab [value]="5">
+          <i class="pi pi-comments"></i> Reviews
+        </p-tab>
+      </p-tablist>
+      <p-tabpanels>
+        <p-tabpanel [value]="1">
+          <div class="tab-content">
+            @if (bookInSeries.length > 1) {
+              <div class="dashboard-scroller-infinite" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" [horizontal]="true">
+                @for (bookInSeriesItem of bookInSeries; track bookInSeriesItem) {
+                  @if (bookInSeriesItem.id !== book.id) {
+                    <div class="dashboard-scroller-card">
+                      <app-book-card-lite-component [book]="bookInSeriesItem" [isActive]="bookInSeriesItem.id === book.id"></app-book-card-lite-component>
+                    </div>
+                  }
+                }
+              </div>
+            }
+          </div>
+        </p-tabpanel>
+        <p-tabpanel [value]="2">
+          <div class="tab-content">
+            @if (recommendedBooks.length > 0) {
+              <div class="dashboard-scroller-infinite" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" [horizontal]="true">
+                @for (book of recommendedBooks; track book.book.id) {
+                  <div class="dashboard-scroller-card">
+                    <app-book-card-lite-component [book]="book.book"></app-book-card-lite-component>
+                  </div>
+                }
+              </div>
+            }
+          </div>
+        </p-tabpanel>
+        <p-tabpanel [value]="3">
+          <app-book-notes-component [bookId]="book.id"></app-book-notes-component>
+        </p-tabpanel>
+        <p-tabpanel [value]="4">
+          <app-book-reading-sessions [bookId]="book.id"></app-book-reading-sessions>
+        </p-tabpanel>
+        <p-tabpanel [value]="5">
+          <app-book-reviews [bookId]="book.id"></app-book-reviews>
+        </p-tabpanel>
+      </p-tabpanels>
+    </p-tabs>
+  </div>
+} @else {
+  <div class="loading-state">
+    <p-progressSpinner strokeWidth="4" fill="transparent" animationDuration=".8s"></p-progressSpinner>
+    <p class="loading-text">Loading book details...</p>
+  </div>
+}
