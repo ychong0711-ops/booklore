@@ -138,6 +138,18 @@ public class SecurityConfig {
             publicEndpoints.addAll(Arrays.asList(SWAGGER_ENDPOINTS));
         }
         http
+                .securityMatcher(
+                        "/api/v1/books/**",
+                        "/api/v1/library/**",
+                        "/api/v1/search/**",
+                        "/api/v1/collections/**",
+                        "/api/v1/tags/**",
+                        "/api/v1/series/**",
+                        "/api/v1/authors/**",
+                        "/api/v1/upload/**",
+                        "/api/v1/settings/**",
+                        "/api/v1/users/**"
+                )
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
