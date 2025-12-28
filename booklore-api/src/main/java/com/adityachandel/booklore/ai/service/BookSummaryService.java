@@ -4,6 +4,7 @@ import com.adityachandel.booklore.ai.config.OllamaConfig;
 import com.adityachandel.booklore.ai.dto.SummarizeRequest;
 import com.adityachandel.booklore.ai.dto.SummarizeResponse;
 import com.adityachandel.booklore.model.entity.BookEntity;
+import com.adityachandel.booklore.model.entity.BookMetadataEntity;
 import com.adityachandel.booklore.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -11,10 +12,10 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 
 /**
  * 책 콘텐츠 요약 서비스
@@ -61,9 +62,8 @@ public class BookSummaryService {
         int originalWordCount = 0;
         
         // 책 ID가 제공된 경우 데이터베이스에서 콘텐츠 조회
-        if (request.getBookId() != null && !request.getBookId().isEmpty()) {
-            Optional<BookEntity> bookOpt = 
-                    bookRepository.findById(request.getBookId());
+        if (request.getBookId() != null) {
+            Optional<BookEntity> bookOpt = bookRepository.findById(request.getBookId());
             
             if (bookOpt.isEmpty()) {
                 return SummarizeResponse.builder()
@@ -74,8 +74,9 @@ public class BookSummaryService {
             
             BookEntity book = bookOpt.get();
             contentToSummarize = buildContentFromBook(book, request.getScope());
+            String bookTitle = getBookTitle(book);
             log.info("책 '{}'에서 콘텐츠 추출 완료. 길이: {} 문자", 
-                    book.getTitle(), contentToSummarize.length());
+                    bookTitle, contentToSummarize.length());
         } else if (request.getContent() != null && !request.getContent().isEmpty()) {
             // 사용자가 직접 콘텐츠 제공
             contentToSummarize = request.getContent();
@@ -97,9 +98,9 @@ public class BookSummaryService {
         
         // Ollama API 호출
         try {
-            List<Map<String, String>> messages = new ArrayList<>();
-            messages.add(Map.of("role", "system", "content", systemPrompt));
-            messages.add(Map.of("role", "user", "content", userPrompt));
+            List<java.util.Map<String, String>> messages = new ArrayList<>();
+            messages.add(java.util.Map.of("role", "system", "content", systemPrompt));
+            messages.add(java.util.Map.of("role", "user", "content", userPrompt));
             
             String summary = ollamaClient.chat(messages);
             long processingTime = (System.currentTimeMillis() - startTime) / 1000;
@@ -142,49 +143,73 @@ public class BookSummaryService {
     private String buildContentFromBook(BookEntity book, String scope) {
         StringBuilder content = new StringBuilder();
         
-        switch (scope.toLowerCase()) {
-            case "description":
-                // 책 설명만 요약
-                if (book.getDescription() != null) {
-                    content.append("책 제목: ").append(book.getTitle()).append("\n");
-                    content.append("설명: ").append(book.getDescription());
-                }
-                break;
-                
-            case "chapter":
-                // 챕터 내용 요약 (있는 경우)
-                // Note: 실제 구현에서는 Book의 chapter 목록을 순회
-                content.append("책 제목: ").append(book.getTitle()).append("\n");
-                if (book.getDescription() != null) {
-                    content.append("내용 개요: ").append(book.getDescription());
-                }
-                break;
-                
-            case "all":
-            default:
-                // 전체 내용 요약
-                content.append("책 제목: ").append(book.getTitle()).append("\n");
-                content.append("저자: ").append(book.getAuthor() != null ? book.getAuthor() : "알 수 없음").append("\n");
-                if (book.getDescription() != null) {
-                    content.append("내용 개요: ").append(book.getDescription()).append("\n");
-                }
-                if (book.getContent() != null) {
-                    content.append("본문 내용:\n").append(book.getContent());
-                }
-                break;
+        String lowerScope = scope.toLowerCase();
+        
+        if ("description".equals(lowerScope)) {
+            // 책 설명만 요약
+            BookMetadataEntity metadata = book.getMetadata();
+            if (metadata != null && metadata.getDescription() != null) {
+                content.append("책 제목: ").append(getBookTitle(book)).append("\n");
+                content.append("설명: ").append(metadata.getDescription());
+            }
+            
+        } else if ("chapter".equals(lowerScope)) {
+            // 챕터 내용 요약 (있는 경우)
+            content.append("책 제목: ").append(getBookTitle(book)).append("\n");
+            BookMetadataEntity metadata = book.getMetadata();
+            if (metadata != null && metadata.getDescription() != null) {
+                content.append("내용 개요: ").append(metadata.getDescription());
+            }
+            
+        } else {
+            // 전체 내용 요약 (all 또는 기본값)
+            content.append("책 제목: ").append(getBookTitle(book)).append("\n");
+            content.append("저자: ").append(getBookAuthor(book)).append("\n");
+            BookMetadataEntity metadata = book.getMetadata();
+            if (metadata != null && metadata.getDescription() != null) {
+                content.append("내용 개요: ").append(metadata.getDescription()).append("\n");
+            }
         }
         
         return content.toString();
     }
     
     /**
+     * 책 제목을 안전하게 가져옵니다.
+     */
+    private String getBookTitle(BookEntity book) {
+        if (book.getMetadata() != null && book.getMetadata().getTitle() != null) {
+            return book.getMetadata().getTitle();
+        }
+        return "알 수 없음";
+    }
+    
+    /**
+     * 책 저자를 안전하게 가져옵니다.
+     */
+    private String getBookAuthor(BookEntity book) {
+        if (book.getMetadata() != null && book.getMetadata().getAuthors() != null 
+                && !book.getMetadata().getAuthors().isEmpty()) {
+            Set<String> authorNames = new HashSet<>();
+            book.getMetadata().getAuthors().forEach(author -> {
+                if (author.getName() != null) {
+                    authorNames.add(author.getName());
+                }
+            });
+            return String.join(", ", authorNames);
+        }
+        return "알 수 없음";
+    }
+    
+    /**
      * 요약 스타일별 시스템 프롬프트를 생성합니다.
      * 
      * 각 스타일은 AI에게 명확한 지침을 제공하여 일관된 형태의 출력을 생성합니다.
-     * 시스템 프롬프트는 AI의 행동 양식과 출력 형식을 정의합니다.
      */
     private String buildSummarySystemPrompt(String style) {
-        return switch (style.toLowerCase()) {
+        String lowerStyle = style.toLowerCase();
+        
+        return switch (lowerStyle) {
             case "brief" -> """
                 당신은 전문적인 책 평론가이자 요약가입니다. 
                 간결하고 핵심적인 요약을 작성하는 것이 당신의 전문 분야입니다.
@@ -227,7 +252,6 @@ public class BookSummaryService {
                 - 스포일러를 최소화하면서도 충분한 정보를 제공하세요
                 """;
                 
-            case "detailed":
             default -> """
                 당신은 전문적인 책 요약가입니다. 포괄적이고 균형 잡힌 요약을 작성하는 것이 전문입니다.
                 
@@ -259,17 +283,10 @@ public class BookSummaryService {
     
     /**
      * 콘텐츠를 요약에 적합하게 최적화합니다.
-     * Ollama 모델의 컨텍스트 윈도우 제한을 고려하여 적절히 자릅니다.
      */
     private String optimizeContentForSummarization(String content, int maxWords) {
-        // 한국어와 영어가 혼합된 텍스트에서 단어 수 추정
-        // 일반적으로 4글자당 약 1토큰으로估算 (영문 기준)
-        
         final int ESTIMATED_TOKENS_PER_WORD = 4;
         int estimatedTokens = content.length() / ESTIMATED_TOKENS_PER_WORD;
-        
-        // Ollama 모델의 일반적인 컨텍스트 윈도우 (예: 8K 토큰)
-        // 안전하게 6000 토큰 정도 사용 가능
         final int MAX_CONTEXT_TOKENS = 6000;
         
         if (estimatedTokens > MAX_CONTEXT_TOKENS) {
@@ -279,15 +296,20 @@ public class BookSummaryService {
             content = content.substring(0, Math.min(maxChars, content.length()));
         }
         
+        if (maxWords > 0) {
+            String[] words = content.split("\\s+");
+            if (words.length > maxWords) {
+                content = String.join(" ", java.util.Arrays.copyOf(words, maxWords));
+            }
+        }
+        
         return content;
     }
     
     /**
      * 토큰 수를 추정합니다.
-     * 실제 구현에서는 토크나이저 라이브러리를 사용하는 것이 정확합니다.
      */
     private int estimateTokenCount(String text) {
-        // 영어 기준 대략 4글자당 1토큰, 한국어는 더 많음
         return text.length() / 3;
     }
 }
