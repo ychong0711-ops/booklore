@@ -99,9 +99,25 @@ test {
     jvmArgs("-XX:+EnableDynamicAgentLoading")
 }
 
+// Angular 빌드를 위한 자동 복사 태스크
+task copyAngularToStatic(type: Copy) {
+    from "$projectDir/../booklore-ui/dist/booklore/browser"
+    into "$projectDir/src/main/resources/static"
+    include '**/*'
+}
+
+// Angular 빌드가 완료된 후 파일 복사
+copyAngularToStatic.mustRunAfter :booklore-ui:build
+
+// bootRun 실행 시 Angular 빌드 및 복사가 먼저 수행되도록 설정
+bootRun.dependsOn copyAngularToStatic
+
+// 전체 빌드 시에도 Angular 파일 포함
+build.dependsOn copyAngularToStatic
+
 bootRun {
     def debug = System.getenv('REMOTE_DEBUG_ENABLED')
-    if (debug.equals("true")) { 
+    if (debug.equals("true")) {
         jvmArgs("-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005")
     }
 }
