@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.bookdrop.BookdropMonitoringServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:01.179Z" hostname="DESKTOP-67T0KNA" time="0.053">
+  <properties/>
+  <testcase name="scanExistingBookdropFiles_ShouldIgnoreDotUnderscoreFiles()" classname="com.adityachandel.booklore.service.bookdrop.BookdropMonitoringServiceTest" time="0.053"/>
+  <system-out><![CDATA[14:34:01.215 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookdropMonitoringService -- Starting bookdrop folder monitor: C:\Users\home\AppData\Local\Temp\junit-9259470326727437606
+14:34:01.222 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookdropMonitoringService -- Found existing supported file on startup: C:\Users\home\AppData\Local\Temp\junit-9259470326727437606\book.epub
+14:34:01.223 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookdropMonitoringService -- Found existing supported file on startup: C:\Users\home\AppData\Local\Temp\junit-9259470326727437606\subdir\another.epub
+14:34:01.223 [BookdropFolderWatcher] INFO com.adityachandel.booklore.service.bookdrop.BookdropMonitoringService -- Bookdrop monitor thread interrupted
+14:34:01.224 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookdropMonitoringService -- Stopped bookdrop folder monitor
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

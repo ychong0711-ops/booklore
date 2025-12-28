@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Bookmark Building" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:58.843Z" hostname="DESKTOP-67T0KNA" time="0.005">
+  <properties/>
+  <testcase name="Should build bookmark from progress with location" classname="com.adityachandel.booklore.service.KoboReadingStateBuilderTest$BookmarkBuilding" time="0.001"/>
+  <testcase name="Should build empty bookmark with timestamp" classname="com.adityachandel.booklore.service.KoboReadingStateBuilderTest$BookmarkBuilding" time="0.001"/>
+  <testcase name="Should use default time when progress received time is null" classname="com.adityachandel.booklore.service.KoboReadingStateBuilderTest$BookmarkBuilding" time="0.002"/>
+  <testcase name="Should round progress percentage correctly" classname="com.adityachandel.booklore.service.KoboReadingStateBuilderTest$BookmarkBuilding" time="0.001"/>
+  <testcase name="Should build bookmark without location when null" classname="com.adityachandel.booklore.service.KoboReadingStateBuilderTest$BookmarkBuilding" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

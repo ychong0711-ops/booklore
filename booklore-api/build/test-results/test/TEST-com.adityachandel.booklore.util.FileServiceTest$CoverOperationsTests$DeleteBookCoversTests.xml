@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="deleteBookCovers" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:09.271Z" hostname="DESKTOP-67T0KNA" time="0.124">
+  <properties/>
+  <testcase name="nonExistentCovers_doesNotThrow()" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$DeleteBookCoversTests" time="0.004"/>
+  <testcase name="existingCovers_deletesAll()" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$DeleteBookCoversTests" time="0.05"/>
+  <testcase name="singleBookId_works()" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$DeleteBookCoversTests" time="0.037"/>
+  <testcase name="mixedExistingAndNonExisting_deletesExisting()" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$DeleteBookCoversTests" time="0.028"/>
+  <testcase name="emptySet_doesNothing()" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$DeleteBookCoversTests" time="0.004"/>
+  <system-out><![CDATA[14:34:09.273 [Test worker] INFO com.adityachandel.booklore.util.FileService -- Deleted 2 book covers
+14:34:09.320 [Test worker] INFO com.adityachandel.booklore.util.FileService -- Deleted 2 book covers
+14:34:09.357 [Test worker] INFO com.adityachandel.booklore.util.FileService -- Deleted 1 book covers
+14:34:09.387 [Test worker] INFO com.adityachandel.booklore.util.FileService -- Deleted 2 book covers
+14:34:09.393 [Test worker] INFO com.adityachandel.booklore.util.FileService -- Deleted 0 book covers
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

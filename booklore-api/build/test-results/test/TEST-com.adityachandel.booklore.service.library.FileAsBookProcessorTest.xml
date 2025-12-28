@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.library.FileAsBookProcessorTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:04.628Z" hostname="DESKTOP-67T0KNA" time="0.045">
+  <properties/>
+  <testcase name="processLibraryFile_shouldReturnNullForUnsupportedFileType()" classname="com.adityachandel.booklore.service.library.FileAsBookProcessorTest" time="0.03"/>
+  <testcase name="processLibraryFile_shouldProcessSupportedFileTypes()" classname="com.adityachandel.booklore.service.library.FileAsBookProcessorTest" time="0.002"/>
+  <testcase name="processLibraryFiles_shouldNotSendNotificationWhenProcessorReturnsNull()" classname="com.adityachandel.booklore.service.library.FileAsBookProcessorTest" time="0.002"/>
+  <testcase name="processLibraryFiles_shouldSkipFilesWithUnsupportedExtensions()" classname="com.adityachandel.booklore.service.library.FileAsBookProcessorTest" time="0.002"/>
+  <testcase name="processLibraryFile_shouldHandleNullReturnFromProcessor()" classname="com.adityachandel.booklore.service.library.FileAsBookProcessorTest" time="0.001"/>
+  <testcase name="processLibraryFiles_shouldProcessAllSupportedFileExtensions()" classname="com.adityachandel.booklore.service.library.FileAsBookProcessorTest" time="0.002"/>
+  <testcase name="processLibraryFiles_shouldHandleEmptyList()" classname="com.adityachandel.booklore.service.library.FileAsBookProcessorTest" time="0.004"/>
+  <testcase name="processLibraryFiles_shouldProcessAllValidFiles()" classname="com.adityachandel.booklore.service.library.FileAsBookProcessorTest" time="0.002"/>
+  <system-out><![CDATA[14:34:04.658 [Test worker] WARN com.adityachandel.booklore.service.library.FileAsBookProcessor -- Unsupported file type for file: document.txt
+14:34:04.662 [Test worker] INFO com.adityachandel.booklore.service.library.FileAsBookProcessor -- Processing file: book.epub
+14:34:04.662 [Test worker] INFO com.adityachandel.booklore.service.library.FileAsBookProcessor -- Finished processing library 'null'
+14:34:04.664 [Test worker] INFO com.adityachandel.booklore.service.library.FileAsBookProcessor -- Processing file: book.epub
+14:34:04.665 [Test worker] ERROR com.adityachandel.booklore.service.library.FileAsBookProcessor -- Failed to process file 'book.epub': Cannot invoke "com.adityachandel.booklore.service.kobo.KoboAutoShelfService.autoAddBookToKoboShelves(java.lang.Long)" because "this.koboAutoShelfService" is null
+14:34:04.665 [Test worker] INFO com.adityachandel.booklore.service.library.FileAsBookProcessor -- Processing file: document.txt
+14:34:04.665 [Test worker] WARN com.adityachandel.booklore.service.library.FileAsBookProcessor -- Unsupported file type for file: document.txt
+14:34:04.665 [Test worker] INFO com.adityachandel.booklore.service.library.FileAsBookProcessor -- Finished processing library 'null'
+14:34:04.667 [Test worker] INFO com.adityachandel.booklore.service.library.FileAsBookProcessor -- Processing file: book.epub
+14:34:04.667 [Test worker] ERROR com.adityachandel.booklore.service.library.FileAsBookProcessor -- Failed to process file 'book.epub': Cannot invoke "com.adityachandel.booklore.service.kobo.KoboAutoShelfService.autoAddBookToKoboShelves(java.lang.Long)" because "this.koboAutoShelfService" is null
+14:34:04.667 [Test worker] INFO com.adityachandel.booklore.service.library.FileAsBookProcessor -- Processing file: book.pdf
+14:34:04.667 [Test worker] ERROR com.adityachandel.booklore.service.library.FileAsBookProcessor -- Failed to process file 'book.pdf': Cannot invoke "com.adityachandel.booklore.service.kobo.KoboAutoShelfService.autoAddBookToKoboShelves(java.lang.Long)" because "this.koboAutoShelfService" is null
+14:34:04.667 [Test worker] INFO com.adityachandel.booklore.service.library.FileAsBookProcessor -- Processing file: comic.cbz
+14:34:04.668 [Test worker] ERROR com.adityachandel.booklore.service.library.FileAsBookProcessor -- Failed to process file 'comic.cbz': Cannot invoke "com.adityachandel.booklore.service.kobo.KoboAutoShelfService.autoAddBookToKoboShelves(java.lang.Long)" because "this.koboAutoShelfService" is null
+14:34:04.668 [Test worker] INFO com.adityachandel.booklore.service.library.FileAsBookProcessor -- Processing file: comic.cbr
+14:34:04.668 [Test worker] ERROR com.adityachandel.booklore.service.library.FileAsBookProcessor -- Failed to process file 'comic.cbr': Cannot invoke "com.adityachandel.booklore.service.kobo.KoboAutoShelfService.autoAddBookToKoboShelves(java.lang.Long)" because "this.koboAutoShelfService" is null
+14:34:04.668 [Test worker] INFO com.adityachandel.booklore.service.library.FileAsBookProcessor -- Finished processing library 'null'
+14:34:04.669 [Test worker] INFO com.adityachandel.booklore.service.library.FileAsBookProcessor -- Finished processing library 'null'
+14:34:04.674 [Test worker] INFO com.adityachandel.booklore.service.library.FileAsBookProcessor -- Processing file: book1.epub
+14:34:04.674 [Test worker] ERROR com.adityachandel.booklore.service.library.FileAsBookProcessor -- Failed to process file 'book1.epub': Cannot invoke "com.adityachandel.booklore.service.kobo.KoboAutoShelfService.autoAddBookToKoboShelves(java.lang.Long)" because "this.koboAutoShelfService" is null
+14:34:04.674 [Test worker] INFO com.adityachandel.booklore.service.library.FileAsBookProcessor -- Processing file: book2.pdf
+14:34:04.674 [Test worker] ERROR com.adityachandel.booklore.service.library.FileAsBookProcessor -- Failed to process file 'book2.pdf': Cannot invoke "com.adityachandel.booklore.service.kobo.KoboAutoShelfService.autoAddBookToKoboShelves(java.lang.Long)" because "this.koboAutoShelfService" is null
+14:34:04.674 [Test worker] INFO com.adityachandel.booklore.service.library.FileAsBookProcessor -- Finished processing library 'null'
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.metadata.extractor.CbxMetadataExtractorTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:05.404Z" hostname="DESKTOP-67T0KNA" time="0.111">
+  <properties/>
+  <testcase name="extractMetadata_fromCbz_withComicInfo_populatesFields()" classname="com.adityachandel.booklore.service.metadata.extractor.CbxMetadataExtractorTest" time="0.048"/>
+  <testcase name="extractCover_fromCbz_fallbackAlphabeticalFirst()" classname="com.adityachandel.booklore.service.metadata.extractor.CbxMetadataExtractorTest" time="0.031"/>
+  <testcase name="extractMetadata_nonArchive_fallbackTitle()" classname="com.adityachandel.booklore.service.metadata.extractor.CbxMetadataExtractorTest" time="0.004"/>
+  <testcase name="extractCover_fromCbz_usesComicInfoImageFile()" classname="com.adityachandel.booklore.service.metadata.extractor.CbxMetadataExtractorTest" time="0.028"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

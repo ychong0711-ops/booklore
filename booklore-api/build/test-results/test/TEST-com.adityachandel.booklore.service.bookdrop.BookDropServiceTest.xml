@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.bookdrop.BookDropServiceTest" tests="16" skipped="1" failures="0" errors="0" timestamp="2025-12-28T05:34:00.728Z" hostname="DESKTOP-67T0KNA" time="0.318">
+  <properties/>
+  <testcase name="getBookdropCover_WhenCoverDoesNotExist_ShouldReturnNull()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceTest" time="0.111"/>
+  <testcase name="finalizeImport_WhenMetadataRefreshFails_ShouldPreserveSourceFileInBookdrop()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceTest" time="0.06"/>
+  <testcase name="finalizeImport_WhenProcessingSucceeds_ShouldDeleteSourceFileFromBookdrop()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceTest" time="0.015"/>
+  <testcase name="finalizeImport_WhenLibraryNotFound_ShouldFail()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceTest" time="0.01"/>
+  <testcase name="discardSelectedFiles_WhenBookdropFolderDoesNotExist_ShouldHandleGracefully()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceTest" time="0.009"/>
+  <testcase name="discardSelectedFiles_WhenSelectAllTrue_ShouldDeleteAllExceptExcluded()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceTest" time="0.014"/>
+  <testcase name="discardSelectedFiles_WhenSelectAllFalse_ShouldDeleteOnlySelected()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceTest" time="0.012"/>
+  <testcase name="getFilesByStatus_WhenStatusIsNotPending_ShouldReturnAllFiles()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceTest" time="0.008"/>
+  <testcase name="getBookdropCover_WhenCoverExists_ShouldReturnResource()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceTest" time="0.012"/>
+  <testcase name="finalizeImport_ShouldPauseAndResumeMonitoring()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceTest" time="0.008"/>
+  <testcase name="getFileNotificationSummary_ShouldReturnCorrectCounts()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceTest" time="0.009"/>
+  <testcase name="getFilesByStatus_WhenStatusIsPending_ShouldReturnPendingFiles()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceTest" time="0.01"/>
+  <testcase name="finalizeImport_WhenProcessingFails_ShouldPreserveSourceFileInBookdrop()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceTest" time="0.011"/>
+  <testcase name="finalizeImport_WhenIOExceptionDuringMove_ShouldHandleGracefully()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceTest" time="0.011"/>
+  <testcase name="finalizeImport_WhenSourceFileDoesNotExist_ShouldDeleteFromDB()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceTest" time="0.01"/>
+  <testcase name="finalizeImport_WhenSelectAllTrue_ShouldProcessAllFiles()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceTest" time="0.001">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[14:34:00.877 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Starting finalizeImport: selectAll=false, provided file count=1, defaultLibraryId=null, defaultPathId=null
+14:34:00.877 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Processing 1 manually selected files in chunks of 100. File IDs: [1]
+14:34:00.879 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Collected 1 unique libraries for monitoring unregistration: [1]
+14:34:00.879 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Unregistered 1 libraries from monitoring
+14:34:00.879 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Processing chunk 1/1 (1 files): IDs=[1]
+14:34:00.887 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Moved file id=1, name=test-book.pdf from 'C:\Users\home\AppData\Local\Temp\junit-7236366234423399635\metadata-failure-test-book.pdf' to 'C:\Users\home\AppData\Local\Temp\junit-7236366234423399635\library\moved-book.pdf'
+14:34:00.892 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Cleaned up target file 'C:\Users\home\AppData\Local\Temp\junit-7236366234423399635\library\moved-book.pdf' after processing exception for file id=1
+14:34:00.893 [Test worker] WARN com.adityachandel.booklore.service.bookdrop.BookDropService -- Finalization failed (non-exception) for file id=1, name=test-book.pdf, message=Processing failed: Metadata refresh failed
+14:34:00.894 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Re-registered 1 libraries for monitoring
+14:34:00.894 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Finalization complete. Success: 0, Failed: 1, Total processed: 1
+14:34:00.894 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Bookdrop monitoring resumed
+14:34:00.907 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Starting finalizeImport: selectAll=true, provided file count=0, defaultLibraryId=1, defaultPathId=1
+14:34:00.907 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- SelectAll: Total files to finalize (after exclusions): 1, Excluded IDs: []
+14:34:00.907 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Collected 1 unique libraries for monitoring unregistration: [1]
+14:34:00.907 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Unregistered 1 libraries from monitoring
+14:34:00.907 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Processing chunk 1/1 (1 files): IDs=[1]
+14:34:00.908 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Moved file id=1, name=test-book.pdf from 'C:\Users\home\AppData\Local\Temp\junit-462694413263361913\test-book.pdf' to 'C:\Users\home\AppData\Local\Temp\junit-462694413263361913\moved-book.pdf'
+14:34:00.908 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- File import completed: id=1, name=moved-book.pdf, library=Test Library, path=C:\Users\home\AppData\Local\Temp\junit-462694413263361913
+14:34:00.908 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Successfully deleted source file 'C:\Users\home\AppData\Local\Temp\junit-462694413263361913\test-book.pdf' after successful import for file id=1
+14:34:00.909 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Successfully finalized file id=1, name=test-book.pdf
+14:34:00.909 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Re-registered 1 libraries for monitoring
+14:34:00.909 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Finalization complete. Success: 1, Failed: 0, Total processed: 1
+14:34:00.909 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Bookdrop monitoring resumed
+14:34:00.918 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Starting finalizeImport: selectAll=true, provided file count=0, defaultLibraryId=999, defaultPathId=1
+14:34:00.919 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- SelectAll: Total files to finalize (after exclusions): 1, Excluded IDs: []
+14:34:00.919 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Collected 1 unique libraries for monitoring unregistration: [999]
+14:34:00.919 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Unregistered 1 libraries from monitoring
+14:34:00.919 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Processing chunk 1/1 (1 files): IDs=[1]
+14:34:00.919 [Test worker] ERROR com.adityachandel.booklore.service.bookdrop.BookDropService -- Error finalizing file [id=1, name=test-book.pdf]: Library not found with ID: 999
+com.adityachandel.booklore.exception.APIException: Library not found with ID: 999
+	at com.adityachandel.booklore.exception.ApiError.createException(ApiError.java:72)
+	at com.adityachandel.booklore.service.bookdrop.BookDropService.lambda$moveFile$0(BookDropService.java:376)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at com.adityachandel.booklore.service.bookdrop.BookDropService.moveFile(BookDropService.java:376)
+	at com.adityachandel.booklore.service.bookdrop.BookDropService.processFile(BookDropService.java:325)
+	at com.adityachandel.booklore.service.bookdrop.BookDropService.processFileChunks(BookDropService.java:249)
+	at com.adityachandel.booklore.service.bookdrop.BookDropService.processAllFiles(BookDropService.java:197)
+	at com.adityachandel.booklore.service.bookdrop.BookDropService.processFinalizationRequest(BookDropService.java:165)
+	at com.adityachandel.booklore.service.bookdrop.BookDropService.finalizeImport(BookDropService.java:109)
+	at com.adityachandel.booklore.service.bookdrop.BookDropServiceTest.finalizeImport_WhenLibraryNotFound_ShouldFail(BookDropServiceTest.java:299)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:775)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:479)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:216)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:212)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+14:34:00.920 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Re-registered 1 libraries for monitoring
+14:34:00.920 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Finalization complete. Success: 0, Failed: 1, Total processed: 1
+14:34:00.920 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Bookdrop monitoring resumed
+14:34:00.929 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Bookdrop folder does not exist: \non-existent-path
+14:34:00.930 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Bookdrop monitoring resumed after cleanup (library monitoring unaffected)
+14:34:00.942 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Discarding all files except excluded IDs: [2]
+14:34:00.943 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Deleted 1 bookdrop DB entries
+14:34:00.943 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Bookdrop cleanup summary: deleted 1 files, 0 folders, 1 DB entries, 1 covers
+14:34:00.943 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Bookdrop monitoring resumed after cleanup (library monitoring unaffected)
+14:34:00.955 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Discarding selected files: [1]
+14:34:00.956 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Deleted 1 bookdrop DB entries
+14:34:00.956 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Bookdrop cleanup summary: deleted 1 files, 0 folders, 1 DB entries, 1 covers
+14:34:00.956 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Bookdrop monitoring resumed after cleanup (library monitoring unaffected)
+14:34:00.985 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Starting finalizeImport: selectAll=false, provided file count=0, defaultLibraryId=null, defaultPathId=null
+14:34:00.985 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Processing 0 manually selected files in chunks of 100. File IDs: []
+14:34:00.985 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Collected 0 unique libraries for monitoring unregistration: []
+14:34:00.985 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Unregistered 0 libraries from monitoring
+14:34:00.985 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Re-registered 0 libraries for monitoring
+14:34:00.985 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Finalization complete. Success: 0, Failed: 0, Total processed: 0
+14:34:00.985 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Bookdrop monitoring resumed
+14:34:01.014 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Starting finalizeImport: selectAll=false, provided file count=1, defaultLibraryId=null, defaultPathId=null
+14:34:01.014 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Processing 1 manually selected files in chunks of 100. File IDs: [1]
+14:34:01.014 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Collected 1 unique libraries for monitoring unregistration: [1]
+14:34:01.014 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Unregistered 1 libraries from monitoring
+14:34:01.014 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Processing chunk 1/1 (1 files): IDs=[1]
+14:34:01.015 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Moved file id=1, name=test-book.pdf from 'C:\Users\home\AppData\Local\Temp\junit-5732050265689793942\test-book.pdf' to 'C:\Users\home\AppData\Local\Temp\junit-5732050265689793942\moved-book.pdf'
+14:34:01.015 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Cleaned up target file 'C:\Users\home\AppData\Local\Temp\junit-5732050265689793942\moved-book.pdf' after processing exception for file id=1
+14:34:01.015 [Test worker] WARN com.adityachandel.booklore.service.bookdrop.BookDropService -- Finalization failed (non-exception) for file id=1, name=test-book.pdf, message=Processing failed: Processing failed
+14:34:01.016 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Re-registered 1 libraries for monitoring
+14:34:01.016 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Finalization complete. Success: 0, Failed: 1, Total processed: 1
+14:34:01.016 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Bookdrop monitoring resumed
+14:34:01.026 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Starting finalizeImport: selectAll=true, provided file count=0, defaultLibraryId=1, defaultPathId=1
+14:34:01.026 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- SelectAll: Total files to finalize (after exclusions): 1, Excluded IDs: []
+14:34:01.026 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Collected 1 unique libraries for monitoring unregistration: [1]
+14:34:01.026 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Unregistered 1 libraries from monitoring
+14:34:01.026 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Processing chunk 1/1 (1 files): IDs=[1]
+14:34:01.027 [Test worker] ERROR com.adityachandel.booklore.service.bookdrop.BookDropService -- Failed to move file id=1, name=test-book.pdf from 'C:\Users\home\AppData\Local\Temp\junit-10268362607715579861\test-book.pdf' to 'C:\Users\home\AppData\Local\Temp\junit-10268362607715579861\target-file.pdf': Disk full
+java.io.IOException: Disk full
+	at java.base/java.nio.file.Files.createTempFile(Files.java:923)
+	at com.adityachandel.booklore.service.bookdrop.BookDropService.performFileMove(BookDropService.java:408)
+	at com.adityachandel.booklore.service.bookdrop.BookDropService.moveFile(BookDropService.java:402)
+	at com.adityachandel.booklore.service.bookdrop.BookDropService.processFile(BookDropService.java:325)
+	at com.adityachandel.booklore.service.bookdrop.BookDropService.processFileChunks(BookDropService.java:249)
+	at com.adityachandel.booklore.service.bookdrop.BookDropService.processAllFiles(BookDropService.java:197)
+	at com.adityachandel.booklore.service.bookdrop.BookDropService.processFinalizationRequest(BookDropService.java:165)
+	at com.adityachandel.booklore.service.bookdrop.BookDropService.finalizeImport(BookDropService.java:109)
+	at com.adityachandel.booklore.service.bookdrop.BookDropServiceTest.finalizeImport_WhenIOExceptionDuringMove_ShouldHandleGracefully(BookDropServiceTest.java:437)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:775)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:479)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:216)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:212)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+14:34:01.027 [Test worker] WARN com.adityachandel.booklore.service.bookdrop.BookDropService -- Finalization failed (non-exception) for file id=1, name=test-book.pdf, message=Failed to move file: Disk full
+14:34:01.027 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Re-registered 1 libraries for monitoring
+14:34:01.027 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Finalization complete. Success: 0, Failed: 1, Total processed: 1
+14:34:01.027 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Bookdrop monitoring resumed
+14:34:01.038 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Starting finalizeImport: selectAll=true, provided file count=0, defaultLibraryId=1, defaultPathId=1
+14:34:01.038 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- SelectAll: Total files to finalize (after exclusions): 1, Excluded IDs: []
+14:34:01.038 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Collected 1 unique libraries for monitoring unregistration: [1]
+14:34:01.038 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Unregistered 1 libraries from monitoring
+14:34:01.038 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Processing chunk 1/1 (1 files): IDs=[2]
+14:34:01.038 [Test worker] WARN com.adityachandel.booklore.service.bookdrop.BookDropService -- Source file [id=2] not found at '\non-existent\missing-file.pdf'. Deleting entry from DB.
+14:34:01.038 [Test worker] WARN com.adityachandel.booklore.service.bookdrop.BookDropService -- Finalization failed (non-exception) for file id=2, name=missing-file.pdf, message=Source file does not exist in bookdrop folder
+14:34:01.038 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Re-registered 1 libraries for monitoring
+14:34:01.038 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Finalization complete. Success: 0, Failed: 1, Total processed: 1
+14:34:01.039 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Bookdrop monitoring resumed
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

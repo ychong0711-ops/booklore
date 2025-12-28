@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Metadata writing Tests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:07.310Z" hostname="DESKTOP-67T0KNA" time="0.054">
+  <properties/>
+  <testcase name="Should only overwrite authors of EPUB metadata" classname="com.adityachandel.booklore.service.metadata.writer.EpubMetadataWriterTest$MetadataWritingTests" time="0.054"/>
+  <system-out><![CDATA[14:34:07.356 [Test worker] INFO com.adityachandel.booklore.service.metadata.writer.EpubMetadataWriter -- Metadata updated in EPUB: test-metadata-21868175745500.epub
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

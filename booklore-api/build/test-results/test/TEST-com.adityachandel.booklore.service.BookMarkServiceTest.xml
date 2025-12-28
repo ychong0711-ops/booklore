@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.BookMarkServiceTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:53.813Z" hostname="DESKTOP-67T0KNA" time="0.164">
+  <properties/>
+  <testcase name="createBookmark_Success()" classname="com.adityachandel.booklore.service.BookMarkServiceTest" time="0.131"/>
+  <testcase name="deleteBookmark_NotFound()" classname="com.adityachandel.booklore.service.BookMarkServiceTest" time="0.003"/>
+  <testcase name="createBookmark_BookNotFound()" classname="com.adityachandel.booklore.service.BookMarkServiceTest" time="0.003"/>
+  <testcase name="deleteBookmark_Success()" classname="com.adityachandel.booklore.service.BookMarkServiceTest" time="0.003"/>
+  <testcase name="updateBookmark_Success()" classname="com.adityachandel.booklore.service.BookMarkServiceTest" time="0.006"/>
+  <testcase name="createBookmark_Duplicate()" classname="com.adityachandel.booklore.service.BookMarkServiceTest" time="0.003"/>
+  <testcase name="getBookmarksForBook_Success()" classname="com.adityachandel.booklore.service.BookMarkServiceTest" time="0.003"/>
+  <testcase name="getBookmarkById_Success()" classname="com.adityachandel.booklore.service.BookMarkServiceTest" time="0.002"/>
+  <testcase name="getBookmarkById_NotFound()" classname="com.adityachandel.booklore.service.BookMarkServiceTest" time="0.002"/>
+  <testcase name="updateBookmark_NotFound()" classname="com.adityachandel.booklore.service.BookMarkServiceTest" time="0.003"/>
+  <system-out><![CDATA[14:33:53.944 [Test worker] INFO com.adityachandel.booklore.service.book.BookMarkService -- Creating bookmark for book 100 by user 1
+14:33:53.954 [Test worker] INFO com.adityachandel.booklore.service.book.BookMarkService -- Deleting bookmark 50
+14:33:53.961 [Test worker] INFO com.adityachandel.booklore.service.book.BookMarkService -- Updating bookmark 50
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

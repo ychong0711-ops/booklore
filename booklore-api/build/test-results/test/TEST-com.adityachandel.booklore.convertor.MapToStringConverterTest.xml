@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.convertor.MapToStringConverterTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:53.393Z" hostname="DESKTOP-67T0KNA" time="0.009">
+  <properties/>
+  <testcase name="convertToEntityAttribute_withBlankString_shouldReturnNull()" classname="com.adityachandel.booklore.convertor.MapToStringConverterTest" time="0.002"/>
+  <testcase name="convertToEntityAttribute_withEmptyString_shouldReturnNull()" classname="com.adityachandel.booklore.convertor.MapToStringConverterTest" time="0.0"/>
+  <testcase name="convertToDatabaseColumn_shouldSerializeMapToJsonString()" classname="com.adityachandel.booklore.convertor.MapToStringConverterTest" time="0.002"/>
+  <testcase name="convertToEntityAttribute_withNull_shouldReturnNull()" classname="com.adityachandel.booklore.convertor.MapToStringConverterTest" time="0.0"/>
+  <testcase name="convertToEntityAttribute_shouldDeserializeJsonStringToMap()" classname="com.adityachandel.booklore.convertor.MapToStringConverterTest" time="0.002"/>
+  <testcase name="convertToDatabaseColumn_withNull_shouldReturnNull()" classname="com.adityachandel.booklore.convertor.MapToStringConverterTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

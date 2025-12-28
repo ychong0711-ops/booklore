@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - FolderAsBookFileProcessorExampleTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>FolderAsBookFileProcessorExampleTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.adityachandel.booklore.service.library.html">com.adityachandel.booklore.service.library</a> &gt; FolderAsBookFileProcessorExampleTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">9</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.158s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">processLibraryFiles_shouldAddAdditionalFilesToExistingBook()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">processLibraryFiles_shouldAddAdditionalFormatsToExistingBook()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">processLibraryFiles_shouldAddSupplementaryFilesToExistingBook()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">processLibraryFiles_shouldCreateNewBookFromDirectory()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">processLibraryFiles_shouldCreateNewBookFromDirectoryWithAdditionalBookFormats()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">processLibraryFiles_shouldCreateNewBookFromDirectoryWithAdditionalBookFormatsAndSupplementaryFiles()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">processLibraryFiles_shouldCreateNewBookFromDirectoryWithSameSupplementaryFilesByHash()</td>
+<td class="success">0.106s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">processLibraryFiles_shouldIgnoreAdditionalFormatWithTheSameHashUsedInOtherBook()</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">processLibraryFiles_shouldProcessDeepSubfolders()</td>
+<td class="success">0.021s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>14:34:04.770 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Processing 2 directories with 4 total files for library: Test Library
+14:34:04.773 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Accounting 101.pdf
+14:34:04.776 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Accounting 101.pdf
+14:34:04.777 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Accounting 101.pdf
+14:34:04.781 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Accounting 101 2nd Edition.pdf
+14:34:04.781 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Accounting 101 2nd Edition.pdf
+14:34:04.781 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Accounting 101 2nd Edition.pdf
+14:34:04.785 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Processing 2 directories with 3 total files for library: Test Library
+14:34:04.786 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Accounting 101.epub
+14:34:04.786 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Accounting 101.epub
+14:34:04.786 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Accounting 101.epub
+14:34:04.787 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Anatomy 101.pdf
+14:34:04.788 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Anatomy 101.pdf
+14:34:04.788 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Anatomy 101.pdf
+14:34:04.792 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Processing 1 directories with 1 total files for library: Test Library
+14:34:04.795 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Processing 2 directories with 4 total files for library: Test Library
+14:34:04.795 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Accounting 101.epub
+14:34:04.796 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Accounting 101.epub
+14:34:04.796 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Accounting 101.epub
+14:34:04.796 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Anatomy 101.pdf
+14:34:04.797 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Anatomy 101.pdf
+14:34:04.797 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Anatomy 101.pdf
+14:34:04.800 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Processing 18 directories with 30 total files for library: Test Library
+14:34:04.800 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Accounting 101.epub
+14:34:04.801 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Accounting 101.epub
+14:34:04.801 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Accounting 101.epub
+14:34:04.801 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Anatomy 101.pdf
+14:34:04.802 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Anatomy 101.pdf
+14:34:04.802 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Anatomy 101.pdf
+14:34:04.802 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: How to Repair.epub
+14:34:04.802 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: How to Repair.epub
+14:34:04.802 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: How to Repair.epub
+14:34:04.803 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Superman v1.cbr
+14:34:04.803 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Superman v1.cbr
+14:34:04.803 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Superman v1.cbr
+14:34:04.804 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Superman v2.cbr
+14:34:04.804 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Superman v2.cbr
+14:34:04.804 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Superman v2.cbr
+14:34:04.804 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Batman v1.cbr
+14:34:04.805 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Batman v1.cbr
+14:34:04.805 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Batman v1.cbr
+14:34:04.805 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Batman v2.cbr
+14:34:04.806 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Batman v2.cbr
+14:34:04.806 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Batman v2.cbr
+14:34:04.806 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Spiderman v1.cbz
+14:34:04.806 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Spiderman v1.cbz
+14:34:04.806 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Spiderman v1.cbz
+14:34:04.807 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Spiderman v2.cbz
+14:34:04.807 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Spiderman v2.cbz
+14:34:04.808 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Spiderman v2.cbz
+14:34:04.808 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Naruto v1.cbr
+14:34:04.809 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Naruto v1.cbr
+14:34:04.809 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Naruto v1.cbr
+14:34:04.809 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Naruto v2.cbr
+14:34:04.809 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Naruto v2.cbr
+14:34:04.809 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Naruto v2.cbr
+14:34:04.810 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: One Piece v1.cbz
+14:34:04.810 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: One Piece v1.cbz
+14:34:04.810 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: One Piece v1.cbz
+14:34:04.810 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: One Piece v2.cbz
+14:34:04.811 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: One Piece v2.cbz
+14:34:04.811 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: One Piece v2.cbz
+14:34:04.812 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Design Patterns.epub
+14:34:04.812 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Design Patterns.epub
+14:34:04.812 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Design Patterns.epub
+14:34:04.813 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Effective Java.epub
+14:34:04.814 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Effective Java.epub
+14:34:04.814 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Effective Java.epub
+14:34:04.814 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: PyTorch for Machine Learning.epub
+14:34:04.815 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: PyTorch for Machine Learning.epub
+14:34:04.815 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: PyTorch for Machine Learning.epub
+14:34:04.816 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: TensorFlow for Machine Learning.epub
+14:34:04.816 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: TensorFlow for Machine Learning.epub
+14:34:04.816 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: TensorFlow for Machine Learning.epub
+14:34:04.817 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Flask Web Development.epub
+14:34:04.818 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Flask Web Development.epub
+14:34:04.818 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Flask Web Development.epub
+14:34:04.821 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Processing 1 directories with 1 total files for library: Test Library
+14:34:04.824 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Processing 2 directories with 2 total files for library: Test Library
+14:34:04.824 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Accounting 101.pdf
+14:34:04.825 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Accounting 101.pdf
+14:34:04.825 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Accounting 101.pdf
+14:34:04.825 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Anatomy 101.pdf
+14:34:04.825 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Anatomy 101.pdf
+14:34:04.825 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Anatomy 101.pdf
+14:34:04.828 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Processing 1 directories with 2 total files for library: Test Library
+14:34:04.832 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Processing 2 directories with 4 total files for library: Test Library
+14:34:04.833 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Accounting 101.epub
+14:34:04.834 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Accounting 101.epub
+14:34:04.834 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Accounting 101.epub
+14:34:04.835 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Creating new book from file: Accounting 101 2nd Edition.epub
+14:34:04.835 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Successfully created new book: Accounting 101 2nd Edition.epub
+14:34:04.835 [Test worker] INFO com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Created new book: Accounting 101 2nd Edition.epub
+14:34:04.836 [Test worker] ERROR com.adityachandel.booklore.service.library.FolderAsBookFileProcessor -- Error creating additional file Accounting 101 2nd Edition.pdf: File with the same hash already exists: hash-accounting-101
+java.lang.IllegalArgumentException: File with the same hash already exists: hash-accounting-101
+	at com.adityachandel.booklore.util.builder.LibraryTestBuilder.saveBookAdditionalFile(LibraryTestBuilder.java:330)
+	at com.adityachandel.booklore.util.builder.LibraryTestBuilder.lambda$new$7(LibraryTestBuilder.java:97)
+	at org.mockito.internal.stubbing.StubbedInvocationMatcher.answer(StubbedInvocationMatcher.java:42)
+	at org.mockito.internal.handler.MockHandlerImpl.handle(MockHandlerImpl.java:103)
+	at org.mockito.internal.handler.NullResultGuardian.handle(NullResultGuardian.java:29)
+	at org.mockito.internal.handler.InvocationNotifierHandler.handle(InvocationNotifierHandler.java:34)
+	at org.mockito.internal.creation.bytebuddy.access.MockMethodInterceptor.doIntercept(MockMethodInterceptor.java:84)
+	at org.mockito.internal.creation.bytebuddy.access.MockMethodInterceptor.doIntercept(MockMethodInterceptor.java:58)
+	at org.mockito.internal.creation.bytebuddy.access.MockMethodInterceptor$DispatcherDefaultingToRealMethod.interceptAbstract(MockMethodInterceptor.java:163)
+	at com.adityachandel.booklore.repository.BookAdditionalFileRepository$MockitoMock$ZtihqdIe.save(Unknown Source)
+	at com.adityachandel.booklore.repository.BookAdditionalFileRepository$MockitoMock$ZtihqdIe.save(Unknown Source)
+	at com.adityachandel.booklore.service.library.FolderAsBookFileProcessor.createAdditionalFileIfNotExists(FolderAsBookFileProcessor.java:239)
+	at com.adityachandel.booklore.service.library.FolderAsBookFileProcessor.processAdditionalFiles(FolderAsBookFileProcessor.java:211)
+	at com.adityachandel.booklore.service.library.FolderAsBookFileProcessor.processDirectory(FolderAsBookFileProcessor.java:81)
+	at com.adityachandel.booklore.service.library.FolderAsBookFileProcessor.processLibraryFiles(FolderAsBookFileProcessor.java:70)
+	at com.adityachandel.booklore.service.library.FolderAsBookFileProcessorExampleTest.processLibraryFiles_shouldIgnoreAdditionalFormatWithTheSameHashUsedInOtherBook(FolderAsBookFileProcessorExampleTest.java:171)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:775)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:479)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:161)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:152)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:91)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:112)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:94)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:87)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:216)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:212)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:137)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:156)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:160)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:146)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:144)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:100)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:201)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:170)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:94)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:59)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:142)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$1(InterceptingLauncher.java:39)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:38)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:124)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:94)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:122)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:72)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at 2025. 12. 28. 오후 2:34:11</p>
+</div>
+</div>
+</body>
+</html>

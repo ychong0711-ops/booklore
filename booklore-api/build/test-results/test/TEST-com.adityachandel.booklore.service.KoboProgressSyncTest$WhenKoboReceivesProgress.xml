@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="When Kobo receives progress from a device" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:58.816Z" hostname="DESKTOP-67T0KNA" time="0.002">
+  <properties/>
+  <testcase name="New progress should be marked for sync to other devices" classname="com.adityachandel.booklore.service.KoboProgressSyncTest$WhenKoboReceivesProgress" time="0.001"/>
+  <testcase name="Already synced progress should not sync again" classname="com.adityachandel.booklore.service.KoboProgressSyncTest$WhenKoboReceivesProgress" time="0.0"/>
+  <testcase name="Updated progress after sync should be marked for re-sync" classname="com.adityachandel.booklore.service.KoboProgressSyncTest$WhenKoboReceivesProgress" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

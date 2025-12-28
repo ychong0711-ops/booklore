@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Directory Cleanup Tests" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:01.386Z" hostname="DESKTOP-67T0KNA" time="0.628">
+  <properties/>
+  <testcase name="Deletes directories containing only ignored files (.DS_Store, Thumbs.db)" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$DirectoryCleanupTests" time="0.014"/>
+  <testcase name="Deletes subdirectories containing only ignored files" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$DirectoryCleanupTests" time="0.131"/>
+  <testcase name="Deletes empty parent directories up to library root" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$DirectoryCleanupTests" time="0.012"/>
+  <testcase name="Recursively deletes nested empty subdirectories" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$DirectoryCleanupTests" time="0.331"/>
+  <testcase name="Stops at directory containing non-ignored files" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$DirectoryCleanupTests" time="0.013"/>
+  <testcase name="Does not delete library root even if empty" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$DirectoryCleanupTests" time="0.005"/>
+  <testcase name="Does not delete subdirectories containing real files" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$DirectoryCleanupTests" time="0.118"/>
+  <system-out><![CDATA[14:34:01.395 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted ignored file: C:\Users\home\AppData\Local\Temp\junit-2098061764290094597\library\author\.DS_Store
+14:34:01.395 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted ignored file: C:\Users\home\AppData\Local\Temp\junit-2098061764290094597\library\author\Thumbs.db
+14:34:01.396 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-2098061764290094597\library\author
+14:34:01.412 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted ignored file: C:\Users\home\AppData\Local\Temp\junit-17341028835911859783\library\author\series\.DS_Store
+14:34:01.412 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted ignored file: C:\Users\home\AppData\Local\Temp\junit-17341028835911859783\library\author\series\Thumbs.db
+14:34:01.413 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-17341028835911859783\library\author\series
+14:34:01.528 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-17341028835911859783\library\author
+14:34:01.537 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-11971557504551642565\library\author\series\book
+14:34:01.538 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-11971557504551642565\library\author\series
+14:34:01.539 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-11971557504551642565\library\author
+14:34:01.551 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-16018861987422168526\library\author\series\volume\chapter
+14:34:01.662 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-16018861987422168526\library\author\series\volume
+14:34:01.767 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-16018861987422168526\library\author\series
+14:34:01.872 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-16018861987422168526\library\author
+14:34:01.883 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-16982851595388899653\library\author\series\book
+14:34:01.884 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-16982851595388899653\library\author\series
+14:34:01.903 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-4380785366735651598\library\author\empty-series
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

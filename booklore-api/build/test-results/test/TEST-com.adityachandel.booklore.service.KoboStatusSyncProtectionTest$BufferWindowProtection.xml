@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Buffer Window - Kobo sends multiple requests during single sync cycle" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:59.123Z" hostname="DESKTOP-67T0KNA" time="0.01">
+  <properties/>
+  <testcase name="Status synced 5s ago -&gt; Kobo sends progress -&gt; preserve status (handles rapid Kobo requests)" classname="com.adityachandel.booklore.service.KoboStatusSyncProtectionTest$BufferWindowProtection" time="0.004"/>
+  <testcase name="Status synced 11s ago -&gt; just past buffer -&gt; allow status update" classname="com.adityachandel.booklore.service.KoboStatusSyncProtectionTest$BufferWindowProtection" time="0.003"/>
+  <testcase name="Status synced 15s ago -&gt; buffer expired -&gt; Kobo progress can now update status (e.g., re-reading)" classname="com.adityachandel.booklore.service.KoboStatusSyncProtectionTest$BufferWindowProtection" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

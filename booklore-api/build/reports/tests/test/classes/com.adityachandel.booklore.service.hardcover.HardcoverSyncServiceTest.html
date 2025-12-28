@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - HardcoverSyncServiceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>HardcoverSyncServiceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.adityachandel.booklore.service.hardcover.html">com.adityachandel.booklore.service.hardcover</a> &gt; HardcoverSyncServiceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">18</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.208s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Should handle API errors gracefully</td>
+<td class="success">syncProgressToHardcover_whenApiError_shouldNotThrow()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should skip sync when API key is blank</td>
+<td class="success">syncProgressToHardcover_whenApiKeyBlank_shouldSkip()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should skip sync when API key is missing</td>
+<td class="success">syncProgressToHardcover_whenApiKeyMissing_shouldSkip()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should skip further processing when book not found on Hardcover</td>
+<td class="success">syncProgressToHardcover_whenBookNotFoundOnHardcover_shouldSkipAfterSearch()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should skip sync when book not found</td>
+<td class="success">syncProgressToHardcover_whenBookNotFound_shouldSkip()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should skip sync when Hardcover sync is not enabled for user</td>
+<td class="success">syncProgressToHardcover_whenHardcoverDisabled_shouldSkip()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should use ISBN10 when ISBN13 is missing</td>
+<td class="success">syncProgressToHardcover_whenIsbn13Missing_shouldUseIsbn10()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should skip sync when no ISBN available</td>
+<td class="success">syncProgressToHardcover_whenNoIsbn_shouldSkip()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should skip sync when book has no metadata</td>
+<td class="success">syncProgressToHardcover_whenNoMetadata_shouldSkip()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should set status to READ when progress &gt;= 99%</td>
+<td class="success">syncProgressToHardcover_whenProgress99Percent_shouldMakeApiCalls()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should update existing reading progress</td>
+<td class="success">syncProgressToHardcover_whenProgressExists_shouldUpdate()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should set status to CURRENTLY_READING when progress &lt; 99%</td>
+<td class="success">syncProgressToHardcover_whenProgressLessThan99_shouldMakeApiCalls()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should skip sync when progress is null</td>
+<td class="success">syncProgressToHardcover_whenProgressNull_shouldSkip()</td>
+<td class="success">0.141s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle null response gracefully</td>
+<td class="success">syncProgressToHardcover_whenResponseNull_shouldNotThrow()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle existing user_book gracefully</td>
+<td class="success">syncProgressToHardcover_whenUserBookExists_shouldFindExisting()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should skip sync when user settings not found</td>
+<td class="success">syncProgressToHardcover_whenUserSettingsNotFound_shouldSkip()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should use stored hardcoverBookId when available</td>
+<td class="success">syncProgressToHardcover_withStoredBookId_shouldUseStoredId()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should search by ISBN when hardcoverBookId is not stored</td>
+<td class="success">syncProgressToHardcover_withoutStoredBookId_shouldSearchByIsbn()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>14:34:03.088 [Test worker] INFO com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Progress calculation: userId=1, progressPercent=50.0%, totalPages=300, progressPages=150
+14:34:03.089 [Test worker] ERROR com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to sync progress to Hardcover for book 100 (user 1): Cannot invoke &quot;org.springframework.web.client.RestClient$RequestBodySpec.retrieve()&quot; because the return value of &quot;org.springframework.web.client.RestClient$RequestBodySpec.body(Object)&quot; is null
+14:34:03.094 [Test worker] INFO com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Progress calculation: userId=1, progressPercent=50.0%, totalPages=300, progressPages=150
+14:34:03.095 [Test worker] ERROR com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to sync progress to Hardcover for book 100 (user 1): Cannot invoke &quot;org.springframework.web.client.RestClient$RequestBodySpec.retrieve()&quot; because the return value of &quot;org.springframework.web.client.RestClient$RequestBodySpec.body(Object)&quot; is null
+14:34:03.099 [Test worker] INFO com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Progress calculation: userId=1, progressPercent=50.0%, totalPages=300, progressPages=150
+14:34:03.099 [Test worker] ERROR com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to sync progress to Hardcover for book 100 (user 1): Cannot invoke &quot;org.springframework.web.client.RestClient$RequestBodySpec.retrieve()&quot; because the return value of &quot;org.springframework.web.client.RestClient$RequestBodySpec.body(Object)&quot; is null
+14:34:03.111 [Test worker] INFO com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Progress calculation: userId=1, progressPercent=50.0%, totalPages=300, progressPages=150
+14:34:03.111 [Test worker] ERROR com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to sync progress to Hardcover for book 100 (user 1): Cannot invoke &quot;org.springframework.web.client.RestClient$RequestBodySpec.retrieve()&quot; because the return value of &quot;org.springframework.web.client.RestClient$RequestBodySpec.body(Object)&quot; is null
+14:34:03.115 [Test worker] INFO com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Progress calculation: userId=1, progressPercent=50.0%, totalPages=300, progressPages=150
+14:34:03.115 [Test worker] ERROR com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to sync progress to Hardcover for book 100 (user 1): Cannot invoke &quot;org.springframework.web.client.RestClient$RequestBodySpec.retrieve()&quot; because the return value of &quot;org.springframework.web.client.RestClient$RequestBodySpec.body(Object)&quot; is null
+14:34:03.120 [Test worker] WARN com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to search Hardcover by ISBN 1234567890: Cannot invoke &quot;org.springframework.web.client.RestClient$RequestBodySpec.retrieve()&quot; because the return value of &quot;org.springframework.web.client.RestClient$RequestBodySpec.body(Object)&quot; is null
+14:34:03.124 [Test worker] WARN com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to search Hardcover by ISBN 9781234567890: Cannot invoke &quot;org.springframework.web.client.RestClient$RequestBodySpec.retrieve()&quot; because the return value of &quot;org.springframework.web.client.RestClient$RequestBodySpec.body(Object)&quot; is null
+14:34:03.139 [Test worker] INFO com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Progress calculation: userId=1, progressPercent=99.0%, totalPages=300, progressPages=297
+14:34:03.139 [Test worker] ERROR com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to sync progress to Hardcover for book 100 (user 1): Cannot invoke &quot;org.springframework.web.client.RestClient$RequestBodySpec.retrieve()&quot; because the return value of &quot;org.springframework.web.client.RestClient$RequestBodySpec.body(Object)&quot; is null
+14:34:03.147 [Test worker] INFO com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Progress calculation: userId=1, progressPercent=50.0%, totalPages=300, progressPages=150
+14:34:03.147 [Test worker] ERROR com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to sync progress to Hardcover for book 100 (user 1): Cannot invoke &quot;org.springframework.web.client.RestClient$RequestBodySpec.retrieve()&quot; because the return value of &quot;org.springframework.web.client.RestClient$RequestBodySpec.body(Object)&quot; is null
+14:34:03.151 [Test worker] WARN com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to search Hardcover by ISBN 9781234567890: Cannot invoke &quot;org.springframework.web.client.RestClient$RequestBodySpec.retrieve()&quot; because the return value of &quot;org.springframework.web.client.RestClient$RequestBodySpec.body(Object)&quot; is null
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at 2025. 12. 28. 오후 2:34:11</p>
+</div>
+</div>
+</body>
+</html>

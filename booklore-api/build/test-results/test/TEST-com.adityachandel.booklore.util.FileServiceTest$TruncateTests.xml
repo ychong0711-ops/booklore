@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Truncate Method" tests="21" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:10.710Z" hostname="DESKTOP-67T0KNA" time="0.086">
+  <properties/>
+  <testcase name="Handles surrogate pairs (emojis)" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.003"/>
+  <testcase name="Returns null for null input" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.003"/>
+  <testcase name="Preserves unicode characters" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.003"/>
+  <testcase name="Handles max integer length" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.003"/>
+  <testcase name="[1] input=hello world, maxLength=5, expected=hello" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.007"/>
+  <testcase name="[2] input=test, maxLength=10, expected=test" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.004"/>
+  <testcase name="[3] input=abc, maxLength=3, expected=abc" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.004"/>
+  <testcase name="[4] input=ab, maxLength=3, expected=ab" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.004"/>
+  <testcase name="[5] input=a, maxLength=1, expected=a" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.004"/>
+  <testcase name="[6] input=newline&#10;test, maxLength=7, expected=newline" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.004"/>
+  <testcase name="maxLength=0 returns empty string" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.004"/>
+  <testcase name="maxLength=-1 returns empty string" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.003"/>
+  <testcase name="maxLength=-100 returns empty string" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.003"/>
+  <testcase name="maxLength=-2147483648 returns empty string" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.004"/>
+  <testcase name="Returns original when shorter than maxLength" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.003"/>
+  <testcase name="Returns empty string for empty input" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.003"/>
+  <testcase name="Handles whitespace-only strings" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.004"/>
+  <testcase name="Handles special characters" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.004"/>
+  <testcase name="Truncates when longer than maxLength" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.004"/>
+  <testcase name="Handles maxLength of 1" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.003"/>
+  <testcase name="Returns original when exactly maxLength" classname="com.adityachandel.booklore.util.FileServiceTest$TruncateTests" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

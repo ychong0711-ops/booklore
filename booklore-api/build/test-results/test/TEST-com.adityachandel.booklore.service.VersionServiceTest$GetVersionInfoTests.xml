@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.VersionServiceTest$GetVersionInfoTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:00.546Z" hostname="DESKTOP-67T0KNA" time="0.003">
+  <properties/>
+  <testcase name="usesUnknownIfFetchFails()" classname="com.adityachandel.booklore.service.VersionServiceTest$GetVersionInfoTests" time="0.002"/>
+  <testcase name="includesAppAndLatestOnSuccess()" classname="com.adityachandel.booklore.service.VersionServiceTest$GetVersionInfoTests" time="0.001"/>
+  <system-out><![CDATA[14:34:00.547 [Test worker] WARN com.adityachandel.booklore.service.VersionService -- Error fetching latest release version
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Edge Cases" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:01.337Z" hostname="DESKTOP-67T0KNA" time="0.048">
+  <properties/>
+  <testcase name="moveFile handles file with special characters in name" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$EdgeCaseTests" time="0.014"/>
+  <testcase name="moveFile creates target directory if it doesn't exist" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$EdgeCaseTests" time="0.017"/>
+  <testcase name="deleteEmptyParentDirs handles symlinks safely" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$EdgeCaseTests" time="0.017"/>
+  <system-out><![CDATA[14:34:01.342 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Moving file from C:\Users\home\AppData\Local\Temp\junit-8122419600429760700\file with spaces & special (chars).txt to C:\Users\home\AppData\Local\Temp\junit-8122419600429760700\renamed [file].txt
+14:34:01.357 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Moving file from C:\Users\home\AppData\Local\Temp\junit-1413258938796516234\source.txt to C:\Users\home\AppData\Local\Temp\junit-1413258938796516234\deep\nested\directory\target.txt
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

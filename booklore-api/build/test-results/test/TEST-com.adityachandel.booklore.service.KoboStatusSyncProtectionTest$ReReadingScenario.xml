@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Re-reading - User re-reads after status was synced" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:59.108Z" hostname="DESKTOP-67T0KNA" time="0.003">
+  <properties/>
+  <testcase name="Book marked READ, synced 5min ago, now progress at 50% -&gt; becomes READING" classname="com.adityachandel.booklore.service.KoboStatusSyncProtectionTest$ReReadingScenario" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

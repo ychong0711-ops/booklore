@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - KoreaderServiceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>KoreaderServiceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.adityachandel.booklore.service.html">com.adityachandel.booklore.service</a> &gt; KoreaderServiceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">12</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.125s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">authorizeUser_badPassword()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">authorizeUser_notFound()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">authorizeUser_success()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getProgress_bookNotFound()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getProgress_includesTimestamp()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getProgress_noProgress()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getProgress_nullTimestamp()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getProgress_success()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getProgress_syncDisabled()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">saveProgress_createsNew()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">saveProgress_syncDisabled()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">saveProgress_updatesExisting()</td>
+<td class="success">0.102s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>14:33:59.248 [Test worker] INFO com.adityachandel.booklore.service.koreader.KoreaderService -- saveProgress: saved progress='y' percentage=0.4 for userId=42 bookHash=h
+14:33:59.255 [Test worker] INFO com.adityachandel.booklore.service.koreader.KoreaderService -- User 'u' authorized
+14:33:59.258 [Test worker] INFO com.adityachandel.booklore.service.koreader.KoreaderService -- getProgress: fetched progress='p' percentage=0.5 for userId=42 bookHash=h
+14:33:59.260 [Test worker] WARN com.adityachandel.booklore.service.koreader.KoreaderService -- Sync is disabled for user 'u'
+14:33:59.265 [Test worker] WARN com.adityachandel.booklore.service.koreader.KoreaderService -- Password mismatch for user 'u'
+14:33:59.267 [Test worker] INFO com.adityachandel.booklore.service.koreader.KoreaderService -- getProgress: fetched progress='progress/path2' percentage=0.25 for userId=42 bookHash=hash456
+14:33:59.269 [Test worker] INFO com.adityachandel.booklore.service.koreader.KoreaderService -- saveProgress: saved progress='x' percentage=0.6 for userId=42 bookHash=h
+14:33:59.271 [Test worker] WARN com.adityachandel.booklore.service.koreader.KoreaderService -- KOReader user 'u' not found
+14:33:59.273 [Test worker] WARN com.adityachandel.booklore.service.koreader.KoreaderService -- Sync is disabled for user 'u'
+14:33:59.276 [Test worker] INFO com.adityachandel.booklore.service.koreader.KoreaderService -- getProgress: fetched progress='progress/path' percentage=0.75 for userId=42 bookHash=hash123
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at 2025. 12. 28. 오후 2:34:11</p>
+</div>
+</div>
+</body>
+</html>

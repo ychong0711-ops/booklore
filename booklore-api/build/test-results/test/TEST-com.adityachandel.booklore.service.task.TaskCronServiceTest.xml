@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.task.TaskCronServiceTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:08.107Z" hostname="DESKTOP-67T0KNA" time="0.129">
+  <properties/>
+  <testcase name="testGetCronConfigOrDefault_invalidTaskType_throws()" classname="com.adityachandel.booklore.service.task.TaskCronServiceTest" time="0.089"/>
+  <testcase name="testGetCronConfigOrDefault_noConfig_returnsDefault()" classname="com.adityachandel.booklore.service.task.TaskCronServiceTest" time="0.005"/>
+  <testcase name="testGetCronConfigOrDefault_existingConfig()" classname="com.adityachandel.booklore.service.task.TaskCronServiceTest" time="0.004"/>
+  <testcase name="testValidateCronExpression_invalidFormat()" classname="com.adityachandel.booklore.service.task.TaskCronServiceTest" time="0.003"/>
+  <testcase name="testPatchCronConfig_createNew()" classname="com.adityachandel.booklore.service.task.TaskCronServiceTest" time="0.009"/>
+  <testcase name="testGetAllEnabledCronConfigs_returnsList()" classname="com.adityachandel.booklore.service.task.TaskCronServiceTest" time="0.002"/>
+  <testcase name="testPatchCronConfig_updateExisting()" classname="com.adityachandel.booklore.service.task.TaskCronServiceTest" time="0.002"/>
+  <testcase name="testValidateCronExpression_valid()" classname="com.adityachandel.booklore.service.task.TaskCronServiceTest" time="0.001"/>
+  <testcase name="testValidateTaskTypeForCron_notSupported()" classname="com.adityachandel.booklore.service.task.TaskCronServiceTest" time="0.002"/>
+  <testcase name="testValidateTaskTypeForCron_nullType()" classname="com.adityachandel.booklore.service.task.TaskCronServiceTest" time="0.002"/>
+  <testcase name="testValidateCronExpression_invalidFieldCount()" classname="com.adityachandel.booklore.service.task.TaskCronServiceTest" time="0.002"/>
+  <testcase name="testPatchCronConfig_invalidCronExpression_throws()" classname="com.adityachandel.booklore.service.task.TaskCronServiceTest" time="0.002"/>
+  <testcase name="testPatchCronConfig_invalidTaskType_throws()" classname="com.adityachandel.booklore.service.task.TaskCronServiceTest" time="0.002"/>
+  <testcase name="testGetCronConfigOrDefault_nullTaskType_throws()" classname="com.adityachandel.booklore.service.task.TaskCronServiceTest" time="0.001"/>
+  <testcase name="testValidateTaskTypeForCron_supported()" classname="com.adityachandel.booklore.service.task.TaskCronServiceTest" time="0.001"/>
+  <system-out><![CDATA[14:34:08.217 [Test worker] INFO com.adityachandel.booklore.service.task.TaskCronService -- Updated cron configuration for task type: CLEAR_CBX_CACHE
+14:34:08.222 [Test worker] INFO com.adityachandel.booklore.service.task.TaskCronService -- Updated cron configuration for task type: CLEAR_CBX_CACHE
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

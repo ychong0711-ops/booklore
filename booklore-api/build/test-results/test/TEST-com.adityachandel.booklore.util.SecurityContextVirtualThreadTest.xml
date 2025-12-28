@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.util.SecurityContextVirtualThreadTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:10.961Z" hostname="DESKTOP-67T0KNA" time="0.011">
+  <properties/>
+  <testcase name="testRunWithSecurityContext_handlesException()" classname="com.adityachandel.booklore.util.SecurityContextVirtualThreadTest" time="0.008"/>
+  <testcase name="testRunWithSecurityContext_maintainsMainThreadContext()" classname="com.adityachandel.booklore.util.SecurityContextVirtualThreadTest" time="0.001"/>
+  <testcase name="testRunWithSecurityContext_executesRunnable()" classname="com.adityachandel.booklore.util.SecurityContextVirtualThreadTest" time="0.0"/>
+  <testcase name="testRunWithSecurityContext_withProvidedContext_clearsAfterExecution()" classname="com.adityachandel.booklore.util.SecurityContextVirtualThreadTest" time="0.001"/>
+  <testcase name="testRunWithSecurityContext_withProvidedContext()" classname="com.adityachandel.booklore.util.SecurityContextVirtualThreadTest" time="0.0"/>
+  <testcase name="testRunWithSecurityContext_preservesSecurityContext()" classname="com.adityachandel.booklore.util.SecurityContextVirtualThreadTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Exception in thread "" java.lang.RuntimeException: Test exception
+	at com.adityachandel.booklore.util.SecurityContextVirtualThreadTest.lambda$testRunWithSecurityContext_handlesException$5(SecurityContextVirtualThreadTest.java:145)
+	at com.adityachandel.booklore.util.SecurityContextVirtualThread.lambda$runWithSecurityContext$0(SecurityContextVirtualThread.java:19)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+]]></system-err>
+</testsuite>

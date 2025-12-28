@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Date Parsing Tests" tests="25" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:05.982Z" hostname="DESKTOP-67T0KNA" time="0.435">
+  <properties/>
+  <testcase name="Should parse ISO datetime with timezone offset" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.016"/>
+  <testcase name="Should parse year 1972 correctly" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.014"/>
+  <testcase name="Should parse date with extra content after first 10 characters" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.016"/>
+  <testcase name="Should parse ISO datetime with Z timezone" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.014"/>
+  <testcase name="Should reject invalid year 0000" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.016"/>
+  <testcase name="Should reject year greater than 9999" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.014"/>
+  <testcase name="Should parse year-only date format (e.g., '2024') as January 1st of that year" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.014"/>
+  <testcase name="[1] year=1999, expectedDate=1999-01-01" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.025"/>
+  <testcase name="[2] year=2000, expectedDate=2000-01-01" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.019"/>
+  <testcase name="[3] year=2010, expectedDate=2010-01-01" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.015"/>
+  <testcase name="[4] year=2023, expectedDate=2023-01-01" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.015"/>
+  <testcase name="[5] year=2024, expectedDate=2024-01-01" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.015"/>
+  <testcase name="[6] year=1850, expectedDate=1850-01-01" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.014"/>
+  <testcase name="[7] year=1001, expectedDate=1001-01-01" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.014"/>
+  <testcase name="[8] year=9999, expectedDate=9999-01-01" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.015"/>
+  <testcase name="Should handle whitespace in full date format" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.014"/>
+  <testcase name="Should parse full ISO date format (yyyy-MM-dd)" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.014"/>
+  <testcase name="[1] dateWithSpace= 2024 , expectedDate=2024-01-01" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.015"/>
+  <testcase name="[2] dateWithSpace=&#9;2024, expectedDate=2024-01-01" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.016"/>
+  <testcase name="[3] dateWithSpace=  2024  , expectedDate=2024-01-01" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.016"/>
+  <testcase name="[1] invalidDate=invalid" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.015"/>
+  <testcase name="[2] invalidDate=20" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.016"/>
+  <testcase name="[3] invalidDate=202" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.016"/>
+  <testcase name="[4] invalidDate=abc1234" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.015"/>
+  <testcase name="[5] invalidDate=2024/06/15" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$DateParsingTests" time="0.016"/>
+  <system-out><![CDATA[14:34:06.056 [Test worker] WARN com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractor -- Failed to parse date from string: 0000
+14:34:06.071 [Test worker] WARN com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractor -- Failed to parse date from string: 10000
+14:34:06.349 [Test worker] WARN com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractor -- Failed to parse date from string: invalid
+14:34:06.365 [Test worker] WARN com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractor -- Failed to parse date from string: 20
+14:34:06.381 [Test worker] WARN com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractor -- Failed to parse date from string: 202
+14:34:06.397 [Test worker] WARN com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractor -- Failed to parse date from string: abc1234
+14:34:06.413 [Test worker] WARN com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractor -- Failed to parse date from string: 2024/06/15
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

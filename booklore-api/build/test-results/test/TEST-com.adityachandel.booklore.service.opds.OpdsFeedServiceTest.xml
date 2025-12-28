@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:07.890Z" hostname="DESKTOP-67T0KNA" time="0.213">
+  <properties/>
+  <testcase name="parseLongParam_shouldHandleValidAndInvalidValues()" classname="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" time="0.153"/>
+  <testcase name="getUserId_shouldReturnUserId()" classname="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" time="0.036"/>
+  <testcase name="generateRootNavigation_shouldContainAllSections()" classname="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" time="0.001"/>
+  <testcase name="generateLibrariesNavigation_shouldListLibraries()" classname="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" time="0.002"/>
+  <testcase name="getOpenSearchDescription_shouldReturnValidXml()" classname="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" time="0.0"/>
+  <testcase name="generateSurpriseFeed_shouldReturnFeedWithBooks()" classname="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" time="0.004"/>
+  <testcase name="generateLibrariesNavigation_shouldHandleNoLibraries()" classname="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" time="0.001"/>
+  <testcase name="escapeXml_shouldEscapeSpecialCharacters()" classname="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" time="0.001"/>
+  <testcase name="generateCatalogFeed_shouldHandleEmptyPage()" classname="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" time="0.002"/>
+  <testcase name="generateShelvesNavigation_shouldListShelves()" classname="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" time="0.001"/>
+  <testcase name="generateShelvesNavigation_shouldHandleNullUserDetails()" classname="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" time="0.0"/>
+  <testcase name="generateCatalogFeed_shouldReturnFeedWithBooks()" classname="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" time="0.003"/>
+  <testcase name="generateSurpriseFeed_shouldHandleNoBooks()" classname="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" time="0.001"/>
+  <testcase name="generateShelvesNavigation_shouldHandleNoShelves()" classname="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" time="0.001"/>
+  <testcase name="getUserId_shouldReturnNullWhenNotAuthenticated()" classname="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" time="0.001"/>
+  <testcase name="generateRecentFeed_shouldReturnFeedWithBooks()" classname="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" time="0.002"/>
+  <testcase name="generateRecentFeed_shouldHandleEmptyPage()" classname="com.adityachandel.booklore.service.opds.OpdsFeedServiceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

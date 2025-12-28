@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - SMB Share Behavior Tests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>SMB Share Behavior Tests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.adityachandel.booklore.service.file.html">com.adityachandel.booklore.service.file</a> &gt; FileMoveHelperTest$SmbShareBehaviorTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">8</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.800s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">commitMove moves temp file to final destination</td>
+<td class="success">commitMove_movesToFinalDestination()</td>
+<td class="success">0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">moveFileWithBackup creates temp file and returns its path</td>
+<td class="success">moveFileWithBackup_createsTemporaryFile()</td>
+<td class="success">0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">moveFile succeeds when source appears during retry (simulates SMB eventual consistency)</td>
+<td class="success">moveFile_sourceAppearsAfterRetry_succeeds()</td>
+<td class="success">0.116s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">moveFile throws NoSuchFileException when source never becomes accessible</td>
+<td class="success">moveFile_sourceNeverAccessible_throwsNoSuchFileException()</td>
+<td class="success">0.223s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">rollbackMove does nothing when temp file doesn't exist</td>
+<td class="success">rollbackMove_noTempFile_doesNothing()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">rollbackMove restores original file from temp location</td>
+<td class="success">rollbackMove_restoresOriginalFile()</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">waitForFileAccessible retries when file appears after delay (simulates SMB latency)</td>
+<td class="success">waitForFileAccessible_fileAppearsAfterDelay_eventuallySucceeds()</td>
+<td class="success">0.213s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">waitForFileAccessible returns false when file never appears (simulates SMB file not found)</td>
+<td class="success">waitForFileAccessible_fileNeverAppears_returnsFalse()</td>
+<td class="success">0.217s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>14:34:02.464 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Rolling back move from C:\Users\home\AppData\Local\Temp\junit-1883325442040209109\file.txt.tmp_move to C:\Users\home\AppData\Local\Temp\junit-1883325442040209109\original.txt
+14:34:02.477 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Committing move from temporary location C:\Users\home\AppData\Local\Temp\junit-1420823863154196135\file.txt.tmp_move to C:\Users\home\AppData\Local\Temp\junit-1420823863154196135\subdir\final.txt
+14:34:02.704 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Moving file from C:\Users\home\AppData\Local\Temp\junit-17579895749321787330\original.txt to temporary location C:\Users\home\AppData\Local\Temp\junit-17579895749321787330\original.txt.tmp_move
+14:34:02.819 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Moving file from C:\Users\home\AppData\Local\Temp\junit-9871520017242762116\eventual-source.txt to C:\Users\home\AppData\Local\Temp\junit-9871520017242762116\subdir\target.txt
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at 2025. 12. 28. 오후 2:34:11</p>
+</div>
+</div>
+</body>
+</html>

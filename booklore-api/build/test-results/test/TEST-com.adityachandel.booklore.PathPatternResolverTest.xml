@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.PathPatternResolverTest" tests="35" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:52.022Z" hostname="DESKTOP-67T0KNA" time="0.542">
+  <properties/>
+  <testcase name="seriesNumber_decimalAndInteger()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.4"/>
+  <testcase name="subtitleInPattern_replacedCorrectly()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.005"/>
+  <testcase name="emptyPattern_returnsOnlyExtension()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.004"/>
+  <testcase name="placeholderWithEmptyValue_outsideOptional_replacedByEmpty()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.004"/>
+  <testcase name="patternEndsWithSlash_slashIsPreserved()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.004"/>
+  <testcase name="patternWithBackslashes_isSanitized()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.004"/>
+  <testcase name="subtitleInOptionalBlock_withValue_blockIncluded()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.004"/>
+  <testcase name="complexPatternWithSubtitle_allPlaceholdersPresent()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.004"/>
+  <testcase name="subtitleEmpty_replacedWithEmpty()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.004"/>
+  <testcase name="subtitleInOptionalBlock_withoutValue_blockRemoved()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.004"/>
+  <testcase name="multipleAuthors_concatenatedProperly()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.003"/>
+  <testcase name="noExtension_returnsNoDot()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.003"/>
+  <testcase name="optionalBlockWithTitleAndSubtitle_partialValues()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.007"/>
+  <testcase name="subtitleWithWhitespace_trimmedAndSanitized()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.004"/>
+  <testcase name="optionalBlockWithMixedResolvedAndEmptyValues_skippedEntirely()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.003"/>
+  <testcase name="placeholdersOutsideOptional_replacedWithEmpty()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.003"/>
+  <testcase name="complexPattern_allPlaceholdersPresent()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.006"/>
+  <testcase name="patternWithExtensionAndFilenamePlaceholder_works()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.003"/>
+  <testcase name="patternWithOnlyExtension_returnsExtensionOnly()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.003"/>
+  <testcase name="noFileExtension_returnsNoDot()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.003"/>
+  <testcase name="invalidFilename_noExtension_stillResolves()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.003"/>
+  <testcase name="sanitize_removesIllegalCharacters()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.005"/>
+  <testcase name="missingAllMetadata_returnsExtensionOnly()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.003"/>
+  <testcase name="allPlaceholdersMissing_yieldsJustExtension()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.004"/>
+  <testcase name="extensionDotEscaped_doubleDotsNotAdded()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.003"/>
+  <testcase name="optionalBlockMissingPlaceholder_removed()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.003"/>
+  <testcase name="seriesNumberDecimals_andIntegersHandledProperly()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.005"/>
+  <testcase name="patternWithOnlyOptional_allEmpty_resolvesToFilename()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.004"/>
+  <testcase name="subtitleWithIllegalChars_sanitized()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.003"/>
+  <testcase name="sanitizes_illegalCharsAndWhitespace()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.003"/>
+  <testcase name="placeholderWithWhitespace_trimmedAndSanitized()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.003"/>
+  <testcase name="complexPattern_someMissingOptionalBlocksSkipped()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.003"/>
+  <testcase name="subtitleNull_replacedWithEmpty()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.003"/>
+  <testcase name="optionalBlockWithEmptyValue_removesBlock()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.002"/>
+  <testcase name="multipleOptionalBlocks_partialValues()" classname="com.adityachandel.booklore.PathPatternResolverTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.model.entity.BookMetadataEntityTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:53.434Z" hostname="DESKTOP-67T0KNA" time="0.026">
+  <properties/>
+  <testcase name="updateSearchText_normalizesAuthorWithDiacritics()" classname="com.adityachandel.booklore.model.entity.BookMetadataEntityTest" time="0.022"/>
+  <testcase name="updateSearchText_handlesFrenchGermanAndSpanishDiacritics()" classname="com.adityachandel.booklore.model.entity.BookMetadataEntityTest" time="0.001"/>
+  <testcase name="searchSimulation_withDiacritics()" classname="com.adityachandel.booklore.model.entity.BookMetadataEntityTest" time="0.001"/>
+  <testcase name="updateSearchText_populatesSearchText()" classname="com.adityachandel.booklore.model.entity.BookMetadataEntityTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

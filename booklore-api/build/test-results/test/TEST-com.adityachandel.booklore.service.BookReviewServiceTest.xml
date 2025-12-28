@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.BookReviewServiceTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:54.090Z" hostname="DESKTOP-67T0KNA" time="0.236">
+  <properties/>
+  <testcase name="getByBookId_fetchesAndSavesReviews_whenAdminUserAndNoExistingReviews()" classname="com.adityachandel.booklore.service.BookReviewServiceTest" time="0.202"/>
+  <testcase name="fetchBookReviews_filtersEnabledProviders()" classname="com.adityachandel.booklore.service.BookReviewServiceTest" time="0.003"/>
+  <testcase name="getByBookId_returnsEmptyList_whenUserLacksPermissions()" classname="com.adityachandel.booklore.service.BookReviewServiceTest" time="0.003"/>
+  <testcase name="getByBookId_returnsEmptyList_whenDownloadDisabled()" classname="com.adityachandel.booklore.service.BookReviewServiceTest" time="0.002"/>
+  <testcase name="getByBookId_fetchesAndSavesReviews_whenLibraryManipulatorAndNoExistingReviews()" classname="com.adityachandel.booklore.service.BookReviewServiceTest" time="0.003"/>
+  <testcase name="getByBookId_throwsException_whenBookNotFound()" classname="com.adityachandel.booklore.service.BookReviewServiceTest" time="0.003"/>
+  <testcase name="fetchBookReviews_returnsEmptyList_whenDownloadDisabled()" classname="com.adityachandel.booklore.service.BookReviewServiceTest" time="0.003"/>
+  <testcase name="getByBookId_returnsExistingReviews_whenReviewsExist()" classname="com.adityachandel.booklore.service.BookReviewServiceTest" time="0.002"/>
+  <testcase name="fetchBookReviews_skipsMetadataWithNullReviews()" classname="com.adityachandel.booklore.service.BookReviewServiceTest" time="0.002"/>
+  <testcase name="delete_throwsException_whenReviewNotFound()" classname="com.adityachandel.booklore.service.BookReviewServiceTest" time="0.003"/>
+  <testcase name="fetchBookReviews_aggregatesReviewsFromMultipleProviders()" classname="com.adityachandel.booklore.service.BookReviewServiceTest" time="0.002"/>
+  <testcase name="delete_removesReview_whenReviewExists()" classname="com.adityachandel.booklore.service.BookReviewServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

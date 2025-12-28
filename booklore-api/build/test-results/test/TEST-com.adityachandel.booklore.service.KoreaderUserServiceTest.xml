@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.KoreaderUserServiceTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:59.278Z" hostname="DESKTOP-67T0KNA" time="0.1">
+  <properties/>
+  <testcase name="toggleSync_throws_whenEntityMissing()" classname="com.adityachandel.booklore.service.KoreaderUserServiceTest" time="0.08"/>
+  <testcase name="upsertUser_updatesExisting_whenPresent()" classname="com.adityachandel.booklore.service.KoreaderUserServiceTest" time="0.006"/>
+  <testcase name="getUser_returnsDto_whenFound()" classname="com.adityachandel.booklore.service.KoreaderUserServiceTest" time="0.002"/>
+  <testcase name="upsertUser_createsNew_whenAbsent()" classname="com.adityachandel.booklore.service.KoreaderUserServiceTest" time="0.004"/>
+  <testcase name="upsertUser_throws_whenOwnerMissing()" classname="com.adityachandel.booklore.service.KoreaderUserServiceTest" time="0.002"/>
+  <testcase name="getUser_throws_whenNotFound()" classname="com.adityachandel.booklore.service.KoreaderUserServiceTest" time="0.002"/>
+  <testcase name="toggleSync_setsFlag_andSaves()" classname="com.adityachandel.booklore.service.KoreaderUserServiceTest" time="0.001"/>
+  <system-out><![CDATA[14:33:59.364 [Test worker] INFO com.adityachandel.booklore.service.koreader.KoreaderUserService -- upsertUser: Updated KoreaderUser [id=10, username='newName'] for BookLoreUser='ownerName'
+14:33:59.370 [Test worker] INFO com.adityachandel.booklore.service.koreader.KoreaderUserService -- upsertUser: Created KoreaderUser [id=42, username='userA'] for BookLoreUser='ownerName'
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

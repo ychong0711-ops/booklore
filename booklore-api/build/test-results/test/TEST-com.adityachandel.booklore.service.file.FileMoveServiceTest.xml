@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.file.FileMoveServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:02.825Z" hostname="DESKTOP-67T0KNA" time="0.115">
+  <properties/>
+  <testcase name="moveSingleFile_whenLibraryMonitored_reRegistersLibraryPaths()" classname="com.adityachandel.booklore.service.file.FileMoveServiceTest" time="0.113"/>
+  <testcase name="moveSingleFile_whenLibraryNotMonitored_skipsMonitoringCalls()" classname="com.adityachandel.booklore.service.file.FileMoveServiceTest" time="0.002"/>
+  <system-out><![CDATA[14:34:02.936 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveService -- File for book ID 999 needs to be moved from \library\root\SciFi\Original.epub to \library\root\SciFi\Renamed.epub to match library pattern
+14:34:02.941 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveService -- File for book ID 999 needs to be moved from \library\root\SciFi\Original.epub to \library\root\SciFi\Renamed.epub to match library pattern
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

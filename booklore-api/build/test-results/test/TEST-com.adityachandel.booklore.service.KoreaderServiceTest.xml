@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.KoreaderServiceTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:59.147Z" hostname="DESKTOP-67T0KNA" time="0.13">
+  <properties/>
+  <testcase name="saveProgress_updatesExisting()" classname="com.adityachandel.booklore.service.KoreaderServiceTest" time="0.102"/>
+  <testcase name="getProgress_noProgress()" classname="com.adityachandel.booklore.service.KoreaderServiceTest" time="0.003"/>
+  <testcase name="authorizeUser_success()" classname="com.adityachandel.booklore.service.KoreaderServiceTest" time="0.002"/>
+  <testcase name="getProgress_success()" classname="com.adityachandel.booklore.service.KoreaderServiceTest" time="0.002"/>
+  <testcase name="saveProgress_syncDisabled()" classname="com.adityachandel.booklore.service.KoreaderServiceTest" time="0.002"/>
+  <testcase name="getProgress_bookNotFound()" classname="com.adityachandel.booklore.service.KoreaderServiceTest" time="0.002"/>
+  <testcase name="authorizeUser_badPassword()" classname="com.adityachandel.booklore.service.KoreaderServiceTest" time="0.002"/>
+  <testcase name="getProgress_nullTimestamp()" classname="com.adityachandel.booklore.service.KoreaderServiceTest" time="0.002"/>
+  <testcase name="saveProgress_createsNew()" classname="com.adityachandel.booklore.service.KoreaderServiceTest" time="0.002"/>
+  <testcase name="authorizeUser_notFound()" classname="com.adityachandel.booklore.service.KoreaderServiceTest" time="0.001"/>
+  <testcase name="getProgress_syncDisabled()" classname="com.adityachandel.booklore.service.KoreaderServiceTest" time="0.002"/>
+  <testcase name="getProgress_includesTimestamp()" classname="com.adityachandel.booklore.service.KoreaderServiceTest" time="0.003"/>
+  <system-out><![CDATA[14:33:59.248 [Test worker] INFO com.adityachandel.booklore.service.koreader.KoreaderService -- saveProgress: saved progress='y' percentage=0.4 for userId=42 bookHash=h
+14:33:59.255 [Test worker] INFO com.adityachandel.booklore.service.koreader.KoreaderService -- User 'u' authorized
+14:33:59.258 [Test worker] INFO com.adityachandel.booklore.service.koreader.KoreaderService -- getProgress: fetched progress='p' percentage=0.5 for userId=42 bookHash=h
+14:33:59.260 [Test worker] WARN com.adityachandel.booklore.service.koreader.KoreaderService -- Sync is disabled for user 'u'
+14:33:59.265 [Test worker] WARN com.adityachandel.booklore.service.koreader.KoreaderService -- Password mismatch for user 'u'
+14:33:59.267 [Test worker] INFO com.adityachandel.booklore.service.koreader.KoreaderService -- getProgress: fetched progress='progress/path2' percentage=0.25 for userId=42 bookHash=hash456
+14:33:59.269 [Test worker] INFO com.adityachandel.booklore.service.koreader.KoreaderService -- saveProgress: saved progress='x' percentage=0.6 for userId=42 bookHash=h
+14:33:59.271 [Test worker] WARN com.adityachandel.booklore.service.koreader.KoreaderService -- KOReader user 'u' not found
+14:33:59.273 [Test worker] WARN com.adityachandel.booklore.service.koreader.KoreaderService -- Sync is disabled for user 'u'
+14:33:59.276 [Test worker] INFO com.adityachandel.booklore.service.koreader.KoreaderService -- getProgress: fetched progress='progress/path' percentage=0.75 for userId=42 bookHash=hash123
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

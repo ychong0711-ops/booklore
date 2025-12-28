@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.util.Md5UtilTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:10.867Z" hostname="DESKTOP-67T0KNA" time="0.006">
+  <properties/>
+  <testcase name="testMd5Hex_helloWorld()" classname="com.adityachandel.booklore.util.Md5UtilTest" time="0.0"/>
+  <testcase name="testMd5Hex_simpleText()" classname="com.adityachandel.booklore.util.Md5UtilTest" time="0.001"/>
+  <testcase name="testMd5Hex_longText()" classname="com.adityachandel.booklore.util.Md5UtilTest" time="0.001"/>
+  <testcase name="testMd5Hex_emptyString()" classname="com.adityachandel.booklore.util.Md5UtilTest" time="0.0"/>
+  <testcase name="testMd5Hex_unicode()" classname="com.adityachandel.booklore.util.Md5UtilTest" time="0.001"/>
+  <testcase name="testMd5Hex_caseSensitive()" classname="com.adityachandel.booklore.util.Md5UtilTest" time="0.0"/>
+  <testcase name="testMd5Hex_differentInputs()" classname="com.adityachandel.booklore.util.Md5UtilTest" time="0.001"/>
+  <testcase name="testMd5Hex_length()" classname="com.adityachandel.booklore.util.Md5UtilTest" time="0.0"/>
+  <testcase name="testMd5Hex_specialCharacters()" classname="com.adityachandel.booklore.util.Md5UtilTest" time="0.001"/>
+  <testcase name="testMd5Hex_nullInput()" classname="com.adityachandel.booklore.util.Md5UtilTest" time="0.0"/>
+  <testcase name="testMd5Hex_numbers()" classname="com.adityachandel.booklore.util.Md5UtilTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

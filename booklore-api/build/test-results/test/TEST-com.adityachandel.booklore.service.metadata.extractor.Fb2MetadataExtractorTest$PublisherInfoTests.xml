@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Publisher Info Extraction Tests" tests="4" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:06.517Z" hostname="DESKTOP-67T0KNA" time="0.032">
+  <properties/>
+  <testcase name="Should extract ISBN-10 from publish-info" classname="com.adityachandel.booklore.service.metadata.extractor.Fb2MetadataExtractorTest$PublisherInfoTests" time="0.008"/>
+  <testcase name="Should extract ISBN-13 from publish-info" classname="com.adityachandel.booklore.service.metadata.extractor.Fb2MetadataExtractorTest$PublisherInfoTests" time="0.007"/>
+  <testcase name="Should extract year from publish-info" classname="com.adityachandel.booklore.service.metadata.extractor.Fb2MetadataExtractorTest$PublisherInfoTests" time="0.007"/>
+  <testcase name="Should extract publisher from publish-info" classname="com.adityachandel.booklore.service.metadata.extractor.Fb2MetadataExtractorTest$PublisherInfoTests" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

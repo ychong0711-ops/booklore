@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.util.BookUtilsTest" tests="53" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:08.657Z" hostname="DESKTOP-67T0KNA" time="0.021">
+  <properties/>
+  <testcase name="testBuildSearchText_withDiacritics()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.001"/>
+  <testcase name="testCleanSearchTerm_doesNotTruncate()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanFileName_withZLibrary()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanAndTruncateSearchTerm_emptyString()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testNormalizeForSearch_handlesMixedCaseDiacritics()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanAndTruncateSearchTerm_whitespaceHandling()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanFileName_onlyExtension()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanAndTruncateSearchTerm_exactly60CharsWithWords()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanFileName_withAuthorInParentheses()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanAndTruncateSearchTerm_exactly60Chars()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testNormalizeForSearch_withOnlyWhitespace()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testSearchMatchingWithAndWithoutDiacritics()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanAndTruncateSearchTerm_onlySpecialChars()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.001"/>
+  <testcase name="testCleanSearchTerm_removesSpecialCharacters()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testNormalizeForSearch_programmingLanguages()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testNormalizeForSearch_preservesNumbers()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.001"/>
+  <testcase name="testCleanAndTruncateSearchTerm_withBrackets()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testBuildSearchText_withNullAuthors()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanFileName_withMultipleParentheses()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanAndTruncateSearchTerm_longText()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testBuildSearchText_withNullMetadata()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testBuildSearchText_withAllNullFields()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanAndTruncateSearchTerm_singleLongWord()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testNormalizeForSearch_variousDiacritics()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanSearchTerm_withOnlySpecialChars()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testBuildSearchText_withNullFields()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testNormalizeForSearch_nullAndEmpty()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.001"/>
+  <testcase name="testBuildSearchText_withAuthorHavingNullName()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testNormalizeForSearch_withEmptyString()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanFileName_nullInput()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanAndTruncateSearchTerm_longTextWithSpecialChars()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testBuildSearchText()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.001"/>
+  <testcase name="testNormalizeForSearch()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanAndTruncateSearchTerm_simpleText()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanFileName_withZLibraryInMiddle()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testBuildSearchText_withEmptyAuthorsSet()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.001"/>
+  <testcase name="testCleanAndTruncateSearchTerm_withSpecialChars()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="[1] input=Book (Author) (Year) (Z-Library).pdf, expected=Book" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="[2] input=Book (Z-Library) More Text.pdf, expected=Book More Text" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="[3] input=Book ((Nested)) (Author).pdf, expected=Book" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="[4] input=Simple Book.epub, expected=Simple Book" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="[5] input=Book (Author Name).pdf, expected=Book" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.001"/>
+  <testcase name="[6] input=Complex (Nested (Deep)) (Multiple) File.epub, expected=Complex File" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testBuildSearchText_handlesExceptionGracefully()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.001"/>
+  <testcase name="testCleanAndTruncateSearchTerm_nullInput()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanSearchTerm_withMixedSpecialChars()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanFileName_complexCase()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanFileName_withNestedParentheses()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testNormalizeForSearch_preservesSpaces()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testNormalizeForSearch_removesSpecialCharacters()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanFileName_simpleName()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanFileName_noExtension()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.0"/>
+  <testcase name="testCleanFileName_withMultipleExtensions()" classname="com.adityachandel.booklore.util.BookUtilsTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

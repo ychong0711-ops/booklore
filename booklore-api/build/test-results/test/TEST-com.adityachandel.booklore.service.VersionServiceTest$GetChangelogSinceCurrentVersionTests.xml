@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.VersionServiceTest$GetChangelogSinceCurrentVersionTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:00.259Z" hostname="DESKTOP-67T0KNA" time="0.282">
+  <properties/>
+  <testcase name="returnsEmptyListWhenNoNewReleases()" classname="com.adityachandel.booklore.service.VersionServiceTest$GetChangelogSinceCurrentVersionTests" time="0.269"/>
+  <testcase name="returnsNotesWhenAvailable()" classname="com.adityachandel.booklore.service.VersionServiceTest$GetChangelogSinceCurrentVersionTests" time="0.013"/>
+  <system-out><![CDATA[Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

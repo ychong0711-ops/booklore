@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Normal Updates - Status set purely from Kobo progress (no manual status)" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:59.112Z" hostname="DESKTOP-67T0KNA" time="0.01">
+  <properties/>
+  <testcase name="Progress below threshold -&gt; UNREAD (e.g., just opened book)" classname="com.adityachandel.booklore.service.KoboStatusSyncProtectionTest$NormalStatusUpdates" time="0.003"/>
+  <testcase name="First sync from Kobo -&gt; creates progress with status from progress%" classname="com.adityachandel.booklore.service.KoboStatusSyncProtectionTest$NormalStatusUpdates" time="0.003"/>
+  <testcase name="No manual status set -&gt; Kobo progress determines status" classname="com.adityachandel.booklore.service.KoboStatusSyncProtectionTest$NormalStatusUpdates" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

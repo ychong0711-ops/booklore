@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="saveCoverImages" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:10.129Z" hostname="DESKTOP-67T0KNA" time="0.365">
+  <properties/>
+  <testcase name="convertsTransparentToOpaqueWithWhiteBackground()" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$SaveCoverImagesTests" time="0.019"/>
+  <testcase name="createsBothCoverAndThumbnail()" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$SaveCoverImagesTests" time="0.03"/>
+  <testcase name="smallImage_maintainsOriginalDimensions()" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$SaveCoverImagesTests" time="0.028"/>
+  <testcase name="thumbnailHasCorrectDimensions()" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$SaveCoverImagesTests" time="0.06"/>
+  <testcase name="largeImage_isScaledDownToMaxDimensions()" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$SaveCoverImagesTests" time="0.154"/>
+  <testcase name="originalMaintainsDimensions()" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$SaveCoverImagesTests" time="0.056"/>
+  <testcase name="createsDirectoryIfNotExists()" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$SaveCoverImagesTests" time="0.017"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

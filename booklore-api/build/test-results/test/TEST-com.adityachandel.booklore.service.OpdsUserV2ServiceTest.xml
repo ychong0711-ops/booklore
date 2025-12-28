@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.OpdsUserV2ServiceTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:00.043Z" hostname="DESKTOP-67T0KNA" time="0.214">
+  <properties/>
+  <testcase name="deleteOpdsUser_userNotFound_throwsRuntimeException()" classname="com.adityachandel.booklore.service.OpdsUserV2ServiceTest" time="0.107"/>
+  <testcase name="getOpdsUsers_returnsMappedDtos()" classname="com.adityachandel.booklore.service.OpdsUserV2ServiceTest" time="0.063"/>
+  <testcase name="createOpdsUser_passwordEncoderThrows_propagatesException()" classname="com.adityachandel.booklore.service.OpdsUserV2ServiceTest" time="0.028"/>
+  <testcase name="deleteOpdsUser_deletesWhenOwner()" classname="com.adityachandel.booklore.service.OpdsUserV2ServiceTest" time="0.003"/>
+  <testcase name="createOpdsUser_userNotFound_throwsUsernameNotFoundException()" classname="com.adityachandel.booklore.service.OpdsUserV2ServiceTest" time="0.002"/>
+  <testcase name="createOpdsUser_success_savesWithEncodedPasswordAndReturnsDto()" classname="com.adityachandel.booklore.service.OpdsUserV2ServiceTest" time="0.003"/>
+  <testcase name="getOpdsUsers_returnsEmptyListWhenNoUsers()" classname="com.adityachandel.booklore.service.OpdsUserV2ServiceTest" time="0.002"/>
+  <testcase name="deleteOpdsUser_throwsAccessDeniedWhenNotOwner()" classname="com.adityachandel.booklore.service.OpdsUserV2ServiceTest" time="0.002"/>
+  <testcase name="createOpdsUser_usernameNull_savedWithNullUsername()" classname="com.adityachandel.booklore.service.OpdsUserV2ServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

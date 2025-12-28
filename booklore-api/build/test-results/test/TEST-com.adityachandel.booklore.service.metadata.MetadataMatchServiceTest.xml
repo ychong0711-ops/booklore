@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.metadata.MetadataMatchServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:05.396Z" hostname="DESKTOP-67T0KNA" time="0.007">
+  <properties/>
+  <testcase name="calculateMatchScore_shouldScoreLockedEmptySubtitle()" classname="com.adityachandel.booklore.service.metadata.MetadataMatchServiceTest" time="0.005"/>
+  <testcase name="calculateMatchScore_shouldScoreOnlyPresentFields()" classname="com.adityachandel.booklore.service.metadata.MetadataMatchServiceTest" time="0.001"/>
+  <testcase name="calculateMatchScore_shouldScoreLockedNullSeriesNumber()" classname="com.adityachandel.booklore.service.metadata.MetadataMatchServiceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

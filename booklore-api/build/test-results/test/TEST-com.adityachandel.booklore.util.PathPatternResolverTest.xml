@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.util.PathPatternResolverTest" tests="54" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:10.923Z" hostname="DESKTOP-67T0KNA" time="0.024">
+  <properties/>
+  <testcase name="Should handle files with only numeric extension-like pattern correctly" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="testResolvePattern_nullTitle()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should handle optional block with all values present" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="testResolvePattern_blankPattern()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="testResolvePattern_isbn10Fallback()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="Should truncate single very long author name" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should truncate combined long components in final validation" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="testResolvePattern_seriesInfo()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="testResolvePattern_optionalBlock_allPresent()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should preserve file extension when truncating very long filenames" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="Should not add extension when using {currentFilename} in subdirectory" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="testResolvePattern_authorsWithinLimit()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should handle hidden file (starts with dot)" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="testResolvePattern_emptyAuthors()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should handle single author that exceeds byte limits" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="testResolvePattern_complexPattern()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="testResolvePattern_nullMetadata()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should preserve CBZ extension for comic files with chapter numbers" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="testResolvePattern_withBookEntity()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="testResolvePattern_authorsList()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="testResolvePattern_currentFilename()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="testResolvePattern_nullPattern()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="testResolvePattern_emptyOptionalBlocks()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should handle empty extension gracefully" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="testResolvePattern_isbnPriority()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should preserve extension for files with multiple dots in name" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should handle filename with very long extension - truncates or warns" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should add extension when pattern doesn't include it" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="testResolvePattern_titleWithExtension()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="Should remove trailing dots from multiple path components" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should handle filename with only extension" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="Should handle empty filename without title - uses default" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should handle filename with no extension in currentFilename" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should remove trailing dots from path components for Windows compatibility" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="Should handle authors truncation when first author exceeds limit" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="Should handle empty filename with title - uses title" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="testResolvePattern_withBookMetadataEntity()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="Should handle title with dots and numeric suffix without duplicating extension" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should truncate long author lists to prevent filesystem errors" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="Should sanitize illegal filesystem characters" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should handle blank result with fallback to filename" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="testResolvePattern_handlesNullPattern()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should apply author truncation in various pattern contexts" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="Should preserve extension for files with numeric patterns in name (e.g., Chapter 8.1.cbz)" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="testResolvePattern_seriesNumberFloat()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="testResolvePattern_handlesMissingMetadataFields()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="testResolvePattern_simpleTitle()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="testResolvePattern_multiplePlaceholders()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="testResolvePattern_specialCharacters()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should add 'et al.' when authors are truncated" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.001"/>
+  <testcase name="Should handle pattern with unknown placeholder" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="testResolvePattern_optionalBlock_missingValue()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="testResolvePattern_whitespacePattern()" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <testcase name="Should handle multiple trailing dots in path components" classname="com.adityachandel.booklore.util.PathPatternResolverTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

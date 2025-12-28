@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" tests="18" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:02.942Z" hostname="DESKTOP-67T0KNA" time="0.212">
+  <properties/>
+  <testcase name="Should skip sync when progress is null" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.141"/>
+  <testcase name="Should update existing reading progress" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.006"/>
+  <testcase name="Should set status to CURRENTLY_READING when progress &lt; 99%" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.003"/>
+  <testcase name="Should handle API errors gracefully" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.004"/>
+  <testcase name="Should skip sync when API key is blank" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.004"/>
+  <testcase name="Should skip sync when user settings not found" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.004"/>
+  <testcase name="Should handle existing user_book gracefully" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.004"/>
+  <testcase name="Should handle null response gracefully" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.004"/>
+  <testcase name="Should use ISBN10 when ISBN13 is missing" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.005"/>
+  <testcase name="Should skip further processing when book not found on Hardcover" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.004"/>
+  <testcase name="Should skip sync when book has no metadata" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.003"/>
+  <testcase name="Should skip sync when book not found" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.003"/>
+  <testcase name="Should skip sync when API key is missing" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.004"/>
+  <testcase name="Should set status to READ when progress &gt;= 99%" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.004"/>
+  <testcase name="Should skip sync when no ISBN available" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.004"/>
+  <testcase name="Should use stored hardcoverBookId when available" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.004"/>
+  <testcase name="Should search by ISBN when hardcoverBookId is not stored" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.004"/>
+  <testcase name="Should skip sync when Hardcover sync is not enabled for user" classname="com.adityachandel.booklore.service.hardcover.HardcoverSyncServiceTest" time="0.003"/>
+  <system-out><![CDATA[14:34:03.088 [Test worker] INFO com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Progress calculation: userId=1, progressPercent=50.0%, totalPages=300, progressPages=150
+14:34:03.089 [Test worker] ERROR com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to sync progress to Hardcover for book 100 (user 1): Cannot invoke "org.springframework.web.client.RestClient$RequestBodySpec.retrieve()" because the return value of "org.springframework.web.client.RestClient$RequestBodySpec.body(Object)" is null
+14:34:03.094 [Test worker] INFO com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Progress calculation: userId=1, progressPercent=50.0%, totalPages=300, progressPages=150
+14:34:03.095 [Test worker] ERROR com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to sync progress to Hardcover for book 100 (user 1): Cannot invoke "org.springframework.web.client.RestClient$RequestBodySpec.retrieve()" because the return value of "org.springframework.web.client.RestClient$RequestBodySpec.body(Object)" is null
+14:34:03.099 [Test worker] INFO com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Progress calculation: userId=1, progressPercent=50.0%, totalPages=300, progressPages=150
+14:34:03.099 [Test worker] ERROR com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to sync progress to Hardcover for book 100 (user 1): Cannot invoke "org.springframework.web.client.RestClient$RequestBodySpec.retrieve()" because the return value of "org.springframework.web.client.RestClient$RequestBodySpec.body(Object)" is null
+14:34:03.111 [Test worker] INFO com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Progress calculation: userId=1, progressPercent=50.0%, totalPages=300, progressPages=150
+14:34:03.111 [Test worker] ERROR com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to sync progress to Hardcover for book 100 (user 1): Cannot invoke "org.springframework.web.client.RestClient$RequestBodySpec.retrieve()" because the return value of "org.springframework.web.client.RestClient$RequestBodySpec.body(Object)" is null
+14:34:03.115 [Test worker] INFO com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Progress calculation: userId=1, progressPercent=50.0%, totalPages=300, progressPages=150
+14:34:03.115 [Test worker] ERROR com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to sync progress to Hardcover for book 100 (user 1): Cannot invoke "org.springframework.web.client.RestClient$RequestBodySpec.retrieve()" because the return value of "org.springframework.web.client.RestClient$RequestBodySpec.body(Object)" is null
+14:34:03.120 [Test worker] WARN com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to search Hardcover by ISBN 1234567890: Cannot invoke "org.springframework.web.client.RestClient$RequestBodySpec.retrieve()" because the return value of "org.springframework.web.client.RestClient$RequestBodySpec.body(Object)" is null
+14:34:03.124 [Test worker] WARN com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to search Hardcover by ISBN 9781234567890: Cannot invoke "org.springframework.web.client.RestClient$RequestBodySpec.retrieve()" because the return value of "org.springframework.web.client.RestClient$RequestBodySpec.body(Object)" is null
+14:34:03.139 [Test worker] INFO com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Progress calculation: userId=1, progressPercent=99.0%, totalPages=300, progressPages=297
+14:34:03.139 [Test worker] ERROR com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to sync progress to Hardcover for book 100 (user 1): Cannot invoke "org.springframework.web.client.RestClient$RequestBodySpec.retrieve()" because the return value of "org.springframework.web.client.RestClient$RequestBodySpec.body(Object)" is null
+14:34:03.147 [Test worker] INFO com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Progress calculation: userId=1, progressPercent=50.0%, totalPages=300, progressPages=150
+14:34:03.147 [Test worker] ERROR com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to sync progress to Hardcover for book 100 (user 1): Cannot invoke "org.springframework.web.client.RestClient$RequestBodySpec.retrieve()" because the return value of "org.springframework.web.client.RestClient$RequestBodySpec.body(Object)" is null
+14:34:03.151 [Test worker] WARN com.adityachandel.booklore.service.hardcover.HardcoverSyncService -- Failed to search Hardcover by ISBN 9781234567890: Cannot invoke "org.springframework.web.client.RestClient$RequestBodySpec.retrieve()" because the return value of "org.springframework.web.client.RestClient$RequestBodySpec.body(Object)" is null
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

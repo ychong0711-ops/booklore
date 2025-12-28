@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.BookServiceDeleteTests" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:49.673Z" hostname="DESKTOP-67T0KNA" time="2.339">
+  <properties/>
+  <testcase name="handlesUnreadableDirectoryGracefully()" classname="com.adityachandel.booklore.BookServiceDeleteTests" time="2.204"/>
+  <testcase name="deletesIgnoredFilesBeforeDeletingDirectory()" classname="com.adityachandel.booklore.BookServiceDeleteTests" time="0.082"/>
+  <testcase name="stopsAtLibraryRoot()" classname="com.adityachandel.booklore.BookServiceDeleteTests" time="0.011"/>
+  <testcase name="doesNotDeleteDirectoryWithImportantFile()" classname="com.adityachandel.booklore.BookServiceDeleteTests" time="0.016"/>
+  <testcase name="deletesEmptyDirectoriesUpToLibraryRoot()" classname="com.adityachandel.booklore.BookServiceDeleteTests" time="0.018"/>
+  <system-out><![CDATA[Could not change read permission; skipping unreadable directory test.
+14:33:51.899 [Test worker] INFO com.adityachandel.booklore.service.book.BookService -- Deleted ignored file: C:\Users\home\AppData\Local\Temp\junit-17809749221156823471\libraryRoot\nested\.DS_Store
+14:33:51.905 [Test worker] INFO com.adityachandel.booklore.service.book.BookService -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-17809749221156823471\libraryRoot\nested
+14:33:52.003 [Test worker] INFO com.adityachandel.booklore.service.book.BookService -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-6378652509330992014\libraryRoot\1\2\3
+14:33:52.005 [Test worker] INFO com.adityachandel.booklore.service.book.BookService -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-6378652509330992014\libraryRoot\1\2
+14:33:52.006 [Test worker] INFO com.adityachandel.booklore.service.book.BookService -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-6378652509330992014\libraryRoot\1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

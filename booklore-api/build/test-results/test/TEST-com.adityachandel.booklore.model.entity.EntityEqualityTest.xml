@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.model.entity.EntityEqualityTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:53.461Z" hostname="DESKTOP-67T0KNA" time="0.014">
+  <properties/>
+  <testcase name="moodEntity_shouldBeEqual_whenIdsAreSame()" classname="com.adityachandel.booklore.model.entity.EntityEqualityTest" time="0.002"/>
+  <testcase name="set_shouldDeduplicate_basedOnId()" classname="com.adityachandel.booklore.model.entity.EntityEqualityTest" time="0.001"/>
+  <testcase name="testEntityFactory_createsEntitiesWithUniqueIds()" classname="com.adityachandel.booklore.model.entity.EntityEqualityTest" time="0.003"/>
+  <testcase name="unsavedEntities_withNullIds_shouldNotBeEqual()" classname="com.adityachandel.booklore.model.entity.EntityEqualityTest" time="0.0"/>
+  <testcase name="sameInstance_shouldBeEqual()" classname="com.adityachandel.booklore.model.entity.EntityEqualityTest" time="0.0"/>
+  <testcase name="authorEntity_shouldBeEqual_whenIdsAreSame()" classname="com.adityachandel.booklore.model.entity.EntityEqualityTest" time="0.0"/>
+  <testcase name="tagEntity_shouldBeEqual_whenIdsAreSame()" classname="com.adityachandel.booklore.model.entity.EntityEqualityTest" time="0.003"/>
+  <testcase name="categoryEntity_shouldBeEqual_whenIdsAreSame()" classname="com.adityachandel.booklore.model.entity.EntityEqualityTest" time="0.003"/>
+  <testcase name="authorEntity_shouldNotBeEqual_whenIdsAreDifferent()" classname="com.adityachandel.booklore.model.entity.EntityEqualityTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

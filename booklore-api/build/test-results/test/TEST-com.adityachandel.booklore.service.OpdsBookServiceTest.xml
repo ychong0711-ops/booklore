@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.OpdsBookServiceTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:59.650Z" hostname="DESKTOP-67T0KNA" time="0.387">
+  <properties/>
+  <testcase name="getLibraryName_returnsName_whenFound()" classname="com.adityachandel.booklore.service.OpdsBookServiceTest" time="0.122"/>
+  <testcase name="getRandomBooks_returnsBooks_whenLibrariesAccessible()" classname="com.adityachandel.booklore.service.OpdsBookServiceTest" time="0.123"/>
+  <testcase name="getRecentBooksPage_appliesBookFilters_forNonAdminV2User()" classname="com.adityachandel.booklore.service.OpdsBookServiceTest" time="0.009"/>
+  <testcase name="getLibraryName_returnsDefault_whenNotFound()" classname="com.adityachandel.booklore.service.OpdsBookServiceTest" time="0.002"/>
+  <testcase name="getShelfName_returnsDefault_whenNotFound()" classname="com.adityachandel.booklore.service.OpdsBookServiceTest" time="0.002"/>
+  <testcase name="getBooksPageForV2User_throwsForbidden_whenNoPermission()" classname="com.adityachandel.booklore.service.OpdsBookServiceTest" time="0.061"/>
+  <testcase name="getRandomBooks_returnsEmpty_whenNoLibraries()" classname="com.adityachandel.booklore.service.OpdsBookServiceTest" time="0.002"/>
+  <testcase name="getBooksPage_v2User_delegatesToV2Method()" classname="com.adityachandel.booklore.service.OpdsBookServiceTest" time="0.047"/>
+  <testcase name="getRecentBooksPage_returnsRecentBooks_forLegacyUser()" classname="com.adityachandel.booklore.service.OpdsBookServiceTest" time="0.002"/>
+  <testcase name="getAccessibleLibraries_returnsEmptyList_whenUserIdIsNull()" classname="com.adityachandel.booklore.service.OpdsBookServiceTest" time="0.001"/>
+  <testcase name="getShelfName_returnsShelfName_whenFound()" classname="com.adityachandel.booklore.service.OpdsBookServiceTest" time="0.002"/>
+  <testcase name="getAccessibleLibraries_returnsAssignedLibraries_forNonAdmin()" classname="com.adityachandel.booklore.service.OpdsBookServiceTest" time="0.005"/>
+  <testcase name="getUserShelves_returnsShelves()" classname="com.adityachandel.booklore.service.OpdsBookServiceTest" time="0.001"/>
+  <testcase name="getBooksPage_legacyUser_delegatesToLegacyMethod()" classname="com.adityachandel.booklore.service.OpdsBookServiceTest" time="0.003"/>
+  <testcase name="getAccessibleLibraries_returnsAllLibraries_forAdmin()" classname="com.adityachandel.booklore.service.OpdsBookServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

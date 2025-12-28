@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Date Extraction Tests" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:06.575Z" hostname="DESKTOP-67T0KNA" time="0.023">
+  <properties/>
+  <testcase name="Should extract date from title-info" classname="com.adityachandel.booklore.service.metadata.extractor.Fb2MetadataExtractorTest$DateExtractionTests" time="0.008"/>
+  <testcase name="Should handle date with value attribute" classname="com.adityachandel.booklore.service.metadata.extractor.Fb2MetadataExtractorTest$DateExtractionTests" time="0.008"/>
+  <testcase name="Should extract year-only date" classname="com.adityachandel.booklore.service.metadata.extractor.Fb2MetadataExtractorTest$DateExtractionTests" time="0.007"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

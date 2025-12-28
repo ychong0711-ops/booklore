@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.util.MetadataChangeDetectorTest" tests="74" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:10.875Z" hostname="DESKTOP-67T0KNA" time="0.047">
+  <properties/>
+  <testcase name="testClearFlag_whenExistingValueIsNull_returnsFalse()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testEdgeCase_nullToEmptyString_returnsFalse()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testIsDifferent_whenCoverLockChanges_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testEdgeCase_whitespaceNormalization()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testHasValueChanges_whenClearFlagSet_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testIsDifferent_whenFieldLocked_changes_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testIsDifferent_whenCoverLockUnchanged_returnsFalse()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testHasValueChangesForFileWrite_includesCategories()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testHasValueChanges_whenLockedFieldChanged_returnsFalse()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testHasValueChanges_whenStringWhitespaceOnly_returnsFalse()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="title field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="subtitle field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="publisher field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="publishedDate field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="description field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="seriesName field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="seriesNumber field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="seriesTotal field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="isbn13 field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="isbn10 field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="asin field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="goodreadsId field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="comicvineId field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="hardcoverId field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="googleId field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="pageCount field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="language field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="amazonRating field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="amazonReviewCount field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="goodreadsRating field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="goodreadsReviewCount field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="hardcoverRating field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="hardcoverReviewCount field change" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testIsDifferent_whenBothSubtitleValuesNull_returnsFalse()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testIsDifferent_whenCoverLocked_changes_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testIsDifferent_whenCategoriesSetChanges_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testHasValueChangesForFileWrite_excludesRatingsForFileWrite()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testIsDifferent_whenNullClearFlags_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testHasValueChangesForFileWrite_excludesTags()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testIsDifferent_whenNoChanges_returnsFalse()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testAuthorsSetComparison_isOrderInsensitive()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testHasValueChangesForFileWrite_excludesMoods()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testHasValueChanges_whenEmptyStringToNull_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="hasValueChangesForFileWrite() excludes certain fields from triggering file writes" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testHasValueChanges_whenNullToEmptyString_returnsFalse()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testIsDifferent_whenAuthorsSetOrderChanges_returnsFalse()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testHasValueChangesForFileWrite_whenNoChanges_returnsFalse()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testEdgeCase_emptyCollectionToNull_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testHasValueChanges_whenTitleChanged_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testIsDifferent_whenTagsSetChanges_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testHasValueChanges_whenFloatSeriesNumberUnchanged_returnsFalse()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testIsDifferent_whenMultipleFieldsChange_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="Lock takes precedence over clear flag" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testHasValueChanges_whenMultipleCollectionsChange_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testIsDifferent_whenClearFlagTrue_andValuesIdentical_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testIsDifferent_whenFieldLocked_noChange_returnsFalse()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testHasValueChangesForFileWrite_whenTitleChanged_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testHasValueChangesForFileWrite_whenTitleAndPageCountChange_onlyTitleTriggers()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testIsDifferent_whenOnlyLockChanges_noValueChange_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="Locked field blocks value changes but still detects lock state changes" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testHasValueChangesForFileWrite_includesAuthors()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testHasValueChangesForFileWrite_excludesRatingFields()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testIsDifferent_whenFieldLockedAndOnlyValueDifferent_returnsFalse()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testEdgeCase_emptyStringToNull_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testIsDifferent_whenMoodsSetChanges_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testHasValueChanges_whenAuthorsSetOrderChanges_returnsFalse()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testHasValueChanges_whenEmptySetToNull_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testHasValueChanges_whenNoChanges_returnsFalse()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testHasValueChanges_whenFloatSeriesNumberChanges_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testEdgeCase_nullToEmptyCollection_returnsFalse()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testIsDifferent_whenAuthorsSetContentChanges_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testIsDifferent_whenTitleLocked_changes_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <testcase name="testClearFlag_whenFieldUnlocked_triggersChange()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.0"/>
+  <testcase name="testHasValueChanges_whenStringWithWhitespaceChanges_returnsTrue()" classname="com.adityachandel.booklore.util.MetadataChangeDetectorTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="getBackgroundResource" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:08.679Z" hostname="DESKTOP-67T0KNA" time="0.181">
+  <properties/>
+  <testcase name="noCustomBackgrounds_returnsDefault()" classname="com.adityachandel.booklore.util.FileServiceTest$BackgroundOperationsTests$GetBackgroundResourceTests" time="0.083"/>
+  <testcase name="Priority: user &gt; global &gt; default" classname="com.adityachandel.booklore.util.FileServiceTest$BackgroundOperationsTests$GetBackgroundResourceTests" time="0.024"/>
+  <testcase name="userHasBackground_returnsUserBackground()" classname="com.adityachandel.booklore.util.FileServiceTest$BackgroundOperationsTests$GetBackgroundResourceTests" time="0.013"/>
+  <testcase name="userHasNoBackground_globalExists_returnsGlobal()" classname="com.adityachandel.booklore.util.FileServiceTest$BackgroundOperationsTests$GetBackgroundResourceTests" time="0.011"/>
+  <testcase name="userBackgroundTakesPriority_overGlobal()" classname="com.adityachandel.booklore.util.FileServiceTest$BackgroundOperationsTests$GetBackgroundResourceTests" time="0.018"/>
+  <testcase name="[1] filename=1.jpg" classname="com.adityachandel.booklore.util.FileServiceTest$BackgroundOperationsTests$GetBackgroundResourceTests" time="0.009"/>
+  <testcase name="[2] filename=1.jpeg" classname="com.adityachandel.booklore.util.FileServiceTest$BackgroundOperationsTests$GetBackgroundResourceTests" time="0.008"/>
+  <testcase name="[3] filename=1.png" classname="com.adityachandel.booklore.util.FileServiceTest$BackgroundOperationsTests$GetBackgroundResourceTests" time="0.009"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

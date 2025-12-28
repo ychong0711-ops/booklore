@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.BookNoteServiceTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:53.982Z" hostname="DESKTOP-67T0KNA" time="0.101">
+  <properties/>
+  <testcase name="createOrUpdateNote_updatesExistingNote_whenIdIsPresent()" classname="com.adityachandel.booklore.service.BookNoteServiceTest" time="0.085"/>
+  <testcase name="getNotesForBook_returnsMappedNotes()" classname="com.adityachandel.booklore.service.BookNoteServiceTest" time="0.002"/>
+  <testcase name="createOrUpdateNote_throwsIfBookNotFound()" classname="com.adityachandel.booklore.service.BookNoteServiceTest" time="0.004"/>
+  <testcase name="createOrUpdateNote_throwsIfUserNotFound()" classname="com.adityachandel.booklore.service.BookNoteServiceTest" time="0.002"/>
+  <testcase name="deleteNote_throwsIfNotFound()" classname="com.adityachandel.booklore.service.BookNoteServiceTest" time="0.002"/>
+  <testcase name="deleteNote_deletesIfExists()" classname="com.adityachandel.booklore.service.BookNoteServiceTest" time="0.001"/>
+  <testcase name="createOrUpdateNote_throwsIfNoteNotFoundForUpdate()" classname="com.adityachandel.booklore.service.BookNoteServiceTest" time="0.002"/>
+  <testcase name="createOrUpdateNote_createsNewNote_whenIdIsNull()" classname="com.adityachandel.booklore.service.BookNoteServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

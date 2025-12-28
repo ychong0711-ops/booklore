@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Basic Metadata Extraction Tests" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:06.599Z" hostname="DESKTOP-67T0KNA" time="0.051">
+  <properties/>
+  <testcase name="Should extract author name from title-info" classname="com.adityachandel.booklore.service.metadata.extractor.Fb2MetadataExtractorTest$BasicMetadataTests" time="0.008"/>
+  <testcase name="Should extract multiple genres as categories" classname="com.adityachandel.booklore.service.metadata.extractor.Fb2MetadataExtractorTest$BasicMetadataTests" time="0.007"/>
+  <testcase name="Should extract annotation as description" classname="com.adityachandel.booklore.service.metadata.extractor.Fb2MetadataExtractorTest$BasicMetadataTests" time="0.007"/>
+  <testcase name="Should extract genre as category" classname="com.adityachandel.booklore.service.metadata.extractor.Fb2MetadataExtractorTest$BasicMetadataTests" time="0.007"/>
+  <testcase name="Should extract language" classname="com.adityachandel.booklore.service.metadata.extractor.Fb2MetadataExtractorTest$BasicMetadataTests" time="0.007"/>
+  <testcase name="Should extract title from title-info" classname="com.adityachandel.booklore.service.metadata.extractor.Fb2MetadataExtractorTest$BasicMetadataTests" time="0.007"/>
+  <testcase name="Should extract multiple authors" classname="com.adityachandel.booklore.service.metadata.extractor.Fb2MetadataExtractorTest$BasicMetadataTests" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

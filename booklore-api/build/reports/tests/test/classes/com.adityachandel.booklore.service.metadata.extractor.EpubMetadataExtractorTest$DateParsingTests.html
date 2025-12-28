@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Date Parsing Tests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Date Parsing Tests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.adityachandel.booklore.service.metadata.extractor.html">com.adityachandel.booklore.service.metadata.extractor</a> &gt; EpubMetadataExtractorTest$DateParsingTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">25</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.389s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Should parse date with extra content after first 10 characters</td>
+<td class="success">parseDate_dateWithExtraContent_returnsCorrectDate()</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle whitespace in full date format</td>
+<td class="success">parseDate_fullDateWithWhitespace_trimsAndParses()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should parse full ISO date format (yyyy-MM-dd)</td>
+<td class="success">parseDate_fullIsoDate_returnsCorrectDate()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[1] invalidDate=invalid</td>
+<td class="success">parseDate_invalidFormats_returnsNullDate(String)[1]</td>
+<td class="success">0.015s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] invalidDate=20</td>
+<td class="success">parseDate_invalidFormats_returnsNullDate(String)[2]</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] invalidDate=202</td>
+<td class="success">parseDate_invalidFormats_returnsNullDate(String)[3]</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[4] invalidDate=abc1234</td>
+<td class="success">parseDate_invalidFormats_returnsNullDate(String)[4]</td>
+<td class="success">0.015s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[5] invalidDate=2024/06/15</td>
+<td class="success">parseDate_invalidFormats_returnsNullDate(String)[5]</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should parse ISO datetime with timezone offset</td>
+<td class="success">parseDate_isoDateTimeWithOffset_returnsCorrectDate()</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should parse ISO datetime with Z timezone</td>
+<td class="success">parseDate_isoDateTimeWithZ_returnsCorrectDate()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[1] year=1999, expectedDate=1999-01-01</td>
+<td class="success">parseDate_variousYears_returnsCorrectDate(String, String)[1]</td>
+<td class="success">0.025s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] year=2000, expectedDate=2000-01-01</td>
+<td class="success">parseDate_variousYears_returnsCorrectDate(String, String)[2]</td>
+<td class="success">0.019s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] year=2010, expectedDate=2010-01-01</td>
+<td class="success">parseDate_variousYears_returnsCorrectDate(String, String)[3]</td>
+<td class="success">0.015s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[4] year=2023, expectedDate=2023-01-01</td>
+<td class="success">parseDate_variousYears_returnsCorrectDate(String, String)[4]</td>
+<td class="success">0.015s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[5] year=2024, expectedDate=2024-01-01</td>
+<td class="success">parseDate_variousYears_returnsCorrectDate(String, String)[5]</td>
+<td class="success">0.015s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[6] year=1850, expectedDate=1850-01-01</td>
+<td class="success">parseDate_variousYears_returnsCorrectDate(String, String)[6]</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[7] year=1001, expectedDate=1001-01-01</td>
+<td class="success">parseDate_variousYears_returnsCorrectDate(String, String)[7]</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[8] year=9999, expectedDate=9999-01-01</td>
+<td class="success">parseDate_variousYears_returnsCorrectDate(String, String)[8]</td>
+<td class="success">0.015s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should parse year 1972 correctly</td>
+<td class="success">parseDate_year1972_returnsJanuary1st()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should parse year-only date format (e.g., '2024') as January 1st of that year</td>
+<td class="success">parseDate_yearOnly_returnsJanuary1st()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should reject year greater than 9999</td>
+<td class="success">parseDate_yearTooLarge_returnsNull()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[1] dateWithSpace= 2024 , expectedDate=2024-01-01</td>
+<td class="success">parseDate_yearWithWhitespace_trimsAndParses(String, String)[1]</td>
+<td class="success">0.015s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] dateWithSpace=	2024, expectedDate=2024-01-01</td>
+<td class="success">parseDate_yearWithWhitespace_trimsAndParses(String, String)[2]</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] dateWithSpace=  2024  , expectedDate=2024-01-01</td>
+<td class="success">parseDate_yearWithWhitespace_trimsAndParses(String, String)[3]</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should reject invalid year 0000</td>
+<td class="success">parseDate_yearZero_returnsNull()</td>
+<td class="success">0.016s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>14:34:06.056 [Test worker] WARN com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractor -- Failed to parse date from string: 0000
+14:34:06.071 [Test worker] WARN com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractor -- Failed to parse date from string: 10000
+14:34:06.349 [Test worker] WARN com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractor -- Failed to parse date from string: invalid
+14:34:06.365 [Test worker] WARN com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractor -- Failed to parse date from string: 20
+14:34:06.381 [Test worker] WARN com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractor -- Failed to parse date from string: 202
+14:34:06.397 [Test worker] WARN com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractor -- Failed to parse date from string: abc1234
+14:34:06.413 [Test worker] WARN com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractor -- Failed to parse date from string: 2024/06/15
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at 2025. 12. 28. 오후 2:34:11</p>
+</div>
+</div>
+</body>
+</html>

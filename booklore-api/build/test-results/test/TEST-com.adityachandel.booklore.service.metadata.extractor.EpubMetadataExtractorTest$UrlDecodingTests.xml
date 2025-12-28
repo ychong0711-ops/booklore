@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="URL Decoding Tests" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:05.516Z" hostname="DESKTOP-67T0KNA" time="0.126">
+  <properties/>
+  <testcase name="Should properly decode unicode characters in cover href" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$UrlDecodingTests" time="0.08"/>
+  <testcase name="Should handle multiple encoded unicode characters" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$UrlDecodingTests" time="0.021"/>
+  <testcase name="Should extract cover with URL-encoded characters in manifest" classname="com.adityachandel.booklore.service.metadata.extractor.EpubMetadataExtractorTest$UrlDecodingTests" time="0.023"/>
+  <system-out><![CDATA[2025-12-28 14:34:05.566 [D] io.documentnode.epub4j.epub.PackageDocumentMetadataReader - Package does not contain element identifier
+2025-12-28 14:34:05.567 [D] io.documentnode.epub4j.epub.PackageDocumentReader - Element spine not found in package document, generating one automatically
+2025-12-28 14:34:05.569 [D] io.documentnode.epub4j.epub.NCXDocument - Book does not contain a table of contents file
+2025-12-28 14:34:05.610 [D] io.documentnode.epub4j.epub.PackageDocumentMetadataReader - Package does not contain element identifier
+2025-12-28 14:34:05.611 [D] io.documentnode.epub4j.epub.PackageDocumentReader - Element spine not found in package document, generating one automatically
+2025-12-28 14:34:05.611 [D] io.documentnode.epub4j.epub.NCXDocument - Book does not contain a table of contents file
+2025-12-28 14:34:05.632 [D] io.documentnode.epub4j.epub.PackageDocumentMetadataReader - Package does not contain element identifier
+2025-12-28 14:34:05.632 [D] io.documentnode.epub4j.epub.PackageDocumentReader - Element spine not found in package document, generating one automatically
+2025-12-28 14:34:05.632 [D] io.documentnode.epub4j.epub.NCXDocument - Book does not contain a table of contents file
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

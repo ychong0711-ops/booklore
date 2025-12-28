@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SMB Share Behavior Tests" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:02.022Z" hostname="DESKTOP-67T0KNA" time="0.802">
+  <properties/>
+  <testcase name="waitForFileAccessible retries when file appears after delay (simulates SMB latency)" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$SmbShareBehaviorTests" time="0.213"/>
+  <testcase name="moveFile throws NoSuchFileException when source never becomes accessible" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$SmbShareBehaviorTests" time="0.223"/>
+  <testcase name="rollbackMove restores original file from temp location" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$SmbShareBehaviorTests" time="0.008"/>
+  <testcase name="rollbackMove does nothing when temp file doesn't exist" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$SmbShareBehaviorTests" time="0.004"/>
+  <testcase name="commitMove moves temp file to final destination" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$SmbShareBehaviorTests" time="0.01"/>
+  <testcase name="waitForFileAccessible returns false when file never appears (simulates SMB file not found)" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$SmbShareBehaviorTests" time="0.217"/>
+  <testcase name="moveFileWithBackup creates temp file and returns its path" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$SmbShareBehaviorTests" time="0.009"/>
+  <testcase name="moveFile succeeds when source appears during retry (simulates SMB eventual consistency)" classname="com.adityachandel.booklore.service.file.FileMoveHelperTest$SmbShareBehaviorTests" time="0.116"/>
+  <system-out><![CDATA[14:34:02.464 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Rolling back move from C:\Users\home\AppData\Local\Temp\junit-1883325442040209109\file.txt.tmp_move to C:\Users\home\AppData\Local\Temp\junit-1883325442040209109\original.txt
+14:34:02.477 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Committing move from temporary location C:\Users\home\AppData\Local\Temp\junit-1420823863154196135\file.txt.tmp_move to C:\Users\home\AppData\Local\Temp\junit-1420823863154196135\subdir\final.txt
+14:34:02.704 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Moving file from C:\Users\home\AppData\Local\Temp\junit-17579895749321787330\original.txt to temporary location C:\Users\home\AppData\Local\Temp\junit-17579895749321787330\original.txt.tmp_move
+14:34:02.819 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Moving file from C:\Users\home\AppData\Local\Temp\junit-9871520017242762116\eventual-source.txt to C:\Users\home\AppData\Local\Temp\junit-9871520017242762116\subdir\target.txt
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

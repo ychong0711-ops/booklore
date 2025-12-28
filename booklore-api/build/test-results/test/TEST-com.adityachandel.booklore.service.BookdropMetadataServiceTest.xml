@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.BookdropMetadataServiceTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:54.333Z" hostname="DESKTOP-67T0KNA" time="1.316">
+  <properties/>
+  <testcase name="attachFetchedMetadata_shouldSleepIfGoodreadsIncluded()" classname="com.adityachandel.booklore.service.BookdropMetadataServiceTest" time="1.29"/>
+  <testcase name="extractInitialMetadata_shouldThrowForUnsupportedFileExtension()" classname="com.adityachandel.booklore.service.BookdropMetadataServiceTest" time="0.006"/>
+  <testcase name="attachFetchedMetadata_shouldThrowOnJsonProcessingError()" classname="com.adityachandel.booklore.service.BookdropMetadataServiceTest" time="0.005"/>
+  <testcase name="attachInitialMetadata_shouldHandleNullCoverGracefully()" classname="com.adityachandel.booklore.service.BookdropMetadataServiceTest" time="0.004"/>
+  <testcase name="attachInitialMetadata_shouldExtractAndSaveMetadata()" classname="com.adityachandel.booklore.service.BookdropMetadataServiceTest" time="0.004"/>
+  <testcase name="attachInitialMetadata_shouldThrowWhenFileMissing()" classname="com.adityachandel.booklore.service.BookdropMetadataServiceTest" time="0.003"/>
+  <testcase name="attachFetchedMetadata_shouldUpdateEntityWithFetchedData()" classname="com.adityachandel.booklore.service.BookdropMetadataServiceTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:05.295Z" hostname="DESKTOP-67T0KNA" time="0.098">
+  <properties/>
+  <testcase name="mergeAuthors_createsTargetAndMovesBooksAndDeletesOldAuthor()" classname="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" time="0.055"/>
+  <testcase name="deleteTags_removesAndDeletes()" classname="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" time="0.003"/>
+  <testcase name="deleteSeries_noBooksDoesNothing()" classname="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" time="0.002"/>
+  <testcase name="mergeCategories_doesNotDuplicateExistingTarget()" classname="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" time="0.004"/>
+  <testcase name="deleteTags_partialMissing_ignoresMissing()" classname="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" time="0.003"/>
+  <testcase name="mergeLanguages_withMultipleTargets_throws()" classname="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" time="0.002"/>
+  <testcase name="mergeTags_noBooks_deletesOldTag()" classname="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" time="0.003"/>
+  <testcase name="mergeSeries_withMultipleTargets_throws()" classname="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" time="0.002"/>
+  <testcase name="deleteCategories_removesAndDeletes()" classname="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" time="0.003"/>
+  <testcase name="mergeTags_movesAndDeletesOldTag()" classname="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" time="0.002"/>
+  <testcase name="mergePublishers_withMultipleTargets_throws()" classname="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" time="0.001"/>
+  <testcase name="mergeMoods_movesAndDeletesOldMood()" classname="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" time="0.004"/>
+  <testcase name="mergeCategories_movesAndDeletesOldCategory()" classname="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" time="0.002"/>
+  <testcase name="mergeTags_mergesMultipleOldTagsIntoSingleTarget()" classname="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" time="0.002"/>
+  <testcase name="deleteSeries_clearsSeriesFields()" classname="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" time="0.002"/>
+  <testcase name="deletePublishers_noBooksDoesNothing()" classname="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" time="0.002"/>
+  <testcase name="deleteMoods_removesAndDeletes()" classname="com.adityachandel.booklore.service.metadata.MetadataManagementServiceTest" time="0.003"/>
+  <system-out><![CDATA[14:34:05.349 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Consolidated 1 authors into [New Author]: [Old Author]
+14:34:05.353 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Deleted 1 tags: [TagToDelete]
+14:34:05.355 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Deleted 1 series: [NoSeries]
+14:34:05.359 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Consolidated 1 categories into [CatTarget]: [OldCat]
+14:34:05.361 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Deleted 1 tags: [PresentTag, MissingTag]
+14:34:05.367 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Consolidated 1 tags into [TargetTag]: [OldTag]
+14:34:05.371 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Deleted 1 categories: [CategoryToDelete]
+14:34:05.374 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Consolidated 1 tags into [New Tag]: [Old Tag]
+14:34:05.380 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Consolidated 1 moods into [New Mood]: [Old Mood]
+14:34:05.383 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Consolidated 1 categories into [New Category]: [Old Category]
+14:34:05.386 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Consolidated 2 tags into [UnifiedTag]: [OldTag1, OldTag2]
+14:34:05.388 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Deleted 1 series: [Some Series]
+14:34:05.390 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Deleted 1 publishers: [NoPublisher]
+14:34:05.392 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Deleted 1 moods: [MoodToDelete]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

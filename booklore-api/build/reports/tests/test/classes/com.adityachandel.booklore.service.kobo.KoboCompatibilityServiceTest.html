@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Kobo Compatibility Service Tests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Kobo Compatibility Service Tests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.adityachandel.booklore.service.kobo.html">com.adityachandel.booklore.service.kobo</a> &gt; KoboCompatibilityServiceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">17</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.014s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Should always support EPUB files regardless of settings</td>
+<td class="success">shouldAlwaysSupportEpubFiles()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle null book gracefully</td>
+<td class="success">shouldHandleNullBookGracefully()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle null book type gracefully</td>
+<td class="success">shouldHandleNullBookTypeGracefully()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle null file size gracefully</td>
+<td class="success">shouldHandleNullFileSizeGracefully()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle settings exception gracefully</td>
+<td class="success">shouldHandleSettingsExceptionGracefully()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should not support CBX files when CBX conversion is disabled</td>
+<td class="success">shouldNotSupportCbxWhenConversionDisabled()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should not support CBX files when they exceed the size limit</td>
+<td class="success">shouldNotSupportCbxWhenExceedsSizeLimit()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should not support CBX files when Kobo settings are null</td>
+<td class="success">shouldNotSupportCbxWhenSettingsAreNull()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should not support CBX files when size limit check fails due to settings error</td>
+<td class="success">shouldNotSupportCbxWhenSizeLimitCheckFails()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should not support PDF files</td>
+<td class="success">shouldNotSupportPdfFiles()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should return false for size limit check on non-CBX book</td>
+<td class="success">shouldReturnFalseForSizeLimitCheckOnNonCbxBook()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should return false when CBX conversion is disabled</td>
+<td class="success">shouldReturnFalseWhenCbxConversionDisabled()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should return true when CBX conversion is enabled</td>
+<td class="success">shouldReturnTrueWhenCbxConversionEnabled()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should support CBX files that exactly meet the size limit</td>
+<td class="success">shouldSupportCbxAtExactSizeLimit()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should support CBX files when CBX conversion is enabled and within size limit</td>
+<td class="success">shouldSupportCbxWhenConversionEnabledAndWithinSizeLimit()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should validate CBX file exceeds size limit</td>
+<td class="success">shouldValidateCbxFileExceedsSizeLimit()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should validate CBX file meets size limit</td>
+<td class="success">shouldValidateCbxFileMeetsSizeLimit()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at 2025. 12. 28. 오후 2:34:11</p>
+</div>
+</div>
+</body>
+</html>

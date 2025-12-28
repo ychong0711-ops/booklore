@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Pending Sync Protection - User changed status in BookLore, waiting to sync to Kobo" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:59.134Z" hostname="DESKTOP-67T0KNA" time="0.011">
+  <properties/>
+  <testcase name="User marks book UNREAD in BookLore -&gt; Kobo sends 100% progress before sync -&gt; UNREAD preserved until synced" classname="com.adityachandel.booklore.service.KoboStatusSyncProtectionTest$PendingSyncProtection" time="0.003"/>
+  <testcase name="User changes status AFTER last sync -&gt; new status preserved until next sync completes" classname="com.adityachandel.booklore.service.KoboStatusSyncProtectionTest$PendingSyncProtection" time="0.003"/>
+  <testcase name="User marks book READ in BookLore -&gt; Kobo sends 50% progress before sync completes -&gt; READ status preserved until synced" classname="com.adityachandel.booklore.service.KoboStatusSyncProtectionTest$PendingSyncProtection" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

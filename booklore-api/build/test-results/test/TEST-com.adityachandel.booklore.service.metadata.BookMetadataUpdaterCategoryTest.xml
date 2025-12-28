@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:04.955Z" hostname="DESKTOP-67T0KNA" time="0.313">
+  <properties/>
+  <testcase name="fixProposal_mergeTrueShouldPreserveExisting()" classname="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" time="0.272"/>
+  <testcase name="bug_emptyArrayFromUIWithMergeFalseClearsEverything()" classname="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" time="0.003"/>
+  <testcase name="replaceAll_withMergeFalse_shouldClearAndAddNew()" classname="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" time="0.002"/>
+  <testcase name="fixProposal_uiShouldSendFullListOrNull()" classname="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" time="0.002"/>
+  <testcase name="bug_addingItemsWithEmptyArrayCausesDisappearance()" classname="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" time="0.002"/>
+  <testcase name="replaceMissing_whenCategoriesExist_shouldNotChange()" classname="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" time="0.002"/>
+  <testcase name="nullReplaceMode_withMergeTrue_shouldAddToExisting()" classname="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" time="0.002"/>
+  <testcase name="replaceAll_withMergeFalse_andEmptyInput_shouldClearAll()" classname="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" time="0.002"/>
+  <testcase name="replaceAll_withMergeTrue_andEmptyInput_shouldClearAll()" classname="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" time="0.002"/>
+  <testcase name="whenNewCategoryDoesNotExist_shouldCreateIt()" classname="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" time="0.003"/>
+  <testcase name="whenInputHasBlankNames_shouldFilterThem()" classname="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" time="0.003"/>
+  <testcase name="nullReplaceMode_withMergeFalse_shouldReplaceAll()" classname="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" time="0.002"/>
+  <testcase name="replaceAll_withMergeTrue_shouldAddWithoutClearing()" classname="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" time="0.002"/>
+  <testcase name="whenClearFlagSet_shouldClearCategories()" classname="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" time="0.003"/>
+  <testcase name="lockShouldPreventUpdateEvenWithEmptyArray()" classname="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" time="0.002"/>
+  <testcase name="replaceMissing_whenCategoriesEmpty_shouldAddNew()" classname="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" time="0.002"/>
+  <testcase name="whenCategoriesLocked_shouldNotUpdate()" classname="com.adityachandel.booklore.service.metadata.BookMetadataUpdaterCategoryTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

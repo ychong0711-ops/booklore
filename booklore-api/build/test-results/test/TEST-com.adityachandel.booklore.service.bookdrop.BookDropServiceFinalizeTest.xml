@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.bookdrop.BookDropServiceFinalizeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:00.564Z" hostname="DESKTOP-67T0KNA" time="0.161">
+  <properties/>
+  <testcase name="finalizeImport_selectAll_withExcludedIds_shouldCallFindAllExcludingIdsFlat()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceFinalizeTest" time="0.158"/>
+  <testcase name="finalizeImport_selectAll_emptyExcludedIds_shouldCallFindAllIds()" classname="com.adityachandel.booklore.service.bookdrop.BookDropServiceFinalizeTest" time="0.003"/>
+  <system-out><![CDATA[14:34:00.721 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Starting finalizeImport: selectAll=true, provided file count=0, defaultLibraryId=1, defaultPathId=1
+14:34:00.721 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- SelectAll: Total files to finalize (after exclusions): 2, Excluded IDs: [3]
+14:34:00.721 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Collected 0 unique libraries for monitoring unregistration: []
+14:34:00.721 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Unregistered 0 libraries from monitoring
+14:34:00.722 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Processing chunk 1/1 (2 files): IDs=[1, 2]
+14:34:00.722 [Test worker] WARN com.adityachandel.booklore.service.bookdrop.BookDropService -- File ID 1 missing in DB during finalizeImport chunk processing
+14:34:00.722 [Test worker] WARN com.adityachandel.booklore.service.bookdrop.BookDropService -- File ID 2 missing in DB during finalizeImport chunk processing
+14:34:00.722 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Re-registered 0 libraries for monitoring
+14:34:00.722 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Finalization complete. Success: 0, Failed: 2, Total processed: 2
+14:34:00.722 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Bookdrop monitoring resumed
+14:34:00.724 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Starting finalizeImport: selectAll=true, provided file count=0, defaultLibraryId=1, defaultPathId=1
+14:34:00.724 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- SelectAll: Total files to finalize (after exclusions): 2, Excluded IDs: []
+14:34:00.724 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Collected 0 unique libraries for monitoring unregistration: []
+14:34:00.724 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Unregistered 0 libraries from monitoring
+14:34:00.725 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Processing chunk 1/1 (2 files): IDs=[1, 2]
+14:34:00.725 [Test worker] WARN com.adityachandel.booklore.service.bookdrop.BookDropService -- File ID 1 missing in DB during finalizeImport chunk processing
+14:34:00.725 [Test worker] WARN com.adityachandel.booklore.service.bookdrop.BookDropService -- File ID 2 missing in DB during finalizeImport chunk processing
+14:34:00.725 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Re-registered 0 libraries for monitoring
+14:34:00.725 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Finalization complete. Success: 0, Failed: 2, Total processed: 2
+14:34:00.725 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Bookdrop monitoring resumed
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

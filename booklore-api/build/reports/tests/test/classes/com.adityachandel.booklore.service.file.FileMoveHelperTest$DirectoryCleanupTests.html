@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Directory Cleanup Tests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Directory Cleanup Tests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.adityachandel.booklore.service.file.html">com.adityachandel.booklore.service.file</a> &gt; FileMoveHelperTest$DirectoryCleanupTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">7</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.624s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Deletes empty parent directories up to library root</td>
+<td class="success">deleteEmptyParentDirs_deletesEmptyDirectories()</td>
+<td class="success">0.012s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Recursively deletes nested empty subdirectories</td>
+<td class="success">deleteEmptyParentDirs_deletesNestedEmptySubdirectories()</td>
+<td class="success">0.331s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Deletes subdirectories containing only ignored files</td>
+<td class="success">deleteEmptyParentDirs_deletesSubdirectoriesWithOnlyIgnoredFiles()</td>
+<td class="success">0.131s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Deletes directories containing only ignored files (.DS_Store, Thumbs.db)</td>
+<td class="success">deleteEmptyParentDirs_handlesMultipleIgnoredFiles()</td>
+<td class="success">0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Does not delete library root even if empty</td>
+<td class="success">deleteEmptyParentDirs_neverDeletesLibraryRoot()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Does not delete subdirectories containing real files</td>
+<td class="success">deleteEmptyParentDirs_preservesSubdirectoriesWithFiles()</td>
+<td class="success">0.118s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Stops at directory containing non-ignored files</td>
+<td class="success">deleteEmptyParentDirs_stopsAtNonEmptyDirectory()</td>
+<td class="success">0.013s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>14:34:01.395 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted ignored file: C:\Users\home\AppData\Local\Temp\junit-2098061764290094597\library\author\.DS_Store
+14:34:01.395 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted ignored file: C:\Users\home\AppData\Local\Temp\junit-2098061764290094597\library\author\Thumbs.db
+14:34:01.396 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-2098061764290094597\library\author
+14:34:01.412 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted ignored file: C:\Users\home\AppData\Local\Temp\junit-17341028835911859783\library\author\series\.DS_Store
+14:34:01.412 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted ignored file: C:\Users\home\AppData\Local\Temp\junit-17341028835911859783\library\author\series\Thumbs.db
+14:34:01.413 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-17341028835911859783\library\author\series
+14:34:01.528 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-17341028835911859783\library\author
+14:34:01.537 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-11971557504551642565\library\author\series\book
+14:34:01.538 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-11971557504551642565\library\author\series
+14:34:01.539 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-11971557504551642565\library\author
+14:34:01.551 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-16018861987422168526\library\author\series\volume\chapter
+14:34:01.662 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-16018861987422168526\library\author\series\volume
+14:34:01.767 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-16018861987422168526\library\author\series
+14:34:01.872 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-16018861987422168526\library\author
+14:34:01.883 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-16982851595388899653\library\author\series\book
+14:34:01.884 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-16982851595388899653\library\author\series
+14:34:01.903 [Test worker] INFO com.adityachandel.booklore.service.file.FileMoveHelper -- Deleted empty directory: C:\Users\home\AppData\Local\Temp\junit-4380785366735651598\library\author\empty-series
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at 2025. 12. 28. 오후 2:34:11</p>
+</div>
+</div>
+</body>
+</html>

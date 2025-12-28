@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.kobo.KoboAutoShelfServiceTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:04.475Z" hostname="DESKTOP-67T0KNA" time="0.068">
+  <properties/>
+  <testcase name="autoAddBookToKoboShelves_withIncompatibleBook_shouldReturnEarly()" classname="com.adityachandel.booklore.service.kobo.KoboAutoShelfServiceTest" time="0.049"/>
+  <testcase name="autoAddBookToKoboShelves_withNoKoboShelvesFound_shouldNotSave()" classname="com.adityachandel.booklore.service.kobo.KoboAutoShelfServiceTest" time="0.003"/>
+  <testcase name="autoAddBookToKoboShelves_withBookOnAllShelves_shouldNotSave()" classname="com.adityachandel.booklore.service.kobo.KoboAutoShelfServiceTest" time="0.002"/>
+  <testcase name="autoAddBookToKoboShelves_withNonExistentBook_shouldReturnEarly()" classname="com.adityachandel.booklore.service.kobo.KoboAutoShelfServiceTest" time="0.001"/>
+  <testcase name="autoAddBookToKoboShelves_withNullBookId_shouldReturnEarly()" classname="com.adityachandel.booklore.service.kobo.KoboAutoShelfServiceTest" time="0.001"/>
+  <testcase name="autoAddBookToKoboShelves_withNullShelves_shouldInitializeAndAdd()" classname="com.adityachandel.booklore.service.kobo.KoboAutoShelfServiceTest" time="0.002"/>
+  <testcase name="autoAddBookToKoboShelves_successfully_shouldAddBookToShelves()" classname="com.adityachandel.booklore.service.kobo.KoboAutoShelfServiceTest" time="0.002"/>
+  <testcase name="autoAddBookToKoboShelves_withBookAlreadyOnShelf_shouldNotDuplicate()" classname="com.adityachandel.booklore.service.kobo.KoboAutoShelfServiceTest" time="0.001"/>
+  <testcase name="autoAddBookToKoboShelves_withSingleUser_shouldAddToSingleShelf()" classname="com.adityachandel.booklore.service.kobo.KoboAutoShelfServiceTest" time="0.002"/>
+  <testcase name="autoAddBookToKoboShelves_withOneUserMissingShelf_shouldAddOnlyToExistingShelves()" classname="com.adityachandel.booklore.service.kobo.KoboAutoShelfServiceTest" time="0.002"/>
+  <testcase name="autoAddBookToKoboShelves_withNoEligibleUsers_shouldReturnEarly()" classname="com.adityachandel.booklore.service.kobo.KoboAutoShelfServiceTest" time="0.002"/>
+  <system-out><![CDATA[14:34:04.531 [Test worker] WARN com.adityachandel.booklore.service.kobo.KoboAutoShelfService -- Book not found for Kobo auto-add
+14:34:04.533 [Test worker] WARN com.adityachandel.booklore.service.kobo.KoboAutoShelfService -- Book ID is null for auto-add to Kobo shelf
+14:34:04.536 [Test worker] INFO com.adityachandel.booklore.service.kobo.KoboAutoShelfService -- Auto-added book 1 to Kobo shelf for user 100
+14:34:04.537 [Test worker] INFO com.adityachandel.booklore.service.kobo.KoboAutoShelfService -- Auto-added book 1 to Kobo shelf for user 200
+14:34:04.538 [Test worker] INFO com.adityachandel.booklore.service.kobo.KoboAutoShelfService -- Auto-added book 1 to Kobo shelf for user 200
+14:34:04.540 [Test worker] INFO com.adityachandel.booklore.service.kobo.KoboAutoShelfService -- Auto-added book 1 to Kobo shelf for user 100
+14:34:04.542 [Test worker] INFO com.adityachandel.booklore.service.kobo.KoboAutoShelfService -- Auto-added book 1 to Kobo shelf for user 100
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

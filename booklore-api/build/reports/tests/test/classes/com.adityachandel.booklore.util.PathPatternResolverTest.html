@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - PathPatternResolverTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>PathPatternResolverTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.adityachandel.booklore.util.html">com.adityachandel.booklore.util</a> &gt; PathPatternResolverTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">54</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.021s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Should add 'et al.' when authors are truncated</td>
+<td class="success">testResolvePattern_addsEtAlWhenTruncated()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should apply author truncation in various pattern contexts</td>
+<td class="success">testResolvePattern_appliesAuthorTruncation()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_authorsList()</td>
+<td class="success">testResolvePattern_authorsList()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_authorsWithinLimit()</td>
+<td class="success">testResolvePattern_authorsWithinLimit()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_blankPattern()</td>
+<td class="success">testResolvePattern_blankPattern()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle blank result with fallback to filename</td>
+<td class="success">testResolvePattern_blankResultUsesFallback()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should preserve CBZ extension for comic files with chapter numbers</td>
+<td class="success">testResolvePattern_comicWithChapterNumber()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_complexPattern()</td>
+<td class="success">testResolvePattern_complexPattern()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_currentFilename()</td>
+<td class="success">testResolvePattern_currentFilename()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle filename with no extension in currentFilename</td>
+<td class="success">testResolvePattern_currentFilenameNoExtension()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should not add extension when using {currentFilename} in subdirectory</td>
+<td class="success">testResolvePattern_currentFilenameWithPath()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_emptyAuthors()</td>
+<td class="success">testResolvePattern_emptyAuthors()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle empty filename without title - uses default</td>
+<td class="success">testResolvePattern_emptyFilename_noTitle_usesDefault()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle empty filename with title - uses title</td>
+<td class="success">testResolvePattern_emptyFilename_withTitle_usesTitle()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_emptyOptionalBlocks()</td>
+<td class="success">testResolvePattern_emptyOptionalBlocks()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should add extension when pattern doesn't include it</td>
+<td class="success">testResolvePattern_extensionNotInPattern()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle filename with only extension</td>
+<td class="success">testResolvePattern_filenameOnlyExtension()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should preserve extension for files with multiple dots in name</td>
+<td class="success">testResolvePattern_filenameWithMultipleDots()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should preserve extension for files with numeric patterns in name (e.g., Chapter 8.1.cbz)</td>
+<td class="success">testResolvePattern_filenameWithNumericPattern()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle authors truncation when first author exceeds limit</td>
+<td class="success">testResolvePattern_firstAuthorExceedsLimit()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_handlesMissingMetadataFields()</td>
+<td class="success">testResolvePattern_handlesMissingMetadataFields()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_handlesNullPattern()</td>
+<td class="success">testResolvePattern_handlesNullPattern()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle hidden file (starts with dot)</td>
+<td class="success">testResolvePattern_hiddenFile()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_isbn10Fallback()</td>
+<td class="success">testResolvePattern_isbn10Fallback()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_isbnPriority()</td>
+<td class="success">testResolvePattern_isbnPriority()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_multiplePlaceholders()</td>
+<td class="success">testResolvePattern_multiplePlaceholders()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle multiple trailing dots in path components</td>
+<td class="success">testResolvePattern_multipleTrailingDots()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle empty extension gracefully</td>
+<td class="success">testResolvePattern_noExtension()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_nullMetadata()</td>
+<td class="success">testResolvePattern_nullMetadata()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_nullPattern()</td>
+<td class="success">testResolvePattern_nullPattern()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_nullTitle()</td>
+<td class="success">testResolvePattern_nullTitle()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle files with only numeric extension-like pattern correctly</td>
+<td class="success">testResolvePattern_numericExtensionLikePattern()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle optional block with all values present</td>
+<td class="success">testResolvePattern_optionalBlockAllPresent()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_optionalBlock_allPresent()</td>
+<td class="success">testResolvePattern_optionalBlock_allPresent()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_optionalBlock_missingValue()</td>
+<td class="success">testResolvePattern_optionalBlock_missingValue()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should preserve file extension when truncating very long filenames</td>
+<td class="success">testResolvePattern_preservesExtensionOnTruncation()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should remove trailing dots from path components for Windows compatibility</td>
+<td class="success">testResolvePattern_removesTrailingDots()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should remove trailing dots from multiple path components</td>
+<td class="success">testResolvePattern_removesTrailingDotsFromMultipleComponents()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should sanitize illegal filesystem characters</td>
+<td class="success">testResolvePattern_sanitizesIllegalCharacters()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_seriesInfo()</td>
+<td class="success">testResolvePattern_seriesInfo()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_seriesNumberFloat()</td>
+<td class="success">testResolvePattern_seriesNumberFloat()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_simpleTitle()</td>
+<td class="success">testResolvePattern_simpleTitle()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should truncate single very long author name</td>
+<td class="success">testResolvePattern_singleVeryLongAuthor()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_specialCharacters()</td>
+<td class="success">testResolvePattern_specialCharacters()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle title with dots and numeric suffix without duplicating extension</td>
+<td class="success">testResolvePattern_titleWithDotsAndNumericSuffix()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_titleWithExtension()</td>
+<td class="success">testResolvePattern_titleWithExtension()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should truncate long author lists to prevent filesystem errors</td>
+<td class="success">testResolvePattern_truncatesLongAuthorList()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle single author that exceeds byte limits</td>
+<td class="success">testResolvePattern_truncatesSingleVeryLongAuthor()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle pattern with unknown placeholder</td>
+<td class="success">testResolvePattern_unknownPlaceholder()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should truncate combined long components in final validation</td>
+<td class="success">testResolvePattern_validatesFinalPathWithCombinedLongComponents()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Should handle filename with very long extension - truncates or warns</td>
+<td class="success">testResolvePattern_veryLongExtension_truncatesOrWarns()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_whitespacePattern()</td>
+<td class="success">testResolvePattern_whitespacePattern()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_withBookEntity()</td>
+<td class="success">testResolvePattern_withBookEntity()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testResolvePattern_withBookMetadataEntity()</td>
+<td class="success">testResolvePattern_withBookMetadataEntity()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at 2025. 12. 28. 오후 2:34:11</p>
+</div>
+</div>
+</body>
+</html>

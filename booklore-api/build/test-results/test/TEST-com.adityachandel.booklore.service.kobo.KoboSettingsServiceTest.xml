@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.kobo.KoboSettingsServiceTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:04.562Z" hostname="DESKTOP-67T0KNA" time="0.063">
+  <properties/>
+  <testcase name="getCurrentUserSettings_settingsWithNullToken_shouldReturnDtoWithNullToken()" classname="com.adityachandel.booklore.service.kobo.KoboSettingsServiceTest" time="0.035"/>
+  <testcase name="updateSettings_getUserKoboShelfReturnsNull_shouldNotThrow()" classname="com.adityachandel.booklore.service.kobo.KoboSettingsServiceTest" time="0.002"/>
+  <testcase name="createOrUpdateToken_existingSettings()" classname="com.adityachandel.booklore.service.kobo.KoboSettingsServiceTest" time="0.003"/>
+  <testcase name="getCurrentUserSettings_noSettings_createsDefault()" classname="com.adityachandel.booklore.service.kobo.KoboSettingsServiceTest" time="0.003"/>
+  <testcase name="updateSettings_disableSync_deletesShelf()" classname="com.adityachandel.booklore.service.kobo.KoboSettingsServiceTest" time="0.002"/>
+  <testcase name="updateSettings_enableSync_createsShelf()" classname="com.adityachandel.booklore.service.kobo.KoboSettingsServiceTest" time="0.002"/>
+  <testcase name="ensureKoboShelfExists_createsIfMissing()" classname="com.adityachandel.booklore.service.kobo.KoboSettingsServiceTest" time="0.001"/>
+  <testcase name="createOrUpdateToken_multipleCalls_generateDifferentTokens()" classname="com.adityachandel.booklore.service.kobo.KoboSettingsServiceTest" time="0.001"/>
+  <testcase name="ensureKoboShelfExists_doesNotCreateIfExists()" classname="com.adityachandel.booklore.service.kobo.KoboSettingsServiceTest" time="0.001"/>
+  <testcase name="updateSettings_nullThresholds_shouldNotChangeExisting()" classname="com.adityachandel.booklore.service.kobo.KoboSettingsServiceTest" time="0.002"/>
+  <testcase name="getCurrentUserSettings_existingSettings()" classname="com.adityachandel.booklore.service.kobo.KoboSettingsServiceTest" time="0.001"/>
+  <testcase name="getCurrentUserSettings_noAuthenticatedUser_shouldThrowException()" classname="com.adityachandel.booklore.service.kobo.KoboSettingsServiceTest" time="0.001"/>
+  <testcase name="updateSettings_updatesThresholds()" classname="com.adityachandel.booklore.service.kobo.KoboSettingsServiceTest" time="0.001"/>
+  <testcase name="ensureKoboShelfExists_idempotentIfCalledTwice()" classname="com.adityachandel.booklore.service.kobo.KoboSettingsServiceTest" time="0.001"/>
+  <testcase name="createOrUpdateToken_noSettings_createsNew()" classname="com.adityachandel.booklore.service.kobo.KoboSettingsServiceTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - BookDropServiceFinalizeTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>BookDropServiceFinalizeTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.adityachandel.booklore.service.bookdrop.html">com.adityachandel.booklore.service.bookdrop</a> &gt; BookDropServiceFinalizeTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.161s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">finalizeImport_selectAll_emptyExcludedIds_shouldCallFindAllIds()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">finalizeImport_selectAll_withExcludedIds_shouldCallFindAllExcludingIdsFlat()</td>
+<td class="success">0.158s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>14:34:00.721 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Starting finalizeImport: selectAll=true, provided file count=0, defaultLibraryId=1, defaultPathId=1
+14:34:00.721 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- SelectAll: Total files to finalize (after exclusions): 2, Excluded IDs: [3]
+14:34:00.721 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Collected 0 unique libraries for monitoring unregistration: []
+14:34:00.721 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Unregistered 0 libraries from monitoring
+14:34:00.722 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Processing chunk 1/1 (2 files): IDs=[1, 2]
+14:34:00.722 [Test worker] WARN com.adityachandel.booklore.service.bookdrop.BookDropService -- File ID 1 missing in DB during finalizeImport chunk processing
+14:34:00.722 [Test worker] WARN com.adityachandel.booklore.service.bookdrop.BookDropService -- File ID 2 missing in DB during finalizeImport chunk processing
+14:34:00.722 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Re-registered 0 libraries for monitoring
+14:34:00.722 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Finalization complete. Success: 0, Failed: 2, Total processed: 2
+14:34:00.722 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Bookdrop monitoring resumed
+14:34:00.724 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Starting finalizeImport: selectAll=true, provided file count=0, defaultLibraryId=1, defaultPathId=1
+14:34:00.724 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- SelectAll: Total files to finalize (after exclusions): 2, Excluded IDs: []
+14:34:00.724 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Collected 0 unique libraries for monitoring unregistration: []
+14:34:00.724 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Unregistered 0 libraries from monitoring
+14:34:00.725 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Processing chunk 1/1 (2 files): IDs=[1, 2]
+14:34:00.725 [Test worker] WARN com.adityachandel.booklore.service.bookdrop.BookDropService -- File ID 1 missing in DB during finalizeImport chunk processing
+14:34:00.725 [Test worker] WARN com.adityachandel.booklore.service.bookdrop.BookDropService -- File ID 2 missing in DB during finalizeImport chunk processing
+14:34:00.725 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Re-registered 0 libraries for monitoring
+14:34:00.725 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Finalization complete. Success: 0, Failed: 2, Total processed: 2
+14:34:00.725 [Test worker] INFO com.adityachandel.booklore.service.bookdrop.BookDropService -- Bookdrop monitoring resumed
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at 2025. 12. 28. 오후 2:34:11</p>
+</div>
+</div>
+</body>
+</html>

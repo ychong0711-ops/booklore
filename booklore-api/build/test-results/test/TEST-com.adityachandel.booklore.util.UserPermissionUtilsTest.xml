@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.util.UserPermissionUtilsTest" tests="74" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:10.975Z" hostname="DESKTOP-67T0KNA" time="0.032">
+  <properties/>
+  <testcase name="[1] permissionType=ADMIN" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.002"/>
+  <testcase name="[2] permissionType=UPLOAD" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[3] permissionType=DOWNLOAD" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[4] permissionType=EDIT_METADATA" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[5] permissionType=MANAGE_LIBRARY" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[6] permissionType=EMAIL_BOOK" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[7] permissionType=DELETE_BOOK" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[8] permissionType=SYNC_KOREADER" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[9] permissionType=SYNC_KOBO" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[10] permissionType=ACCESS_OPDS" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[11] permissionType=MANAGE_METADATA_CONFIG" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[12] permissionType=ACCESS_BOOKDROP" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[13] permissionType=ACCESS_LIBRARY_STATS" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[14] permissionType=ACCESS_USER_STATS" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[15] permissionType=ACCESS_TASK_MANAGER" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[16] permissionType=MANAGE_GLOBAL_PREFERENCES" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[17] permissionType=MANAGE_ICONS" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[18] permissionType=DEMO_USER" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="testHasPermission_allPermissionsFalse()" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.001"/>
+  <testcase name="testHasPermission_allPermissionsTrue()" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[1] permissionType=ADMIN" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[2] permissionType=UPLOAD" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[3] permissionType=DOWNLOAD" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.001"/>
+  <testcase name="[4] permissionType=EDIT_METADATA" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[5] permissionType=MANAGE_LIBRARY" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[6] permissionType=EMAIL_BOOK" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.001"/>
+  <testcase name="[7] permissionType=DELETE_BOOK" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[8] permissionType=SYNC_KOREADER" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[9] permissionType=SYNC_KOBO" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[10] permissionType=ACCESS_OPDS" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.001"/>
+  <testcase name="[11] permissionType=MANAGE_METADATA_CONFIG" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[12] permissionType=ACCESS_BOOKDROP" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.001"/>
+  <testcase name="[13] permissionType=ACCESS_LIBRARY_STATS" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[14] permissionType=ACCESS_USER_STATS" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[15] permissionType=ACCESS_TASK_MANAGER" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[16] permissionType=MANAGE_GLOBAL_PREFERENCES" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[17] permissionType=MANAGE_ICONS" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.001"/>
+  <testcase name="[18] permissionType=DEMO_USER" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[1] permissionType=ADMIN" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[2] permissionType=UPLOAD" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.001"/>
+  <testcase name="[3] permissionType=DOWNLOAD" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[4] permissionType=EDIT_METADATA" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[5] permissionType=MANAGE_LIBRARY" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.001"/>
+  <testcase name="[6] permissionType=EMAIL_BOOK" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[7] permissionType=DELETE_BOOK" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[8] permissionType=SYNC_KOREADER" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[9] permissionType=SYNC_KOBO" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[10] permissionType=ACCESS_OPDS" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[11] permissionType=MANAGE_METADATA_CONFIG" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[12] permissionType=ACCESS_BOOKDROP" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[13] permissionType=ACCESS_LIBRARY_STATS" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[14] permissionType=ACCESS_USER_STATS" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[15] permissionType=ACCESS_TASK_MANAGER" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[16] permissionType=MANAGE_GLOBAL_PREFERENCES" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[17] permissionType=MANAGE_ICONS" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[18] permissionType=DEMO_USER" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[1] permissionType=ADMIN" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[2] permissionType=UPLOAD" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[3] permissionType=DOWNLOAD" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[4] permissionType=EDIT_METADATA" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[5] permissionType=MANAGE_LIBRARY" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[6] permissionType=EMAIL_BOOK" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.001"/>
+  <testcase name="[7] permissionType=DELETE_BOOK" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[8] permissionType=SYNC_KOREADER" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[9] permissionType=SYNC_KOBO" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[10] permissionType=ACCESS_OPDS" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[11] permissionType=MANAGE_METADATA_CONFIG" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[12] permissionType=ACCESS_BOOKDROP" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[13] permissionType=ACCESS_LIBRARY_STATS" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[14] permissionType=ACCESS_USER_STATS" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[15] permissionType=ACCESS_TASK_MANAGER" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.001"/>
+  <testcase name="[16] permissionType=MANAGE_GLOBAL_PREFERENCES" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[17] permissionType=MANAGE_ICONS" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <testcase name="[18] permissionType=DEMO_USER" classname="com.adityachandel.booklore.util.UserPermissionUtilsTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

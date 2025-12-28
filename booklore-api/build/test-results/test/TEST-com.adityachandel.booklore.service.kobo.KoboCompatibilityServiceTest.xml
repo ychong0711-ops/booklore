@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Kobo Compatibility Service Tests" tests="17" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:04.544Z" hostname="DESKTOP-67T0KNA" time="0.017">
+  <properties/>
+  <testcase name="Should handle null file size gracefully" classname="com.adityachandel.booklore.service.kobo.KoboCompatibilityServiceTest" time="0.001"/>
+  <testcase name="Should handle null book type gracefully" classname="com.adityachandel.booklore.service.kobo.KoboCompatibilityServiceTest" time="0.001"/>
+  <testcase name="Should support CBX files that exactly meet the size limit" classname="com.adityachandel.booklore.service.kobo.KoboCompatibilityServiceTest" time="0.001"/>
+  <testcase name="Should not support CBX files when Kobo settings are null" classname="com.adityachandel.booklore.service.kobo.KoboCompatibilityServiceTest" time="0.001"/>
+  <testcase name="Should validate CBX file exceeds size limit" classname="com.adityachandel.booklore.service.kobo.KoboCompatibilityServiceTest" time="0.001"/>
+  <testcase name="Should support CBX files when CBX conversion is enabled and within size limit" classname="com.adityachandel.booklore.service.kobo.KoboCompatibilityServiceTest" time="0.001"/>
+  <testcase name="Should not support PDF files" classname="com.adityachandel.booklore.service.kobo.KoboCompatibilityServiceTest" time="0.0"/>
+  <testcase name="Should handle null book gracefully" classname="com.adityachandel.booklore.service.kobo.KoboCompatibilityServiceTest" time="0.001"/>
+  <testcase name="Should handle settings exception gracefully" classname="com.adityachandel.booklore.service.kobo.KoboCompatibilityServiceTest" time="0.001"/>
+  <testcase name="Should always support EPUB files regardless of settings" classname="com.adityachandel.booklore.service.kobo.KoboCompatibilityServiceTest" time="0.0"/>
+  <testcase name="Should not support CBX files when they exceed the size limit" classname="com.adityachandel.booklore.service.kobo.KoboCompatibilityServiceTest" time="0.0"/>
+  <testcase name="Should return true when CBX conversion is enabled" classname="com.adityachandel.booklore.service.kobo.KoboCompatibilityServiceTest" time="0.0"/>
+  <testcase name="Should return false for size limit check on non-CBX book" classname="com.adityachandel.booklore.service.kobo.KoboCompatibilityServiceTest" time="0.001"/>
+  <testcase name="Should not support CBX files when size limit check fails due to settings error" classname="com.adityachandel.booklore.service.kobo.KoboCompatibilityServiceTest" time="0.002"/>
+  <testcase name="Should not support CBX files when CBX conversion is disabled" classname="com.adityachandel.booklore.service.kobo.KoboCompatibilityServiceTest" time="0.001"/>
+  <testcase name="Should return false when CBX conversion is disabled" classname="com.adityachandel.booklore.service.kobo.KoboCompatibilityServiceTest" time="0.001"/>
+  <testcase name="Should validate CBX file meets size limit" classname="com.adityachandel.booklore.service.kobo.KoboCompatibilityServiceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

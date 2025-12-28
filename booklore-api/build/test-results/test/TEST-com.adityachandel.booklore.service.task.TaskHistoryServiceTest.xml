@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.task.TaskHistoryServiceTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:08.240Z" hostname="DESKTOP-67T0KNA" time="0.066">
+  <properties/>
+  <testcase name="testGetLatestTasksForEachType_success()" classname="com.adityachandel.booklore.service.task.TaskHistoryServiceTest" time="0.049"/>
+  <testcase name="testUpdateTaskError_foundAndUpdated()" classname="com.adityachandel.booklore.service.task.TaskHistoryServiceTest" time="0.001"/>
+  <testcase name="testUpdateTaskStatus_foundAndUpdated()" classname="com.adityachandel.booklore.service.task.TaskHistoryServiceTest" time="0.001"/>
+  <testcase name="testUpdateTaskError_withNullErrorDetails()" classname="com.adityachandel.booklore.service.task.TaskHistoryServiceTest" time="0.001"/>
+  <testcase name="testCreateTask_savesEntity()" classname="com.adityachandel.booklore.service.task.TaskHistoryServiceTest" time="0.0"/>
+  <testcase name="testGetLatestTasksForEachType_exceptionHandled()" classname="com.adityachandel.booklore.service.task.TaskHistoryServiceTest" time="0.002"/>
+  <testcase name="testGetLatestTasksForEachType_allTypesHidden()" classname="com.adityachandel.booklore.service.task.TaskHistoryServiceTest" time="0.002"/>
+  <testcase name="testGetLatestTasksForEachType_emptyRepository()" classname="com.adityachandel.booklore.service.task.TaskHistoryServiceTest" time="0.001"/>
+  <testcase name="testUpdateTaskError_notFound()" classname="com.adityachandel.booklore.service.task.TaskHistoryServiceTest" time="0.001"/>
+  <testcase name="testCreateTask_withNullOptions()" classname="com.adityachandel.booklore.service.task.TaskHistoryServiceTest" time="0.001"/>
+  <testcase name="testUpdateTaskStatus_withNullMessage()" classname="com.adityachandel.booklore.service.task.TaskHistoryServiceTest" time="0.001"/>
+  <testcase name="testGetLatestTasksForEachType_skipsInvalidType()" classname="com.adityachandel.booklore.service.task.TaskHistoryServiceTest" time="0.001"/>
+  <testcase name="testCreateTask_withNullType()" classname="com.adityachandel.booklore.service.task.TaskHistoryServiceTest" time="0.001"/>
+  <testcase name="testUpdateTaskStatus_notFound()" classname="com.adityachandel.booklore.service.task.TaskHistoryServiceTest" time="0.001"/>
+  <system-out><![CDATA[14:34:08.292 [Test worker] ERROR com.adityachandel.booklore.service.task.TaskHistoryService -- Task failed: id=task3
+14:34:08.295 [Test worker] ERROR com.adityachandel.booklore.service.task.TaskHistoryService -- Task failed: id=taskNullError
+14:34:08.297 [Test worker] WARN com.adityachandel.booklore.service.task.TaskHistoryService -- Error fetching latest tasks, possibly due to removed enum values: DB error
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.VersionServiceTest$VersionComparison" tests="10" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:00.550Z" hostname="DESKTOP-67T0KNA" time="0.009">
+  <properties/>
+  <testcase name="returnsTrueWhenMajorIncreases()" classname="com.adityachandel.booklore.service.VersionServiceTest$VersionComparison" time="0.001"/>
+  <testcase name="ignoresPrefixAndSafelyHandlesInvalid()" classname="com.adityachandel.booklore.service.VersionServiceTest$VersionComparison" time="0.001"/>
+  <testcase name="returnsFalseForPatchDecrease()" classname="com.adityachandel.booklore.service.VersionServiceTest$VersionComparison" time="0.0"/>
+  <testcase name="returnsFalseWhenVersion1IsNull()" classname="com.adityachandel.booklore.service.VersionServiceTest$VersionComparison" time="0.0"/>
+  <testcase name="returnsFalseWhenVersion2IsNull()" classname="com.adityachandel.booklore.service.VersionServiceTest$VersionComparison" time="0.001"/>
+  <testcase name="returnsTrueForPatchIncrease()" classname="com.adityachandel.booklore.service.VersionServiceTest$VersionComparison" time="0.0"/>
+  <testcase name="returnsFalseWhenBothVersionsNull()" classname="com.adityachandel.booklore.service.VersionServiceTest$VersionComparison" time="0.001"/>
+  <testcase name="returnsFalseWhenEqual()" classname="com.adityachandel.booklore.service.VersionServiceTest$VersionComparison" time="0.001"/>
+  <testcase name="handlesDifferentLengthVersions()" classname="com.adityachandel.booklore.service.VersionServiceTest$VersionComparison" time="0.0"/>
+  <testcase name="returnsFalseWhenMajorDecreases()" classname="com.adityachandel.booklore.service.VersionServiceTest$VersionComparison" time="0.0"/>
+  <system-out><![CDATA[14:34:00.553 [Test worker] ERROR com.adityachandel.booklore.service.VersionService -- Version comparison failed: For input string: "x"
+14:34:00.554 [Test worker] ERROR com.adityachandel.booklore.service.VersionService -- Version comparison failed: Cannot invoke "String.replace(java.lang.CharSequence, java.lang.CharSequence)" because "version1" is null
+14:34:00.555 [Test worker] ERROR com.adityachandel.booklore.service.VersionService -- Version comparison failed: Cannot invoke "String.replace(java.lang.CharSequence, java.lang.CharSequence)" because "version2" is null
+14:34:00.557 [Test worker] ERROR com.adityachandel.booklore.service.VersionService -- Version comparison failed: Cannot invoke "String.replace(java.lang.CharSequence, java.lang.CharSequence)" because "version1" is null
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

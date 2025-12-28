@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.KoboReadingStateServiceTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:58.913Z" hostname="DESKTOP-67T0KNA" time="0.189">
+  <properties/>
+  <testcase name="Should return existing Kobo reading state when it exists" classname="com.adityachandel.booklore.service.KoboReadingStateServiceTest" time="0.154"/>
+  <testcase name="Should not overwrite existing finished date when syncing completed book" classname="com.adityachandel.booklore.service.KoboReadingStateServiceTest" time="0.009"/>
+  <testcase name="Should return null when no Kobo state and no UserBookProgress exists" classname="com.adityachandel.booklore.service.KoboReadingStateServiceTest" time="0.003"/>
+  <testcase name="Should handle null bookmark gracefully" classname="com.adityachandel.booklore.service.KoboReadingStateServiceTest" time="0.005"/>
+  <testcase name="Should handle null progress percent in bookmark" classname="com.adityachandel.booklore.service.KoboReadingStateServiceTest" time="0.004"/>
+  <testcase name="Should return null when no Kobo reading state exists and UserBookProgress has no Kobo data" classname="com.adityachandel.booklore.service.KoboReadingStateServiceTest" time="0.002"/>
+  <testcase name="Should handle invalid entitlement ID gracefully" classname="com.adityachandel.booklore.service.KoboReadingStateServiceTest" time="0.003"/>
+  <testcase name="Should handle missing book gracefully" classname="com.adityachandel.booklore.service.KoboReadingStateServiceTest" time="0.003"/>
+  <testcase name="Should construct reading state from UserBookProgress when no Kobo state exists" classname="com.adityachandel.booklore.service.KoboReadingStateServiceTest" time="0.003"/>
+  <system-out><![CDATA[14:33:59.095 [Test worker] WARN com.adityachandel.booklore.service.kobo.KoboReadingStateService -- Invalid entitlement ID format: not-a-number
+14:33:59.099 [Test worker] WARN com.adityachandel.booklore.service.kobo.KoboReadingStateService -- Book not found for entitlement ID: 999
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

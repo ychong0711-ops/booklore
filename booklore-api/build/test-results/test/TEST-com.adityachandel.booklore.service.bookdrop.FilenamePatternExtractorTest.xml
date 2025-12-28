@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" tests="44" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:01.235Z" hostname="DESKTOP-67T0KNA" time="0.098">
+  <properties/>
+  <testcase name="extractFromFilename_WithLanguageTag_ShouldExtractLanguage()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.008"/>
+  <testcase name="extractFromFilename_WithPublishedDateDashes_ShouldExtractCorrectly()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.003"/>
+  <testcase name="extractFromFilename_PublishedWithoutFormat_AutoDetectsTwoDigitYear()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.001"/>
+  <testcase name="extractFromFilename_WildcardAtEnd_AllowsPartialMatch()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_PublishedWithoutFormat_AutoDetectsCompactDate()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_WithVolumeAndIssuePattern_ShouldExtractCorrectly()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_WithDecimalSeriesNumber_ShouldParseCorrectly()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_AuthorWithCommas_ShouldParseProperly()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_WithPublishedDateDots_ShouldExtractCorrectly()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_PublishedWithoutFormat_AutoDetectsFlexibleFormat()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.004"/>
+  <testcase name="extractFromFilename_WithPublishedDateSingleDigits_ShouldExtractCorrectly()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_AuthorTitleYear_ShouldExtractAll()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_CalibreStyleFormat_ShouldExtractCorrectly()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="bulkExtract_WithPreviewMode_ShouldReturnExtractionResults()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.007"/>
+  <testcase name="extractFromFilename_PartNumberFormat_ShouldExtractCorrectly()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.001"/>
+  <testcase name="extractFromFilename_WildcardBeforePlaceholder_SkipsUnwantedText()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.001"/>
+  <testcase name="extractFromFilename_WithASIN_ShouldExtractCorrectly()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_WithPublisherYearAndIssue_ShouldExtractAll()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.001"/>
+  <testcase name="extractFromFilename_PublisherBracketFormat_ShouldExtractCorrectly()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_WithISBN13_ShouldExtractISBN13()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_WithSeriesAndChapter_ShouldExtractBoth()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_WithPublishedDateYYYYMMDD_ShouldExtractCorrectly()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.001"/>
+  <testcase name="extractFromFilename_WildcardWithVariousPlacements_HandlesCorrectly()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.001"/>
+  <testcase name="extractFromFilename_WithSpecialCharacters_ShouldHandleCorrectly()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.001"/>
+  <testcase name="bulkExtract_WithFullExtraction_ShouldProcessAndPersistAll()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.003"/>
+  <testcase name="extractFromFilename_WithPublishedYearPattern_ShouldExtractYear()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_SeriesNumberAndTitle_ShouldExtractBoth()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.001"/>
+  <testcase name="extractFromFilename_WithMultipleAuthors_ShouldParseAll()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_WildcardBetweenPlaceholders_SkipsMiddleText()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.001"/>
+  <testcase name="extractFromFilename_WildcardAtEnd_SkipsTrailingText()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.001"/>
+  <testcase name="extractFromFilename_WithNullPattern_ShouldReturnNull()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.001"/>
+  <testcase name="extractFromFilename_TitleOnly_ShouldCaptureFullTitle()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_PublishedWithoutFormat_AutoDetectsYear()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_WithSubtitle_ShouldExtractBoth()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.001"/>
+  <testcase name="extractFromFilename_WithPublishedDateCompact_ShouldExtractCorrectly()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_AuthorSeriesTitleFormat_ShouldExtractAll()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_WithISBN10EndingInX_ShouldExtractCorrectly()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.001"/>
+  <testcase name="extractFromFilename_WithNonMatchingPattern_ShouldReturnNull()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_WithEmptyPattern_ShouldReturnNull()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.001"/>
+  <testcase name="extractFromFilename_WithISBN10_ShouldExtractCorrectly()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_PublishedWithoutFormat_AutoDetectsISODate()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_ComplexPatternWithMultiplePlaceholders_ShouldExtractAll()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.002"/>
+  <testcase name="extractFromFilename_SeriesNameOnly_ShouldCaptureFullName()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.001"/>
+  <testcase name="extractFromFilename_WithAuthorAndTitle_ShouldExtractBoth()" classname="com.adityachandel.booklore.service.bookdrop.FilenamePatternExtractorTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="deleteBackgroundFile" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:08.861Z" hostname="DESKTOP-67T0KNA" time="0.068">
+  <properties/>
+  <testcase name="existingFile_deletesIt()" classname="com.adityachandel.booklore.util.FileServiceTest$BackgroundOperationsTests$DeleteBackgroundFileTests" time="0.014"/>
+  <testcase name="globalBackground_deletesFile()" classname="com.adityachandel.booklore.util.FileServiceTest$BackgroundOperationsTests$DeleteBackgroundFileTests" time="0.013"/>
+  <testcase name="notLastFile_keepsFolder()" classname="com.adityachandel.booklore.util.FileServiceTest$BackgroundOperationsTests$DeleteBackgroundFileTests" time="0.02"/>
+  <testcase name="lastFileInUserFolder_deletesEmptyFolder()" classname="com.adityachandel.booklore.util.FileServiceTest$BackgroundOperationsTests$DeleteBackgroundFileTests" time="0.015"/>
+  <testcase name="nonExistentFile_doesNotThrow()" classname="com.adityachandel.booklore.util.FileServiceTest$BackgroundOperationsTests$DeleteBackgroundFileTests" time="0.005"/>
+  <system-out><![CDATA[14:34:08.869 [Test worker] INFO com.adityachandel.booklore.util.FileService -- Background image saved successfully for user 4: to-delete.jpg
+14:34:08.872 [Test worker] INFO com.adityachandel.booklore.util.FileService -- Deleted empty background folder for user: 4
+14:34:08.897 [Test worker] INFO com.adityachandel.booklore.util.FileService -- Background image saved successfully for user 7: file1.jpg
+14:34:08.901 [Test worker] INFO com.adityachandel.booklore.util.FileService -- Background image saved successfully for user 7: file2.jpg
+14:34:08.916 [Test worker] INFO com.adityachandel.booklore.util.FileService -- Background image saved successfully for user 6: only.jpg
+14:34:08.920 [Test worker] INFO com.adityachandel.booklore.util.FileService -- Deleted empty background folder for user: 6
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.util.kobo.KoboUrlBuilderTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:11.021Z" hostname="DESKTOP-67T0KNA" time="0.017">
+  <properties/>
+  <testcase name="testDownloadUrlWithXForwardedPort()" classname="com.adityachandel.booklore.util.kobo.KoboUrlBuilderTest" time="0.014"/>
+  <testcase name="testDownloadUrl()" classname="com.adityachandel.booklore.util.kobo.KoboUrlBuilderTest" time="0.001"/>
+  <testcase name="testImageUrlTemplate()" classname="com.adityachandel.booklore.util.kobo.KoboUrlBuilderTest" time="0.0"/>
+  <testcase name="testDownloadUrlWithInvalidXForwardedPort()" classname="com.adityachandel.booklore.util.kobo.KoboUrlBuilderTest" time="0.001"/>
+  <testcase name="testImageUrlQualityTemplate()" classname="com.adityachandel.booklore.util.kobo.KoboUrlBuilderTest" time="0.001"/>
+  <testcase name="testUrlBuilderWithIpAddress()" classname="com.adityachandel.booklore.util.kobo.KoboUrlBuilderTest" time="0.0"/>
+  <system-out><![CDATA[14:34:11.031 [Test worker] INFO com.adityachandel.booklore.util.kobo.KoboUrlBuilder -- Applied X-Forwarded-Port: 443
+14:34:11.032 [Test worker] INFO com.adityachandel.booklore.util.kobo.KoboUrlBuilder -- Final base URL: http://localhost:443
+14:34:11.036 [Test worker] WARN com.adityachandel.booklore.util.kobo.KoboUrlBuilder -- Invalid X-Forwarded-Port header: null
+14:34:11.036 [Test worker] INFO com.adityachandel.booklore.util.kobo.KoboUrlBuilder -- Final base URL: http://localhost:8080
+14:34:11.037 [Test worker] WARN com.adityachandel.booklore.util.kobo.KoboUrlBuilder -- Invalid X-Forwarded-Port header: null
+14:34:11.037 [Test worker] INFO com.adityachandel.booklore.util.kobo.KoboUrlBuilder -- Final base URL: http://localhost:8080
+14:34:11.037 [Test worker] WARN com.adityachandel.booklore.util.kobo.KoboUrlBuilder -- Invalid X-Forwarded-Port header: invalid
+14:34:11.037 [Test worker] INFO com.adityachandel.booklore.util.kobo.KoboUrlBuilder -- Final base URL: http://localhost:8080
+14:34:11.038 [Test worker] WARN com.adityachandel.booklore.util.kobo.KoboUrlBuilder -- Invalid X-Forwarded-Port header: null
+14:34:11.038 [Test worker] INFO com.adityachandel.booklore.util.kobo.KoboUrlBuilder -- Final base URL: http://localhost:8080
+14:34:11.039 [Test worker] INFO com.adityachandel.booklore.util.kobo.KoboUrlBuilder -- Applied X-Forwarded-Port: 8443
+14:34:11.039 [Test worker] INFO com.adityachandel.booklore.util.kobo.KoboUrlBuilder -- Final base URL: http://192.168.1.100:8443
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

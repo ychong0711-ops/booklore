@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.MetadataTaskHistoryServiceTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:59.383Z" hostname="DESKTOP-67T0KNA" time="0.26">
+  <properties/>
+  <testcase name="getTaskWithProposals_shouldReturnEmptyWhenNoTaskFound()" classname="com.adityachandel.booklore.service.MetadataTaskHistoryServiceTest" time="0.114"/>
+  <testcase name="getTaskWithProposals_shouldReturnTaskWithFilteredProposals()" classname="com.adityachandel.booklore.service.MetadataTaskHistoryServiceTest" time="0.129"/>
+  <testcase name="updateProposalStatus_shouldUpdateProposalWhenValid()" classname="com.adityachandel.booklore.service.MetadataTaskHistoryServiceTest" time="0.003"/>
+  <testcase name="updateProposalStatus_shouldReturnFalseIfProposalNotFoundOrJobMismatch()" classname="com.adityachandel.booklore.service.MetadataTaskHistoryServiceTest" time="0.002"/>
+  <testcase name="updateProposalStatus_shouldReturnFalseIfInvalidStatus()" classname="com.adityachandel.booklore.service.MetadataTaskHistoryServiceTest" time="0.002"/>
+  <testcase name="deleteTaskAndProposals_shouldReturnFalseWhenTaskMissing()" classname="com.adityachandel.booklore.service.MetadataTaskHistoryServiceTest" time="0.002"/>
+  <testcase name="getActiveTasks_shouldFilterOutTasksWithNoRemainingProposals()" classname="com.adityachandel.booklore.service.MetadataTaskHistoryServiceTest" time="0.003"/>
+  <testcase name="getActiveTasks_shouldReturnOnlyTasksWithRemainingProposals()" classname="com.adityachandel.booklore.service.MetadataTaskHistoryServiceTest" time="0.003"/>
+  <testcase name="deleteTaskAndProposals_shouldDeleteWhenTaskExists()" classname="com.adityachandel.booklore.service.MetadataTaskHistoryServiceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Status Mapping - ReadStatus to KoboReadStatus" tests="9" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:33:58.857Z" hostname="DESKTOP-67T0KNA" time="0.054">
+  <properties/>
+  <testcase name="Should map null ReadStatus to READY_TO_READ" classname="com.adityachandel.booklore.service.KoboReadingStateBuilderTest$StatusMapping" time="0.0"/>
+  <testcase name="[1] input=PARTIALLY_READ" classname="com.adityachandel.booklore.service.KoboReadingStateBuilderTest$StatusMapping" time="0.007"/>
+  <testcase name="[2] input=READING" classname="com.adityachandel.booklore.service.KoboReadingStateBuilderTest$StatusMapping" time="0.0"/>
+  <testcase name="[3] input=RE_READING" classname="com.adityachandel.booklore.service.KoboReadingStateBuilderTest$StatusMapping" time="0.0"/>
+  <testcase name="[4] input=PAUSED" classname="com.adityachandel.booklore.service.KoboReadingStateBuilderTest$StatusMapping" time="0.0"/>
+  <testcase name="[1] input=READ" classname="com.adityachandel.booklore.service.KoboReadingStateBuilderTest$StatusMapping" time="0.0"/>
+  <testcase name="[1] input=UNREAD" classname="com.adityachandel.booklore.service.KoboReadingStateBuilderTest$StatusMapping" time="0.0"/>
+  <testcase name="[2] input=WONT_READ" classname="com.adityachandel.booklore.service.KoboReadingStateBuilderTest$StatusMapping" time="0.0"/>
+  <testcase name="[3] input=ABANDONED" classname="com.adityachandel.booklore.service.KoboReadingStateBuilderTest$StatusMapping" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

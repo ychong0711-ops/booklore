@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.service.metadata.BookReviewUpdateServiceTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:05.288Z" hostname="DESKTOP-67T0KNA" time="0.005">
+  <properties/>
+  <testcase name="limitsReviewsPerProviderToFiveNewest()" classname="com.adityachandel.booklore.service.metadata.BookReviewUpdateServiceTest" time="0.002"/>
+  <testcase name="clearFlagRemovesAllReviews()" classname="com.adityachandel.booklore.service.metadata.BookReviewUpdateServiceTest" time="0.001"/>
+  <testcase name="replaceClearsAndAddsOnlyIncoming()" classname="com.adityachandel.booklore.service.metadata.BookReviewUpdateServiceTest" time="0.0"/>
+  <testcase name="mergeWithExistingAddsReviews()" classname="com.adityachandel.booklore.service.metadata.BookReviewUpdateServiceTest" time="0.001"/>
+  <testcase name="lockedEntityShouldRemainUnchanged()" classname="com.adityachandel.booklore.service.metadata.BookReviewUpdateServiceTest" time="0.0"/>
+  <testcase name="nullOrEmptyReviewsDoNothing()" classname="com.adityachandel.booklore.service.metadata.BookReviewUpdateServiceTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

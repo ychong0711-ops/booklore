@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - MetadataManagementServiceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>MetadataManagementServiceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.adityachandel.booklore.service.metadata.html">com.adityachandel.booklore.service.metadata</a> &gt; MetadataManagementServiceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">17</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.095s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+<li>
+<a href="#">Standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">deleteCategories_removesAndDeletes()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteMoods_removesAndDeletes()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deletePublishers_noBooksDoesNothing()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteSeries_clearsSeriesFields()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteSeries_noBooksDoesNothing()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteTags_partialMissing_ignoresMissing()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteTags_removesAndDeletes()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">mergeAuthors_createsTargetAndMovesBooksAndDeletesOldAuthor()</td>
+<td class="success">0.055s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">mergeCategories_doesNotDuplicateExistingTarget()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">mergeCategories_movesAndDeletesOldCategory()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">mergeLanguages_withMultipleTargets_throws()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">mergeMoods_movesAndDeletesOldMood()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">mergePublishers_withMultipleTargets_throws()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">mergeSeries_withMultipleTargets_throws()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">mergeTags_mergesMultipleOldTagsIntoSingleTarget()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">mergeTags_movesAndDeletesOldTag()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">mergeTags_noBooks_deletesOldTag()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>14:34:05.349 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Consolidated 1 authors into [New Author]: [Old Author]
+14:34:05.353 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Deleted 1 tags: [TagToDelete]
+14:34:05.355 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Deleted 1 series: [NoSeries]
+14:34:05.359 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Consolidated 1 categories into [CatTarget]: [OldCat]
+14:34:05.361 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Deleted 1 tags: [PresentTag, MissingTag]
+14:34:05.367 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Consolidated 1 tags into [TargetTag]: [OldTag]
+14:34:05.371 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Deleted 1 categories: [CategoryToDelete]
+14:34:05.374 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Consolidated 1 tags into [New Tag]: [Old Tag]
+14:34:05.380 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Consolidated 1 moods into [New Mood]: [Old Mood]
+14:34:05.383 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Consolidated 1 categories into [New Category]: [Old Category]
+14:34:05.386 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Consolidated 2 tags into [UnifiedTag]: [OldTag1, OldTag2]
+14:34:05.388 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Deleted 1 series: [Some Series]
+14:34:05.390 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Deleted 1 publishers: [NoPublisher]
+14:34:05.392 [Test worker] INFO com.adityachandel.booklore.service.metadata.MetadataManagementService -- Deleted 1 moods: [MoodToDelete]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at 2025. 12. 28. 오후 2:34:11</p>
+</div>
+</div>
+</body>
+</html>

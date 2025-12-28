@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Truncate Method</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Truncate Method</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.adityachandel.booklore.util.html">com.adityachandel.booklore.util</a> &gt; FileServiceTest$TruncateTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">21</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.078s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a href="#">Tests</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Returns empty string for empty input</td>
+<td class="success">truncate_emptyString_returnsEmpty()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Returns original when exactly maxLength</td>
+<td class="success">truncate_exactLength_returnsOriginal()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Truncates when longer than maxLength</td>
+<td class="success">truncate_longString_truncates()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Handles max integer length</td>
+<td class="success">truncate_maxIntegerLength_returnsOriginal()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Handles maxLength of 1</td>
+<td class="success">truncate_maxLengthOne_returnsSingleChar()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Returns null for null input</td>
+<td class="success">truncate_nullInput_returnsNull()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[1] input=hello world, maxLength=5, expected=hello</td>
+<td class="success">truncate_parameterized(String, int, String)[1]</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] input=test, maxLength=10, expected=test</td>
+<td class="success">truncate_parameterized(String, int, String)[2]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] input=abc, maxLength=3, expected=abc</td>
+<td class="success">truncate_parameterized(String, int, String)[3]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[4] input=ab, maxLength=3, expected=ab</td>
+<td class="success">truncate_parameterized(String, int, String)[4]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[5] input=a, maxLength=1, expected=a</td>
+<td class="success">truncate_parameterized(String, int, String)[5]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[6] input=newline
+test, maxLength=7, expected=newline</td>
+<td class="success">truncate_parameterized(String, int, String)[6]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Returns original when shorter than maxLength</td>
+<td class="success">truncate_shortString_returnsOriginal()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Handles special characters</td>
+<td class="success">truncate_specialCharacters_handlesCorrectly()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Handles surrogate pairs (emojis)</td>
+<td class="success">truncate_surrogratePairs_mayBreakEmoji()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Preserves unicode characters</td>
+<td class="success">truncate_unicodeCharacters_handlesCorrectly()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Handles whitespace-only strings</td>
+<td class="success">truncate_whitespaceOnly_handlesCorrectly()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">maxLength=0 returns empty string</td>
+<td class="success">truncate_zeroOrNegativeMaxLength_returnsEmpty(int)[1]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">maxLength=-1 returns empty string</td>
+<td class="success">truncate_zeroOrNegativeMaxLength_returnsEmpty(int)[2]</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">maxLength=-100 returns empty string</td>
+<td class="success">truncate_zeroOrNegativeMaxLength_returnsEmpty(int)[3]</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">maxLength=-2147483648 returns empty string</td>
+<td class="success">truncate_zeroOrNegativeMaxLength_returnsEmpty(int)[4]</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 8.14.3</a> at 2025. 12. 28. 오후 2:34:11</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CBX Conversion Service Tests" tests="10" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:04.067Z" hostname="DESKTOP-67T0KNA" time="0.406">
+  <properties/>
+  <testcase name="convertCbxToEpub_WithNullTempDir_ShouldThrowException()" classname="com.adityachandel.booklore.service.kobo.CbxConversionServiceTest" time="0.017"/>
+  <testcase name="convertCbxToEpub_WithMultipleImages_ShouldPreservePageOrder()" classname="com.adityachandel.booklore.service.kobo.CbxConversionServiceTest" time="0.173"/>
+  <testcase name="convertCbxToEpub_WithNonExistentFile_ShouldThrowException()" classname="com.adityachandel.booklore.service.kobo.CbxConversionServiceTest" time="0.014"/>
+  <testcase name="convertCbxToEpub_WithUnsupportedFileFormat_ShouldThrowException()" classname="com.adityachandel.booklore.service.kobo.CbxConversionServiceTest" time="0.017"/>
+  <testcase name="convertCbxToEpub_WithNullCbxFile_ShouldThrowException()" classname="com.adityachandel.booklore.service.kobo.CbxConversionServiceTest" time="0.014"/>
+  <testcase name="isSupportedCbxFormat_WithSupportedFiles_ShouldReturnTrue()" classname="com.adityachandel.booklore.service.kobo.CbxConversionServiceTest" time="0.012"/>
+  <testcase name="convertCbxToEpub_WithEmptyCbzFile_ShouldThrowException()" classname="com.adityachandel.booklore.service.kobo.CbxConversionServiceTest" time="0.019"/>
+  <testcase name="isSupportedCbxFormat_WithUnsupportedFormats_ShouldReturnFalse()" classname="com.adityachandel.booklore.service.kobo.CbxConversionServiceTest" time="0.012"/>
+  <testcase name="convertCbxToEpub_WithNullBookEntity_ShouldUseDefaultMetadata()" classname="com.adityachandel.booklore.service.kobo.CbxConversionServiceTest" time="0.063"/>
+  <testcase name="convertCbxToEpub_WithValidCbzFile_ShouldGenerateValidEpub()" classname="com.adityachandel.booklore.service.kobo.CbxConversionServiceTest" time="0.062"/>
+  <system-out><![CDATA[14:34:04.139 [Test worker] INFO com.adityachandel.booklore.service.kobo.CbxConversionService -- Starting CBX to EPUB conversion for: multi-page-comic.cbz
+14:34:04.250 [Test worker] INFO com.adityachandel.booklore.service.kobo.CbxConversionService -- Successfully converted multi-page-comic.cbz to multi-page-comic.cbz.epub (size: 13505 bytes)
+14:34:04.329 [Test worker] INFO com.adityachandel.booklore.service.kobo.CbxConversionService -- Starting CBX to EPUB conversion for: empty-comic.cbz
+14:34:04.358 [Test worker] INFO com.adityachandel.booklore.service.kobo.CbxConversionService -- Starting CBX to EPUB conversion for: test-comic.cbz
+14:34:04.403 [Test worker] INFO com.adityachandel.booklore.service.kobo.CbxConversionService -- Successfully converted test-comic.cbz to test-comic.cbz.epub (size: 5724 bytes)
+14:34:04.422 [Test worker] INFO com.adityachandel.booklore.service.kobo.CbxConversionService -- Starting CBX to EPUB conversion for: test-comic.cbz
+14:34:04.468 [Test worker] INFO com.adityachandel.booklore.service.kobo.CbxConversionService -- Successfully converted test-comic.cbz to test-comic.cbz.epub (size: 5727 bytes)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

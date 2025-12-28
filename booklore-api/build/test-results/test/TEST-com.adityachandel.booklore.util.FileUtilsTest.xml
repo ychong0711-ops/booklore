@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.adityachandel.booklore.util.FileUtilsTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:10.797Z" hostname="DESKTOP-67T0KNA" time="0.069">
+  <properties/>
+  <testcase name="testShouldIgnore_pathWithCaltrashInSubdirectory_returnsTrue()" classname="com.adityachandel.booklore.util.FileUtilsTest" time="0.003"/>
+  <testcase name="testDeleteDirectoryRecursively_nonExistentPath()" classname="com.adityachandel.booklore.util.FileUtilsTest" time="0.003"/>
+  <testcase name="testGetFileSizeInKb_path()" classname="com.adityachandel.booklore.util.FileUtilsTest" time="0.006"/>
+  <testcase name="testShouldIgnore_hiddenDirectory_returnsTrue()" classname="com.adityachandel.booklore.util.FileUtilsTest" time="0.003"/>
+  <testcase name="testGetFileSizeInKb_bookEntity()" classname="com.adityachandel.booklore.util.FileUtilsTest" time="0.009"/>
+  <testcase name="testShouldIgnore_pathWithCaltrash_returnsTrue()" classname="com.adityachandel.booklore.util.FileUtilsTest" time="0.003"/>
+  <testcase name="testShouldIgnore_pathWithoutCaltrash_returnsFalse()" classname="com.adityachandel.booklore.util.FileUtilsTest" time="0.003"/>
+  <testcase name="testShouldIgnore_normalFile_returnsFalse()" classname="com.adityachandel.booklore.util.FileUtilsTest" time="0.003"/>
+  <testcase name="testGetBookFullPath()" classname="com.adityachandel.booklore.util.FileUtilsTest" time="0.003"/>
+  <testcase name="testGetRelativeSubPath()" classname="com.adityachandel.booklore.util.FileUtilsTest" time="0.003"/>
+  <testcase name="testDeleteDirectoryRecursively()" classname="com.adityachandel.booklore.util.FileUtilsTest" time="0.01"/>
+  <testcase name="testGetRelativeSubPath_noParent()" classname="com.adityachandel.booklore.util.FileUtilsTest" time="0.003"/>
+  <testcase name="testShouldIgnore_hiddenFile_returnsTrue()" classname="com.adityachandel.booklore.util.FileUtilsTest" time="0.003"/>
+  <testcase name="testShouldIgnore_emptyFileName_returnsFalse()" classname="com.adityachandel.booklore.util.FileUtilsTest" time="0.003"/>
+  <testcase name="testGetFileSizeInKb_pathFileNotFound()" classname="com.adityachandel.booklore.util.FileUtilsTest" time="0.004"/>
+  <testcase name="testGetFileSizeInKb_validFile_returnsSize()" classname="com.adityachandel.booklore.util.FileUtilsTest" time="0.005"/>
+  <system-out><![CDATA[14:34:10.859 [Test worker] WARN com.adityachandel.booklore.util.FileUtils -- File does not exist: C:\Users\home\AppData\Local\Temp\junit-18313096449706799954\missing.txt
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

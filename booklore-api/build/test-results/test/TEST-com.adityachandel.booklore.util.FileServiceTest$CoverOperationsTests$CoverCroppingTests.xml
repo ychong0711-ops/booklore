@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cover Cropping for Extreme Aspect Ratios" tests="8" skipped="0" failures="0" errors="0" timestamp="2025-12-28T05:34:09.660Z" hostname="DESKTOP-67T0KNA" time="0.468">
+  <properties/>
+  <testcase name="cropping is disabled when settings are off" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$CoverCroppingTests" time="0.051"/>
+  <testcase name="null cover cropping settings returns image unchanged" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$CoverCroppingTests" time="0.057"/>
+  <testcase name="smart cropping with uniform color image uses top/left" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$CoverCroppingTests" time="0.054"/>
+  <testcase name="smart cropping enabled for tall image finds content start" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$CoverCroppingTests" time="0.062"/>
+  <testcase name="extremely wide image is cropped when horizontal cropping enabled" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$CoverCroppingTests" time="0.027"/>
+  <testcase name="extremely tall image is cropped when vertical cropping enabled" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$CoverCroppingTests" time="0.113"/>
+  <testcase name="normal aspect ratio image is not cropped" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$CoverCroppingTests" time="0.05"/>
+  <testcase name="smart cropping enabled for wide image finds content start" classname="com.adityachandel.booklore.util.FileServiceTest$CoverOperationsTests$CoverCroppingTests" time="0.051"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
