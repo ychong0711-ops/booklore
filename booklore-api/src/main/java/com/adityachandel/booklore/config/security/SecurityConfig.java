@@ -150,6 +150,23 @@ public class SecurityConfig {
     }
 
     @Bean
+    @Order(6)
+    public SecurityFilterChain developmentSecurityChain(HttpSecurity http) throws Exception {
+        // Development mode: disable security when force-disable-oidc is true
+        if (appProperties.getForceDisableOidc()) {
+            http
+                    .securityMatcher("/**") // Match all requests
+                    .csrf(AbstractHttpConfigurer::disable)
+                    .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                    .authorizeHttpRequests(auth -> auth
+                            .anyRequest().permitAll()
+                    );
+            return http.build();
+        }
+        return null; // Not a security chain in production mode
+    }
+
+    @Bean
     public AuthenticationManager authenticationManager(HttpSecurity http) throws Exception {
         // Configure the shared AuthenticationManagerBuilder with the UserDetailsService and PasswordEncoder
         AuthenticationManagerBuilder auth = http.getSharedObject(AuthenticationManagerBuilder.class);
