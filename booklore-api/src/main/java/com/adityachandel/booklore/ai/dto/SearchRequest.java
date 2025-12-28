@@ -20,7 +20,7 @@ public class SearchRequest {
     /**
      * 검색 대상 책 ID (null일 경우 전체 검색)
      */
-    private String bookId;
+    private Long bookId;
     
     /**
      * 검색 쿼리 또는 질문 내용

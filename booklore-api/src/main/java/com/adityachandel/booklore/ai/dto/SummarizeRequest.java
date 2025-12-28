@@ -19,7 +19,7 @@ public class SummarizeRequest {
      * 요약할 책의 고유 식별자
      * 데이터베이스에서 해당 책의 정보를 조회하는 데 사용
      */
-    private String bookId;
+    private Long bookId;
     
     /**
      * 요약할 텍스트 내용

@@ -3,7 +3,6 @@ package com.adityachandel.booklore.ai.service;
 import com.adityachandel.booklore.ai.config.OllamaConfig;
 import com.adityachandel.booklore.ai.dto.SearchRequest;
 import com.adityachandel.booklore.ai.dto.SearchResponse;
-import com.adityachandel.booklore.model.entity.AuthorEntity;
 import com.adityachandel.booklore.model.entity.BookEntity;
 import com.adityachandel.booklore.model.entity.BookMetadataEntity;
 import com.adityachandel.booklore.repository.BookRepository;
@@ -47,7 +46,7 @@ public class BookSearchService {
         try {
             // 1. 검색 대상 결정 (특정 책 또는 전체)
             List<BookEntity> targetBooks = new ArrayList<>();
-            if (request.getBookId() != null && !request.getBookId().isEmpty()) {
+            if (request.getBookId() != null) {
                 Optional<BookEntity> bookOpt = bookRepository.findById(request.getBookId());
                 bookOpt.ifPresent(targetBooks::add);
             } else {
@@ -114,7 +113,7 @@ public class BookSearchService {
                     .query(request.getQuery())
                     .searchMode(request.getSearchMode())
                     .modelUsed(modelUsed)
-                    .bookId(request.getBookId())
+                    .bookId(request.getBookId() != null ? request.getBookId().toString() : null)
                     .build();
             
         } catch (Exception e) {
@@ -163,7 +162,7 @@ public class BookSearchService {
         }
         
         return scoredResults.stream()
-                .sorted(Comparator.comparingDouble(ScoredResult::score).reversed())
+                .sorted(Comparator.comparingDouble(ScoredResult::getScore).reversed())
                 .limit(maxResults)
                 .map(this::toSearchResult)
                 .collect(Collectors.toList());
@@ -203,7 +202,7 @@ public class BookSearchService {
         }
         
         return scoredResults.stream()
-                .sorted(Comparator.comparingDouble(ScoredResult::score).reversed())
+                .sorted(Comparator.comparingDouble(ScoredResult::getScore).reversed())
                 .limit(maxResults)
                 .map(this::toSearchResult)
                 .collect(Collectors.toList());
@@ -239,7 +238,8 @@ public class BookSearchService {
             String key = hashContent(r.getSnippet());
             ScoredResult existing = combinedResults.get(key);
             if (existing != null) {
-                existing.score(existing.score() + r.getScore() * 0.4);
+                // 기존 점수에 가중치 적용된 점수 추가
+                existing.setScore(existing.getScore() + r.getScore() * 0.4);
             } else {
                 combinedResults.put(key, new ScoredResult(
                         r.getSnippet(),
@@ -251,7 +251,7 @@ public class BookSearchService {
         }
         
         return combinedResults.values().stream()
-                .sorted(Comparator.comparingDouble(ScoredResult::score).reversed())
+                .sorted(Comparator.comparingDouble(ScoredResult::getScore).reversed())
                 .limit(maxResults)
                 .map(this::toSearchResult)
                 .collect(Collectors.toList());
@@ -476,20 +476,34 @@ public class BookSearchService {
      */
     private SearchResponse.SearchResult toSearchResult(ScoredResult scored) {
         return SearchResponse.SearchResult.builder()
-                .snippet(scored.content())
-                .score(scored.score())
-                .bookTitle(scored.bookTitle())
-                .source(scored.source())
+                .snippet(scored.getContent())
+                .score(scored.getScore())
+                .bookTitle(scored.getBookTitle())
+                .source(scored.getSource())
                 .build();
     }
     
     /**
-     * 점수가 있는 검색 결과를 위한 내부 클래스
+     * 점수가 있는 검색 결과를 위한 내부 클래스 (수정 가능)
      */
-    private record ScoredResult(
-            String content,
-            double score,
-            String bookTitle,
-            String source
-    ) {}
+    private static class ScoredResult {
+        private String content;
+        private double score;
+        private String bookTitle;
+        private String source;
+        
+        ScoredResult(String content, double score, String bookTitle, String source) {
+            this.content = content;
+            this.score = score;
+            this.bookTitle = bookTitle;
+            this.source = source;
+        }
+        
+        public String getContent() { return content; }
+        public double getScore() { return score; }
+        public String getBookTitle() { return bookTitle; }
+        public String getSource() { return source; }
+        
+        public void setScore(double score) { this.score = score; }
+    }
 }
